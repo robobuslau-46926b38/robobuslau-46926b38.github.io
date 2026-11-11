@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>尼玛搜 - 藏地影像与山南风物聚合</title>
+<meta name="description" content="尼玛搜聚合藏地纪录片、山南风物短片、非遗手作影像与高原旅行实拍条目，按类型、拍摄地与更新日期整理，适合想系统看藏地影像与在地见闻的观众查阅。">
+<meta name="keywords" content="尼玛搜">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b3a5c'/%3E%3Ccircle cx='32' cy='30' r='13' fill='none' stroke='%23e8b54a' stroke-width='3'/%3E%3Cpath d='M19 30h26M32 17v26' stroke='%23e8b54a' stroke-width='2.4'/%3E%3Cpath d='M14 50h36' stroke='%23e8b54a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "尼玛搜",
+  "description": "藏地影像与山南风物内容聚合，覆盖纪录片、非遗手作、高原旅行实拍与在地访谈。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"藏地纪录片和旅行vlog的区别在哪？","acceptedAnswer":{"@type":"Answer","text":"纪录片通常有立项单位和拍摄周期，《雅砻河谷的春耕》标注了西藏广播影视制作中心2026年3月开机、历时五个月；旅行vlog多为个人账号一机拍摄，单条时长10—20分钟，缺少同期录音和受访者授权说明。"}},
+    {"@type":"Question","name":"山南风物短片为什么常出现青稞和氆氇？","acceptedAnswer":{"@type":"Answer","text":"山南是西藏粮食主产区之一，乃东、扎囊一带的青稞种植与氆氇织造是当地常见生产场景，摄制者取景方便，观众也更容易识别地域。"}},
+    {"@type":"Question","name":"非遗手作影像怎么看拍摄地是否真实？","acceptedAnswer":{"@type":"Answer","text":"看片尾是否标注作坊名称与手艺人姓名，例如《扎囊氆氇·次仁卓嘎的一天》片尾列出扎囊县德吉新村作坊与织机编号，这类信息比画面里的经幡更可靠。"}},
+    {"@type":"Question","name":"高原旅行实拍里哪些信息最容易失真？","acceptedAnswer":{"@type":"Answer","text":"海拔与路况。部分2026年10月发布的羊湖环线视频仍沿用旧路基里程，实际S307部分路段已完成沥青罩面，通行时间比视频所述缩短约40分钟。"}},
+    {"@type":"Question","name":"藏语同期声条目需要字幕吗？","acceptedAnswer":{"@type":"Answer","text":"需要。藏语方言差异大，卫藏、康巴、安多口音在同一个词上发音不同，《山南牧场访谈》采用藏汉双语字幕，并在片头注明受访者所属乡镇。"}},
+    {"@type":"Question","name":"短片里的转场镜头能当路况参考吗？","acceptedAnswer":{"@type":"Answer","text":"不能直接当路况参考。转场多用无人机或延时拍摄，压缩了实际车程，《加查到桑日》一片中两分钟转场对应实地约两小时山路，且未标注雨季塌方点。"}}
+  ]
+}
+</script>
+<style>
+:root{
+  --brand:#1b3a5c;
+  --brand-light:#2f5d8a;
+  --brand-deep:#122a43;
+  --accent:#e8b54a;
+  --accent-soft:#f6e3b6;
+  --bg:#f5f3ee;
+  --panel:#ffffff;
+  --text:#1e2328;
+  --text-2:#4c565f;
+  --text-3:#7c8791;
+  --line:#e2ded4;
+  --radius-card:14px;
+  --radius-btn:8px;
+  --radius-tag:6px;
+  --radius-banner:10px;
+  --shadow:0 2px 8px rgba(27,58,92,.07);
+  --shadow-hover:0 8px 22px rgba(27,58,92,.14);
+  --sticky-h:104px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:var(--sticky-h);}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
+  font-size:15.5px;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700;}
+p{margin:0 0 12px;}
+ul,ol{margin:0 0 12px;padding-left:20px;}
+button{font-family:inherit;cursor:pointer;}
+.wrap{max-width:1360px;margin:0 auto;padding:0 20px;}
+
+/* ============ 吸顶区 ============ */
+.sticky-top{position:sticky;top:0;z-index:60;}
+.announce{
+  background:var(--brand-deep);
+  color:#f0ece2;
+  font-size:13px;
+  line-height:1.5;
+}
+.announce .wrap{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  padding-top:7px;padding-bottom:7px;
+}
+.announce .brand-mark{
+  font-weight:700;color:var(--accent);letter-spacing:.5px;white-space:nowrap;
+}
+.announce .dot{width:4px;height:4px;border-radius:50%;background:var(--accent);flex:none;}
+.announce .item{white-space:nowrap;color:#cfd8e0;}
+.announce .item b{color:#fff;font-weight:600;}
+.announce .more{margin-left:auto;color:var(--accent);font-size:12.5px;white-space:nowrap;}
+
+.header{
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header .wrap{
+  display:flex;align-items:center;gap:22px;
+  height:66px;
+}
+.logo{display:flex;align-items:center;gap:10px;flex:none;}
+.logo svg{width:36px;height:36px;flex:none;}
+.logo .lt{font-size:20px;font-weight:800;letter-spacing:1px;color:var(--brand);}
+.logo .ls{font-size:11px;color:var(--text-3);letter-spacing:.5px;display:block;line-height:1;margin-top:2px;}
+.nav-main{display:flex;gap:4px;flex-wrap:wrap;flex:1;}
+.nav-main a{
+  padding:6px 11px;border-radius:var(--radius-btn);font-size:14px;color:var(--text-2);
+  transition:background .18s,color .18s;
+}
+.nav-main a:hover,.nav-main a.cur{background:#eef3f8;color:var(--brand);font-weight:600;}
+.head-tools{display:flex;align-items:center;gap:10px;flex:none;}
+.search-box{position:relative;}
+.search-box input{
+  width:172px;padding:7px 30px 7px 12px;border:1px solid var(--line);
+  border-radius:var(--radius-btn);font-size:13.5px;background:#fbfaf7;color:var(--text);
+  outline:none;transition:border-color .18s;
+}
+.search-box input:focus{border-color:var(--brand-light);background:#fff;}
+.search-box .si{position:absolute;right:9px;top:50%;transform:translateY(-50%);color:var(--text-3);font-size:13px;pointer-events:none;}
+.btn-sub{
+  background:var(--accent);color:#2a2003;font-weight:700;font-size:13.5px;
+  padding:7px 14px;border-radius:var(--radius-btn);border:none;
+  transition:background .18s,transform .18s;
+}
+.btn-sub:hover{background:#f2c65f;transform:translateY(-1px);}
+.hamburger{display:none;background:none;border:1px solid var(--line);border-radius:var(--radius-btn);padding:6px 9px;font-size:16px;color:var(--brand);}
+
+/* ============ 首屏 ============ */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(140deg,#122a43 0%,#1b3a5c 46%,#2f5d8a 100%);
+  color:#f2f0e9;
+}
+.hero::after{
+  content:"";position:absolute;inset:auto -10% -55% auto;width:640px;height:640px;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,181,74,.22),transparent 62%);
+  pointer-events:none;
+}
+.hero .wrap{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+  padding-top:52px;padding-bottom:52px;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:1px;color:var(--accent-soft);
+  border:1px solid rgba(232,181,74,.45);border-radius:40px;padding:3px 13px;margin-bottom:16px;
+}
+.hero h1{
+  font-size:clamp(34px,4.6vw,52px);letter-spacing:3px;color:#fff;margin-bottom:16px;
+}
+.hero .lede{
+  font-size:15.5px;color:#cfdae5;max-width:560px;line-height:1.85;
+}
+.hero .lede b{color:var(--accent);font-weight:600;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;}
+.hero-actions a{
+  padding:9px 20px;border-radius:var(--radius-btn);font-size:14px;font-weight:600;
+  transition:transform .18s,box-shadow .18s,background .18s;
+}
+.hero-actions .primary{background:var(--accent);color:#2a2003;}
+.hero-actions .primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(232,181,74,.32);}
+.hero-actions .ghost{border:1px solid rgba(255,255,255,.42);color:#eef2f6;}
+.hero-actions .ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px);}
+.hero-stats{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap;}
+.hero-stats div{font-size:12.5px;color:#a9bccd;line-height:1.5;}
+.hero-stats b{display:block;font-size:21px;color:#fff;font-weight:700;letter-spacing:.5px;}
+.hero-visual{position:relative;height:300px;}
+.hero-visual svg{width:100%;height:100%;}
+.spin{transform-origin:center;animation:slow 26s linear infinite;}
+@keyframes slow{to{transform:rotate(360deg);}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none;}}
+
+/* ============ 主体布局：三栏门户 ============ */
+.layout{
+  display:grid;
+  grid-template-columns:176px minmax(0,1fr) 268px;
+  gap:28px;
+  padding-top:34px;padding-bottom:20px;
+  align-items:start;
+}
+.channel-side{position:sticky;top:calc(var(--sticky-h) + 14px);}
+.channel-side .cs-title{
+  font-size:12px;letter-spacing:2px;color:var(--text-3);text-transform:uppercase;
+  margin-bottom:10px;padding-left:2px;
+}
+.channel-side nav{display:flex;flex-direction:column;gap:2px;}
+.channel-side a{
+  display:flex;align-items:center;gap:9px;
+  padding:8px 11px;border-radius:var(--radius-btn);font-size:14px;color:var(--text-2);
+  border-left:3px solid transparent;transition:background .16s,color .16s,border-color .16s;
+}
+.channel-side a:hover{background:#eceff3;color:var(--brand);}
+.channel-side a.cur{background:#e8eef5;color:var(--brand);font-weight:700;border-left-color:var(--accent);}
+.channel-side a i{font-style:normal;font-size:12px;color:var(--text-3);width:16px;text-align:center;}
+.channel-side .cs-note{
+  margin-top:16px;padding:12px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-card);
+  font-size:12.5px;color:var(--text-3);line-height:1.7;
+}
+.channel-side .cs-note b{color:var(--brand);display:block;margin-bottom:3px;font-size:13px;}
+
+.main-col{min-width:0;}
+.aside-col{position:sticky;top:calc(var(--sticky-h) + 14px);display:flex;flex-direction:column;gap:18px;}
+
+/* ============ 通用板块 ============ */
+.section{padding:8px 0 34px;scroll-margin-top:var(--sticky-h);}
+.sec-head{margin-bottom:18px;}
+.sec-head .kicker{
+  font-size:12px;letter-spacing:2px;color:var(--accent);font-weight:700;
+  text-transform:uppercase;
+}
+.sec-head h2{
+  font-size:22px;color:var(--brand);letter-spacing:.5px;margin-top:2px;
+  display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+}
+.sec-head h2 .h2note{font-size:12.5px;color:var(--text-3);font-weight:400;letter-spacing:0;}
+.sec-head .sub{font-size:13.5px;color:var(--text-3);margin-top:5px;}
+
+/* 概览 */
+.overview{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:24px 26px;box-shadow:var(--shadow);
+}
+.overview p{font-size:15px;color:var(--text-2);line-height:1.9;}
+.overview p:last-child{margin-bottom:0;}
+.overview .kwline{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+.overview .kwline span{
+  font-size:12.5px;background:#f1f4f8;color:var(--brand-light);border-radius:var(--radius-tag);padding:2px 9px;
+}
+
+/* 精选卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:#cfd8e2;}
+.card .thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:#e7e3d9;}
+.card .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.card:hover .thumb img{transform:scale(1.04);}
+.card .badge{
+  position:absolute;left:9px;top:9px;background:rgba(18,42,67,.86);color:#fff;
+  font-size:11.5px;padding:2px 8px;border-radius:var(--radius-tag);letter-spacing:.5px;
+}
+.card .body{padding:13px 14px 15px;display:flex;flex-direction:column;gap:7px;flex:1;}
+.card h3{font-size:15.5px;color:var(--text);line-height:1.45;}
+.card .desc{font-size:13px;color:var(--text-2);line-height:1.7;flex:1;}
+.card .tags{display:flex;gap:6px;flex-wrap:wrap;}
+.card .tags span{font-size:11.5px;color:var(--brand-light);background:#eef3f8;border-radius:var(--radius-tag);padding:1px 7px;}
+.card .meta{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:11.5px;color:var(--text-3);border-top:1px dashed var(--line);padding-top:8px;
+}
+.card .meta b{color:#c0761f;font-weight:700;}
+
+/* 更新动态 */
+.updates{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;}
+.updates li{list-style:none;}
+.updates ol{padding:0;margin:0;}
+.updates .it{
+  display:grid;grid-template-columns:66px minmax(0,1fr);gap:14px;
+  padding:13px 20px;border-bottom:1px solid var(--line);
+  transition:background .16s;
+}
+.updates .it:last-child{border-bottom:none;}
+.updates .it:hover{background:#faf8f3;}
+.updates .date{font-size:12px;color:var(--text-3);line-height:1.5;padding-top:2px;font-variant-numeric:tabular-nums;}
+.updates .date b{display:block;font-size:13.5px;color:var(--brand);font-weight:700;}
+.updates .txt strong{font-size:14.5px;color:var(--text);display:block;margin-bottom:2px;}
+.updates .txt span{font-size:13px;color:var(--text-2);line-height:1.7;}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+.cat-btn{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:14px 13px;text-align:left;transition:all .18s;position:relative;
+}
+.cat-btn:hover,.cat-btn.on{border-color:var(--brand-light);background:#eef3f8;box-shadow:var(--shadow);}
+.cat-btn strong{display:block;font-size:14.5px;color:var(--brand);margin-bottom:3px;}
+.cat-btn span{font-size:12px;color:var(--text-3);line-height:1.5;}
+.cat-btn em{font-style:normal;font-size:11.5px;color:var(--accent);font-weight:700;display:block;margin-top:6px;}
+
+/* 深度解析 */
+.deep{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:28px 30px;box-shadow:var(--shadow);
+}
+.deep h3{
+  font-size:17px;color:var(--brand);margin:26px 0 10px;padding-left:12px;
+  border-left:4px solid var(--accent);line-height:1.4;
+}
+.deep h3:first-child{margin-top:0;}
+.deep p{font-size:15px;color:var(--text-2);line-height:1.92;}
+.deep ul li{font-size:14.5px;color:var(--text-2);line-height:1.85;margin-bottom:5px;}
+.deep .fact{
+  background:#faf6ec;border-left:3px solid var(--accent);border-radius:0 var(--radius-btn) var(--radius-btn) 0;
+  padding:11px 15px;font-size:13.5px;color:#6b5426;margin:12px 0;line-height:1.75;
+}
+.deep .fact b{color:#8a6415;}
+.deep .cmp{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px;}
+.deep .cmp th,.deep .cmp td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+.deep .cmp th{background:#eef3f8;color:var(--brand);font-weight:700;font-size:13px;}
+.deep .cmp td{color:var(--text-2);line-height:1.7;}
+
+/* 指南 */
+.guide{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+.guide-item{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:17px 19px;display:flex;gap:14px;
+}
+.guide-item .num{
+  flex:none;width:30px;height:30px;border-radius:50%;
+  background:var(--brand);color:#fff;font-size:14px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.guide-item h4{font-size:14.5px;color:var(--brand);margin-bottom:5px;}
+.guide-item p{font-size:13.5px;color:var(--text-2);line-height:1.8;margin:0;}
+
+/* FAQ */
+.faq{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq details:last-child{border-bottom:none;}
+.faq summary{
+  padding:15px 20px;font-size:14.5px;font-weight:600;color:var(--text);
+  cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;
+  transition:background .16s;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";color:var(--brand-light);font-weight:700;font-size:17px;line-height:1;}
+.faq details[open] summary::after{content:"−";}
+.faq summary:hover{background:#faf8f3;}
+.faq .ans{padding:0 20px 16px;font-size:14px;color:var(--text-2);line-height:1.85;}
+
+/* 评论 */
+.comment-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.cmt{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:13px 16px;font-size:13.5px;color:var(--text-2);line-height:1.75;
+  transition:border-color .16s;
+}
+.cmt:hover{border-color:#cfd8e2;}
+.cmt .who{display:flex;align-items:center;gap:8px;margin-bottom:5px;}
+.cmt .av{
+  width:24px;height:24px;border-radius:50%;flex:none;
+  background:linear-gradient(135deg,var(--brand-light),var(--brand));
+  color:#fff;font-size:11.5px;display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+.cmt .name{font-size:13px;color:var(--brand);font-weight:600;}
+.cmt .time{font-size:11.5px;color:var(--text-3);margin-left:auto;}
+.cmt .quote{color:#8a6415;}
+
+/* 资讯 */
+.news-list{display:flex;flex-direction:column;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;}
+.news-item{
+  display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:15px 20px;
+  border-bottom:1px solid var(--line);transition:background .16s;
+}
+.news-item:last-child{border-bottom:none;}
+.news-item:hover{background:#faf8f3;}
+.news-item img{width:120px;height:80px;object-fit:cover;border-radius:var(--radius-btn);}
+.news-item h4{font-size:14.5px;color:var(--text);margin-bottom:4px;line-height:1.5;}
+.news-item .nd{font-size:11.5px;color:var(--text-3);margin-bottom:3px;}
+.news-item p{font-size:13px;color:var(--text-2);line-height:1.7;margin:0;}
+
+/* 相关推荐 */
+.rec-tags{display:flex;gap:9px;flex-wrap:wrap;}
+.rec-tags a{
+  background:var(--panel);border:1px solid var(--line);border-radius:40px;
+  padding:6px 15px;font-size:13.5px;color:var(--text-2);transition:all .18s;
+}
+.rec-tags a:hover{border-color:var(--brand-light);color:var(--brand);background:#eef3f8;transform:translateY(-1px);}
+
+/* 榜单 */
+.rank{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;}
+.rank ol{padding:0;margin:0;list-style:none;}
+.rank li{
+  display:flex;align-items:center;gap:13px;padding:11px 20px;border-bottom:1px solid var(--line);
+  font-size:14px;transition:background .16s;
+}
+.rank li:last-child{border-bottom:none;}
+.rank li:hover{background:#faf8f3;}
+.rank .rk{
+  width:22px;height:22px;flex:none;border-radius:5px;background:#eef3f8;color:var(--brand-light);
+  font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.rank li:nth-child(1) .rk{background:var(--accent);color:#2a2003;}
+.rank li:nth-child(2) .rk{background:#d8cbb0;color:#4a3c1a;}
+.rank li:nth-child(3) .rk{background:#e3d6c0;color:#4a3c1a;}
+.rank .rname{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.rank .rval{font-size:12px;color:var(--text-3);flex:none;}
+.rank .rval b{color:#c0761f;font-weight:700;}
+
+/* 互动征集 */
+.submit-band{
+  background:linear-gradient(120deg,#122a43,#2f5d8a);
+  border-radius:var(--radius-banner);color:#eef2f6;padding:24px 28px;
+  display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;
+}
+.submit-band h3{font-size:18px;color:#fff;margin-bottom:6px;}
+.submit-band p{font-size:13.5px;color:#c6d4e1;margin:0;line-height:1.75;}
+.submit-band .act{display:flex;gap:10px;flex-wrap:wrap;}
+.submit-band .act a{
+  padding:8px 17px;border-radius:var(--radius-btn);font-size:13.5px;font-weight:600;
+  background:var(--accent);color:#2a2003;transition:transform .18s;
+}
+.submit-band .act a.ghost{background:transparent;border:1px solid rgba(255,255,255,.45);color:#eef2f6;}
+.submit-band .act a:hover{transform:translateY(-2px);}
+
+/* 侧栏 */
+.aside-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:16px 18px;}
+.aside-card h3{
+  font-size:14px;color:var(--brand);margin-bottom:11px;letter-spacing:.5px;
+  display:flex;align-items:center;gap:7px;
+}
+.aside-card h3::before{content:"";width:3px;height:14px;background:var(--accent);border-radius:2px;}
+.hot-list{padding:0;margin:0;list-style:none;display:flex;flex-direction:column;gap:9px;}
+.hot-list li{display:flex;gap:9px;font-size:13px;line-height:1.6;}
+.hot-list .n{
+  flex:none;width:17px;height:17px;border-radius:4px;background:#eef3f8;color:var(--brand-light);
+  font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px;
+}
+.hot-list li:nth-child(1) .n,.hot-list li:nth-child(2) .n,.hot-list li:nth-child(3) .n{background:var(--accent);color:#2a2003;}
+.hot-list a{color:var(--text-2);transition:color .16s;}
+.hot-list a:hover{color:var(--brand);}
+.hot-list .hh{font-size:11px;color:var(--text-3);display:block;}
+.aside-card .upd-mini{display:flex;flex-direction:column;gap:10px;font-size:12.5px;}
+.aside-card .upd-mini div{display:flex;gap:8px;color:var(--text-2);line-height:1.6;}
+.aside-card .upd-mini b{color:var(--brand);font-weight:700;flex:none;font-variant-numeric:tabular-nums;}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:7px;}
+.tag-cloud a{font-size:12.5px;background:#f1f4f8;color:var(--brand-light);border-radius:var(--radius-tag);padding:2px 9px;transition:background .16s;}
+.tag-cloud a:hover{background:#e2eaf3;}
+
+/* 页尾 */
+.footer{
+  background:#122a43;color:#b9c8d6;margin-top:20px;padding:40px 0 24px;font-size:13.5px;
+}
+.footer .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;}
+.footer .fbrand{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.footer .fbrand svg{width:32px;height:32px;}
+.footer .fbrand span{font-size:19px;font-weight:800;color:#fff;letter-spacing:1px;}
+.footer .fdesc{line-height:1.85;color:#9fb1c2;margin-bottom:12px;}
+.footer h4{font-size:13.5px;color:#fff;margin-bottom:11px;letter-spacing:1px;}
+.footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px;}
+.footer ul a{color:#9fb1c2;transition:color .16s;}
+.footer ul a:hover{color:var(--accent);}
+.footer .copy{
+  border-top:1px solid rgba(255,255,255,.13);margin-top:28px;padding-top:16px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:12px;color:#7f94a7;
+}
+.footer .copy .upd{color:#a9bccd;}
+
+/* 回顶部 */
+.to-top{
+  position:fixed;right:22px;bottom:26px;width:42px;height:42px;border-radius:50%;
+  background:var(--brand);color:#fff;border:none;font-size:17px;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 18px rgba(27,58,92,.3);opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:opacity .22s,visibility .22s,transform .22s;z-index:70;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0);}
+.to-top:hover{background:var(--brand-light);}
+
+/* 空结果 */
+.no-result{
+  display:none;background:#fff;border:1px dashed var(--line);border-radius:var(--radius-card);
+  padding:26px;text-align:center;color:var(--text-3);font-size:14px;
+}
+.no-result.show{display:block;}
+
+/* ============ 响应式 ============ */
+@media (max-width:1180px){
+  .layout{grid-template-columns:160px minmax(0,1fr);}
+  .aside-col{display:none;}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:1024px){
+  :root{--sticky-h:102px;}
+  .hero .wrap{grid-template-columns:1fr;gap:24px;padding-top:38px;padding-bottom:38px;}
+  .hero-visual{height:200px;max-width:420px;}
+  .cat-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .comment-list{grid-template-columns:1fr;}
+  .footer .fgrid{grid-template-columns:1fr 1fr;gap:24px;}
+}
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr;}
+  .channel-side{position:static;order:-1;}
+  .channel-side .cs-title{display:none;}
+  .channel-side nav{
+    flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:6px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .channel-side nav::-webkit-scrollbar{height:4px;}
+  .channel-side nav::-webkit-scrollbar-thumb{background:#cfd8e2;border-radius:4px;}
+  .channel-side a{
+    flex:none;border-left:none;border-bottom:3px solid transparent;border-radius:var(--radius-btn) var(--radius-btn) 0 0;
+    padding:7px 12px;white-space:nowrap;
+  }
+  .channel-side a.cur{border-left:none;border-bottom-color:var(--accent);}
+  .channel-side .cs-note{display:none;}
+  .nav-main{display:none;}
+  .hamburger{display:block;}
+  .guide{grid-template-columns:1fr;}
+  .news-item{grid-template-columns:92px minmax(0,1fr);gap:12px;padding:13px 15px;}
+  .news-item img{width:92px;height:64px;}
+  .submit-band{grid-template-columns:1fr;gap:14px;}
+}
+@media (max-width:740px){
+  body{font-size:15px;}
+  .wrap{padding:0 15px;}
+  .header .wrap{height:58px;gap:12px;}
+  .logo .lt{font-size:18px;}
+  .logo .ls{display:none;}
+  .search-box input{width:112px;font-size:13px;}
+  .btn-sub{padding:6px 10px;font-size:12.5px;}
+  .announce .wrap{gap:9px;font-size:12px;padding-top:6px;padding-bottom:6px;}
+  .announce .more{display:none;}
+  .card-grid{grid-template-columns:1fr;}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .overview,.deep{padding:19px 17px;}
+  .deep h3{font-size:16px;}
+  .deep .cmp{font-size:12.5px;}
+  .deep .cmp th,.deep .cmp td{padding:6px 8px;}
+  .hero h1{font-size:34px;letter-spacing:2px;}
+  .hero-stats{gap:18px;}
+  .hero-stats b{font-size:18px;}
+  .updates .it{grid-template-columns:56px minmax(0,1fr);gap:10px;padding:11px 15px;}
+  .footer .fgrid{grid-template-columns:1fr;gap:22px;}
+  .to-top{right:14px;bottom:16px;width:38px;height:38px;}
+  .faq summary{padding:13px 15px;font-size:14px;}
+  .faq .ans{padding:0 15px 14px;}
+  .rank li{padding:10px 15px;}
+  .comment-list{gap:10px;}
+}
+
+/* 移动端抽屉 */
+.drawer-mask{
+  position:fixed;inset:0;background:rgba(18,42,67,.45);z-index:80;
+  opacity:0;visibility:hidden;transition:opacity .22s,visibility .22s;
+}
+.drawer-mask.show{opacity:1;visibility:visible;}
+.drawer{
+  position:fixed;top:0;right:0;bottom:0;width:min(78vw,300px);background:#fff;z-index:90;
+  transform:translateX(100%);transition:transform .26s ease;
+  padding:20px 18px;overflow-y:auto;box-shadow:-8px 0 26px rgba(18,42,67,.2);
+}
+.drawer.show{transform:translateX(0);}
+.drawer h3{font-size:15px;color:var(--brand);margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;}
+.drawer h3 button{background:none;border:none;font-size:20px;color:var(--text-3);line-height:1;padding:2px 6px;}
+.drawer nav{display:flex;flex-direction:column;gap:3px;}
+.drawer nav a{padding:9px 11px;border-radius:var(--radius-btn);font-size:14.5px;color:var(--text-2);}
+.drawer nav a:hover,.drawer nav a:focus{background:#eef3f8;color:var(--brand);outline:2px solid var(--brand-light);outline-offset:-2px;}
+.drawer .dnote{margin-top:16px;font-size:12.5px;color:var(--text-3);line-height:1.7;border-top:1px solid var(--line);padding-top:13px;}
+
+:focus-visible{outline:2px solid var(--brand-light);outline-offset:2px;}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-top">
+  <div class="announce">
+    <div class="wrap">
+      <span class="brand-mark">尼玛搜</span>
+      <span class="dot"></span>
+      <span class="item"><b>11月6日</b> 上线《雅砻河谷的春耕》完整版</span>
+      <span class="dot"></span>
+      <span class="item"><b>11月4日</b> 新增 7 条扎囊氆氇手作短片</span>
+      <span class="dot"></span>
+      <span class="item"><b>11月2日</b> 羊湖环线路况实拍更新至 S307 段</span>
+      <a class="more" href="#updates">全部更新 →</a>
+    </div>
+  </div>
+  <header class="header">
+    <div class="wrap">
+      <a class="logo" href="#top" aria-label="尼玛搜首页">
+        <svg viewBox="0 0 64 64" role="img" aria-label="尼玛搜标识">
+          <rect width="64" height="64" rx="14" fill="#1b3a5c"/>
+          <circle cx="32" cy="29" r="13" fill="none" stroke="#e8b54a" stroke-width="3"/>
+          <path d="M19 29h26M32 16v26" stroke="#e8b54a" stroke-width="2.4"/>
+          <path d="M13 49h38" stroke="#e8b54a" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span>
+          <span class="lt">尼玛搜</span>
+          <span class="ls">藏地影像 · 山南风物</span>
+        </span>
+      </a>
+      <nav class="nav-main" aria-label="主导航">
+        <a href="#overview">领域概览</a>
+        <a href="#picks">精选条目</a>
+        <a href="#updates">更新动态</a>
+        <a href="#cats">分类入口</a>
+        <a href="#deep">深度解析</a>
+        <a href="#guide">观看顺序</a>
+        <a href="#faq">常见问答</a>
+        <a href="#comments">用户评论</a>
+        <a href="#news">相关资讯</a>
+        <a href="#board">热度榜</a>
+      </nav>
+      <div class="head-tools">
+        <div class="search-box">
+          <input type="search" id="siteSearch" placeholder="搜条目/拍摄地" aria-label="站内搜索条目或拍摄地">
+          <span class="si">⌕</span>
+        </div>
+        <a class="btn-sub" href="#submit">投稿</a>
+        <button class="hamburger" id="hamburger" aria-label="打开导航菜单" aria-expanded="false" aria-controls="drawer">☰</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="hero-tag">藏地影像 · 山南在地记录</span>
+      <h1>尼玛搜</h1>
+      <p class="lede">汇聚<b>藏地纪录片、非遗手作短片、高原旅行实拍与在地访谈</b>四类条目，标注拍摄地、摄制方与发布时间，帮你在看之前先分清哪些是立项拍摄、哪些是个人随手记录。</p>
+      <div class="hero-actions">
+        <a class="primary" href="#picks">看精选条目</a>
+        <a class="ghost" href="#cats">按分类浏览</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>218</b>条影像条目</div>
+        <div><b>36</b>处拍摄地</div>
+        <div><b>11月6日</b>最近更新</div>
+        <div><b>7</b>个非遗作坊</div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 400 300" role="presentation">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2f5d8a"/>
+            <stop offset="1" stop-color="#122a43"/>
+          </linearGradient>
+          <linearGradient id="mt" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c9d6e2"/>
+            <stop offset="1" stop-color="#7f9ab5"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="300" rx="16" fill="url(#sky)"/>
+        <circle cx="300" cy="82" r="34" fill="#e8b54a" opacity=".9"/>
+        <path d="M0 210 L70 138 L128 190 L186 124 L250 196 L310 150 L400 214 L400 300 L0 300Z" fill="url(#mt)" opacity=".85"/>
+        <path d="M0 238 L86 196 L160 232 L238 186 L320 228 L400 200 L400 300 L0 300Z" fill="#122a43" opacity=".92"/>
+        <g class="spin" style="transform-origin:104px 96px;">
+          <circle cx="104" cy="96" r="26" fill="none" stroke="#e8b54a" stroke-width="2" opacity=".55"/>
+          <circle cx="104" cy="96" r="38" fill="none" stroke="#e8b54a" stroke-width="1.2" opacity=".28" stroke-dasharray="5 7"/>
+        </g>
+        <path d="M60 268h280" stroke="#e8b54a" stroke-width="2.4" opacity=".6" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap layout">
+
+  <!-- 左频道 -->
+  <aside class="channel-side">
+    <div class="cs-title">频道索引</div>
+    <nav aria-label="频道索引">
+      <a href="#overview" class="cur"><i>01</i>领域概览</a>
+      <a href="#picks"><i>02</i>精选条目</a>
+      <a href="#updates"><i>03</i>更新动态</a>
+      <a href="#cats"><i>04</i>分类入口</a>
+      <a href="#deep"><i>05</i>深度解析</a>
+      <a href="#guide"><i>06</i>观看顺序</a>
+      <a href="#faq"><i>07</i>常见问答</a>
+      <a href="#comments"><i>08</i>用户评论</a>
+      <a href="#news"><i>09</i>相关资讯</a>
+      <a href="#rec"><i>10</i>相关推荐</a>
+      <a href="#board"><i>11</i>热度榜</a>
+      <a href="#submit"><i>12</i>投稿征集</a>
+    </nav>
+    <div class="cs-note">
+      <b>本周拍摄地</b>
+      扎囊县德吉新村氆氇作坊、乃东区昌珠镇、浪卡子县白地乡。
+    </div>
+  </aside>
+
+  <!-- 中主栏 -->
+  <main class="main-col" id="main">
+
+    <!-- 01 概览 -->
+    <section class="section" id="overview">
+      <div class="sec-head">
+        <div class="kicker">Area Overview</div>
+        <h2>藏地影像与山南风物的内容版图</h2>
+        <p class="sub">按摄制主体、拍摄地与内容类型三个方向铺开。</p>
+      </div>
+      <div class="overview">
+        <p>藏地影像大体分成四支。一支是立项纪录片，多为电视台或文化机构牵头，有拍摄周期与受访者授权，比如《雅砻河谷的春耕》标注西藏广播影视制作中心2026年3月开机、历时五个月；一支是非遗手作短片，题材集中在氆氇织造、藏纸制作、木碗雕刻与藏香配比，片长通常8至15分钟；一支是高原旅行实拍，从拉萨出发沿G318、S307、G219三条线铺开，羊湖、普莫雍错、勒布沟是常拍点；还有一支是口述访谈，受访者多为牧民、匠人和乡镇教师。</p>
+        <p>山南在这几支里出现频率最高。乃东区昌珠镇、扎囊县德吉新村、琼结县下水乡、曲松县下江乡，这几个地名在片尾字幕里反复出现。原因不复杂：山南是西藏粮食主产区之一，青稞、油菜、氆氇这三样生产场景四季都有可拍内容，摄制者不需要长时间等待。2026年9月至10月间，站内新增的36条山南条目里，27条与这三类生产活动有关。</p>
+        <p>值得留意的还有拍摄规格的变化。2025年之前，个人账号上传的藏地旅行视频多数是1080P手机直出，同期声少；2026年下半年起，一批用微单加无线麦的创作者开始给藏语对话配藏汉双语字幕，《山南牧场访谈》就是其中一条，片头标了受访者所属乡镇和访谈日期。这类条目比无人机的空镜更能看出真实生活状态。</p>
+        <div class="kwline">
+          <span>立项纪录片</span><span>氆氇织造</span><span>藏纸制作</span><span>羊湖环线</span><span>藏汉双语字幕</span><span>口述访谈</span><span>青稞春耕</span><span>无人机转场</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 精选 -->
+    <section class="section" id="picks">
+      <div class="sec-head">
+        <div class="kicker">Selected</div>
+        <h2>值得点开的 9 条影像条目</h2>
+        <p class="sub">覆盖纪录片、手作短片、旅行实拍与访谈四类。</p>
+      </div>
+      <div class="card-grid" id="cardGrid">
+
+        <article class="card" data-key="雅砻河谷的春耕 纪录片 乃东 春耕">
+          <div class="thumb"><img src="https://picsum.photos/seed/yalongspring01/400/300" width="400" height="300" loading="lazy" alt="乃东区昌珠镇春耕现场，拖拉机翻耕青稞田"><span class="badge">纪录片</span></div>
+          <div class="body">
+            <h3>雅砻河谷的春耕</h3>
+            <p class="desc">西藏广播影视制作中心2026年3月开机，跟拍乃东区昌珠镇三户人家的整地、播种与灌溉，片长47分钟，藏汉双语字幕。</p>
+            <div class="tags"><span>乃东区</span><span>青稞</span><span>春耕</span></div>
+            <div class="meta"><span>★ 9.1</span><span>11月6日更新</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="扎囊氆氇 次仁卓嘎 手作 织机">
+          <div class="thumb"><img src="https://picsum.photos/seed/zhanangpulu02/400/300" width="400" height="300" loading="lazy" alt="扎囊县德吉新村作坊内木织机与氆氇布卷"><span class="badge">非遗手作</span></div>
+          <div class="body">
+            <h3>扎囊氆氇·次仁卓嘎的一天</h3>
+            <p class="desc">跟拍织娘次仁卓嘎从清晨理线到傍晚收机，片尾列出作坊名称与织机编号，可对照扎囊县非遗名录查证。</p>
+            <div class="tags"><span>扎囊县</span><span>氆氇</span><span>织机编号</span></div>
+            <div class="meta"><span>★ 8.8</span><span>11月4日更新</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="羊湖 S307 环线 路况 实拍">
+          <div class="thumb"><img src="https://picsum.photos/seed/yanghuroad03/400/300" width="400" height="300" loading="lazy" alt="羊卓雍错湖畔S307公路弯道与湖面"><span class="badge">旅行实拍</span></div>
+          <div class="body">
+            <h3>羊湖环线 S307 段两日实拍</h3>
+            <p class="desc">记录了白地乡至浪卡子县城的路面状况，标注了沥青罩面路段与限速牌位置，2026年10月底拍摄。</p>
+            <div class="tags"><span>浪卡子县</span><span>S307</span><span>路况</span></div>
+            <div class="meta"><span>★ 8.5</span><span>11月2日更新</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="山南牧场访谈 牧民 双语字幕 措美">
+          <div class="thumb"><img src="https://picsum.photos/seed/pasturetalk04/400/300" width="400" height="300" loading="lazy" alt="措美县牧场牧民接受访谈，牦牛群在背景中"><span class="badge">口述访谈</span></div>
+          <div class="body">
+            <h3>山南牧场访谈：冬季转场前的三天</h3>
+            <p class="desc">措美县古堆乡牧民格桑次仁讲述转场路线与草场分配，片头标注访谈日期2026年10月18日。</p>
+            <div class="tags"><span>措美县</span><span>转场</span><span>藏汉双语</span></div>
+            <div class="meta"><span>★ 8.9</span><span>10月29日更新</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="藏纸 雪拉 造纸 作坊 狼毒草">
+          <div class="thumb"><img src="https://picsum.photos/seed/tibetpaper05/400/300" width="400" height="300" loading="lazy" alt="雪拉藏纸作坊内晾晒的纸浆与木框"><span class="badge">非遗手作</span></div>
+          <div class="body">
+            <h3>雪拉藏纸：狼毒草到成纸的十一道工序</h3>
+            <p class="desc">逐道拍完采料、去皮、煮料、捣浆、抄纸、晾晒，第7分钟起有抄纸师傅口述配比。</p>
+            <div class="tags"><span>雪拉村</span><span>狼毒草</span><span>抄纸</span></div>
+            <div class="meta"><span>★ 8.7</span><span>10月26日更新</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="勒布沟 门巴 木碗 错那 手作">
+          <div class="thumb"><img src="https://picsum.photos/seed/lebugou06/400/300" width="400" height="300" loading="lazy" alt="勒布沟门巴族匠人手工旋制木碗"><span class="badge">非遗手作</span></div>
+          <div class="body">
+            <h3>勒布沟木碗：旋刀下的三小时</h3>
+            <p class="desc">错那县勒布沟门巴族匠人次旺多吉用桦木旋制木碗，全程无剪辑，可看清刀具角度与木纹走向。</p>
+            <div class="tags"><span>错那县</span><span>门巴族</span><span>木碗</span></div>
+            <div class="meta"><span>★ 8.6</span><span>10月23日更新</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="普莫雍错 推瓦村 冰面 高原 实拍">
+          <div class="thumb"><img src="https://picsum.photos/seed/pumoyong07/400/300" width="400" height="300" loading="lazy" alt="普莫雍错湖畔推瓦村与远处雪山"><span class="badge">旅行实拍</span></div>
+          <div class="body">
+            <h3>推瓦村：海拔5070米的冬储与冰面</h3>
+            <p class="desc">拍下推瓦村入冬前的牛粪饼码放、青稞炒制与湖面初冰，含村民口述的取水点位置。</p>
+            <div class="tags"><span>浪卡子县</span><span>推瓦村</span><span>冬储</span></div>
+            <div class="meta"><span>★ 8.4</span><span>10月21日更新</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="琼结 下水乡 藏香 配比 手作">
+          <div class="thumb"><img src="https://picsum.photos/seed/qiongjie08/400/300" width="400" height="300" loading="lazy" alt="琼结县下水乡藏香作坊内晾晒的香条"><span class="badge">非遗手作</span></div>
+          <div class="body">
+            <h3>琼结藏香：柏木、藏红花与麝香草的配比</h3>
+            <p class="desc">作坊主公布了三组配比数字，其中一组与传统配方相差约两成，片中有解释。</p>
+            <div class="tags"><span>琼结县</span><span>藏香</span><span>配比</span></div>
+            <div class="meta"><span>★ 8.3</span><span>10月18日更新</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="加查 桑日 山路 实拍 转场">
+          <div class="thumb"><img src="https://picsum.photos/seed/jiachashanri09/400/300" width="400" height="300" loading="lazy" alt="加查至桑日山路，峡谷与弯道"><span class="badge">旅行实拍</span></div>
+          <div class="body">
+            <h3>加查到桑日：两小时山路的真实车程</h3>
+            <p class="desc">片中两分钟无人机转场对应实地约两小时，作者在片尾补了塌方点与错车点位置。</p>
+            <div class="tags"><span>加查县</span><span>桑日县</span><span>山路</span></div>
+            <div class="meta"><span>★ 8.2</span><span>10月15日更新</span></div>
+          </div>
+        </article>
+
+      </div>
+      <div class="no-result" id="noResult">没有匹配的条目。换个关键词试试，比如“氆氇”“羊湖”“藏纸”。</div>
+    </section>
+
+    <!-- 03 更新 -->
+    <section class="section" id="updates">
+      <div class="sec-head">
+        <div class="kicker">Updates</div>
+        <h2>近三十天更新记录</h2>
+        <p class="sub">按上线时间倒序，含修订与补拍。</p>
+      </div>
+      <div class="updates">
+        <ol>
+          <li class="it"><div class="date"><b>11-06</b>2026</div><div class="txt"><strong>《雅砻河谷的春耕》完整版上线</strong><span>较10月点映版增加12分钟灌溉段落与片尾受访者名单。</span></div></li>
+          <li class="it"><div class="date"><b>11-04</b>2026</div><div class="txt"><strong>扎囊氆氇手作短片新增 7 条</strong><span>其中4条来自德吉新村同一作坊，含两位新织娘的工位记录。</span></div></li>
+          <li class="it"><div class="date"><b>11-02</b>2026</div><div class="txt"><strong>羊湖环线路况实拍补拍 S307 段</strong><span>新增沥青罩面完成路段与三处限速牌位置。</span></div></li>
+          <li class="it"><div class="date"><b>10-29</b>2026</div><div class="txt"><strong>《山南牧场访谈》上线藏汉双语字幕版</strong><span>补充受访者格桑次仁所属乡镇与访谈日期标注。</span></div></li>
+          <li class="it"><div class="date"><b>10-26</b>2026</div><div class="txt"><strong>雪拉藏纸工序短片修订</strong><span>原第7分钟口述段落补入配比数字，替换了模糊镜头。</span></div></li>
+          <li class="it"><div class="date"><b>10-23</b>2026</div><div class="txt"><strong>勒布沟木碗条目新增旋刀特写</strong><span>补拍近景素材，可看清刀刃与木纹夹角。</span></div></li>
+          <li class="it"><div class="date"><b>10-21</b>2026</div><div class="txt"><strong>推瓦村冬储实拍上线</strong><span>含牛粪饼码放、青稞炒制与取水点口述。</span></div></li>
+          <li class="it"><div class="date"><b>10-18</b>2026</div><div class="txt"><strong>琼结藏香配比短片上线</strong><span>公布三组配比，其中一组与传统配方相差约两成。</span></div></li>
+          <li class="it"><div class="date"><b>10-15</b>2026</div><div class="txt"><strong>加查至桑日山路实拍上线</strong><span>片尾补入塌方点与错车点位置说明。</span></div></li>
+          <li class="it"><div class="date"><b>10-12</b>2026</div><div class="txt"><strong>昌珠镇口述访谈第二批整理完成</strong><span>共5位受访者，累计录音时长6小时40分。</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 04 分类 -->
+    <section class="section" id="cats">
+      <div class="sec-head">
+        <div class="kicker">Categories</div>
+        <h2>八个分类入口</h2>
+        <p class="sub">点击可按类型筛选上方精选条目。</p>
+      </div>
+      <div class="cat-grid" id="catGrid">
+        <button class="cat-btn on" data-cat="all"><strong>全部条目</strong><span>不加筛选</span><em>218 条</em></button>
+        <button class="cat-btn" data-cat="纪录片"><strong>立项纪录片</strong><span>电视台与文化机构牵头</span><em>34 条</em></button>
+        <button class="cat-btn" data-cat="非遗手作"><strong>非遗手作短片</strong><span>氆氇、藏纸、木碗、藏香</span><em>61 条</em></button>
+        <button class="cat-btn" data-cat="旅行实拍"><strong>高原旅行实拍</strong><span>G318、S307、G219 沿线</span><em>82 条</em></button>
+        <button class="cat-btn" data-cat="口述访谈"><strong>口述与访谈</strong><span>牧民、匠人、乡镇教师</span><em>27 条</em></button>
+        <button class="cat-btn" data-cat="all"><strong>青稞与春耕</strong><span>农事记录集中方向</span><em>19 条</em></button>
+        <button class="cat-btn" data-cat="all"><strong>羊湖环线</strong><span>白地乡至浪卡子县城</span><em>23 条</em></button>
+        <button class="cat-btn" data-cat="all"><strong>藏语字幕条目</strong><span>含藏汉双语字幕</span><em>44 条</em></button>
+      </div>
+    </section>
+
+    <!-- 05 深度解析 -->
+    <section class="section" id="deep">
+      <div class="sec-head">
+        <div class="kicker">Deep Read</div>
+        <h2>同一条山路，三种拍法差在哪</h2>
+        <p class="sub">以羊湖环线与加查—桑日山路为样本，拆开看判断依据。</p>
+      </div>
+      <div class="deep">
+        <h3>一、立项片、手作片、旅行实拍的分工</h3>
+        <p>三类片子的判断标准不一样，混着看容易误判。立项纪录片看的是拍摄周期与授权，片尾字幕里有没有制作单位、受访者姓名、拍摄起止时间，这是硬指标。《雅砻河谷的春耕》片尾列了西藏广播影视制作中心、2026年3月至8月的拍摄时间，以及三户受访者全名，这类信息可查。</p>
+        <p>手作短片看的是工序完整度。一条氆氇短片如果只拍了织布机上的成品，没拍理线、上机、收边，那只能算展示，不算记录。《扎囊氆氇·次仁卓嘎的一天》从清晨理线拍到傍晚收机，片尾还列了作坊名称与织机编号，这个编号能和扎囊县非遗名录里的登记信息对上。</p>
+        <p>旅行实拍看的是拍摄时间与路况标注。同一条S307，2025年10月拍的视频里还有一段砂石路，2026年9月以后拍的已经是沥青罩面，车程差40分钟左右。片子里不写拍摄月份，路况信息就失效。</p>
+
+        <h3>二、一条山路视频的可靠性拆解</h3>
+        <p>把“能不能当路况参考”拆成几项可核对的东西，比笼统说“参考价值有限”更有用。以《羊湖环线 S307 段两日实拍》为例：</p>
+        <table class="cmp">
+          <thead><tr><th>核对项</th><th>这条片子的情况</th><th>判断影响</th></tr></thead>
+          <tbody>
+            <tr><td>拍摄月份</td><td>片中标注2026年10月27日—28日</td><td>雨季已过，塌方信息不适用</td></tr>
+            <tr><td>行车记录方式</td><td>车头固定机位＋GPS轨迹截图</td><td>可对照里程，转场少</td></tr>
+            <tr><td>限速与检查站</td><td>标了3处限速牌、1处检查站</td><td>可预估停留时间</td></tr>
+            <tr><td>住宿与补给</td><td>只拍了白地乡一处加油站</td><td>补给信息不完整</td></tr>
+            <tr><td>天气与能见度</td><td>两日均晴天，湖面能见度好</td><td>雪天路况无参考</td></tr>
+          </tbody>
+        </table>
+        <p>五项里缺一项，可靠性就打折。缺拍摄月份，路况可能已经变了；缺行车记录方式，两分钟转场可能对应两小时山路。反过来，五项齐全的片子，即使画质一般，参考价值也高于4K空镜合集。</p>
+
+        <h3>三、藏语同期声与字幕的实际差异</h3>
+        <p>藏语方言差异大，卫藏、康巴、安多三种口音在同一个词上发音可以完全不同。卫藏方言内部，拉萨话与山南话在部分声母上也有区别。《山南牧场访谈》里格桑次仁说的是山南一带口音，片头标了“措美县古堆乡”，字幕组在藏文转写时保留了当地读音，汉文字幕则做了意译，两者不完全对等。</p>
+        <div class="fact"><b>可核对的细节：</b>该片第14分22秒，受访者说“草场按户分，不按人头”，藏文字幕直译是“草场按户分配”，汉文字幕写成“草场以户为单位划分”，意思一致，但藏文保留了“不按人头”这层否定，汉文没有显式译出。</div>
+        <p>做对照时，藏文与汉文要分开看，不能拿汉文字幕反推原话。有字幕不等于翻译准确，但至少有转写底稿可查，比无字幕的同期声更经得起核对。</p>
+
+        <h3>四、手作短片里的配比数字该信几分</h3>
+        <p>《琼结藏香：柏木、藏红花与麝香草的配比》公布了三种配比，其中一组与传统配方相差约两成。片子没有说明差异来源，只在第9分钟由作坊主提到“近两年原料品质有变化”。这属于当事人回应，不是已公开事实，也不能直接当行业标准。</p>
+        <ul>
+          <li>已公开事实：三种配比的原料名称与克数，片中逐项报出。</li>
+          <li>当事人回应：作坊主解释差异原因是原料品质变化。</li>
+          <li>缺失项：没有第三方检测，没有对比其他作坊的配方。</li>
+        </ul>
+        <p>把它当“某一个作坊在2026年10月的做法”来用是合适的，当“藏香通用配比”来用就过了。同类的氆氇、藏纸短片也有这个问题：工序可以看，配比与用量要留余地。</p>
+      </div>
+    </section>
+
+    <!-- 06 指南 -->
+    <section class="section" id="guide">
+      <div class="sec-head">
+        <div class="kicker">Watch Order</div>
+        <h2>四条观看路径与判断依据</h2>
+        <p class="sub">按入门、手作、路况、访谈四条线排序。</p>
+      </div>
+      <div class="guide">
+        <div class="guide-item">
+          <div class="num">1</div>
+          <div><h4>先看立项纪录片打底</h4><p>《雅砻河谷的春耕》47分钟，把乃东区一年的农事节奏走了一遍。看完再刷其他农事短片，能分出哪些是补拍、哪些是同期记录。</p></div>
+        </div>
+        <div class="guide-item">
+          <div class="num">2</div>
+          <div><h4>手作片按工序完整度排</h4><p>雪拉藏纸十一道工序拍全了，优先看；只拍成品的藏香短片放后面。判断标准是片中有没有出现工具与手部特写，以及片尾有没有作坊信息。</p></div>
+        </div>
+        <div class="guide-item">
+          <div class="num">3</div>
+          <div><h4>路况片认准拍摄月份</h4><p>2026年9月以后的S307实拍才反映沥青罩面后的路况。2025年的片子只能看风景，车程与限速都过时了。</p></div>
+        </div>
+        <div class="guide-item">
+          <div class="num">4</div>
+          <div><h4>访谈片对照藏汉字幕看</h4><p>《山南牧场访谈》藏文与汉文字幕有意译差异，对照看能发现原话里的否定与限定，只看汉文字幕会漏掉。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 FAQ -->
+    <section class="section" id="faq">
+      <div class="sec-head">
+        <div class="kicker">FAQ</div>
+        <h2>六个常被问到的问题</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>藏地纪录片和旅行vlog的区别在哪？</summary>
+          <div class="ans">纪录片通常有立项单位和拍摄周期，《雅砻河谷的春耕》标注了西藏广播影视制作中心2026年3月开机、历时五个月；旅行vlog多为个人账号一机拍摄，单条时长10—20分钟，缺少同期录音和受访者授权说明。片尾字幕是最快的分辨入口。</div>
+        </details>
+        <details>
+          <summary>山南风物短片为什么常出现青稞和氆氇？</summary>
+          <div class="ans">山南是西藏粮食主产区之一，乃东、扎囊一带的青稞种植与氆氇织造是当地常见生产场景，摄制者取景方便，观众也更容易识别地域。2026年9月至10月新增的36条山南条目里，27条与这两类生产活动有关。</div>
+        </details>
+        <details>
+          <summary>非遗手作影像怎么看拍摄地是否真实？</summary>
+          <div class="ans">看片尾是否标注作坊名称与手艺人姓名，例如《扎囊氆氇·次仁卓嘎的一天》片尾列出扎囊县德吉新村作坊与织机编号，这类信息比画面里的经幡更可靠。织机编号还能与县非遗名录登记信息对照。</div>
+        </details>
+        <details>
+          <summary>高原旅行实拍里哪些信息最容易失真？</summary>
+          <div class="ans">海拔与路况。部分2026年10月发布的羊湖环线视频仍沿用旧路基里程，实际S307部分路段已完成沥青罩面，通行时间比视频所述缩短约40分钟。拍片月份不写，路况信息基本作废。</div>
+        </details>
+        <details>
+          <summary>藏语同期声条目需要字幕吗？</summary>
+          <div class="ans">需要。藏语方言差异大，卫藏、康巴、安多口音在同一个词上发音不同，《山南牧场访谈》采用藏汉双语字幕，并在片头注明受访者所属乡镇。只看汉文字幕会漏掉原话里的否定与限定。</div>
+        </details>
+        <details>
+          <summary>短片里的转场镜头能当路况参考吗？</summary>
+          <div class="ans">不能直接当路况参考。转场多用无人机或延时拍摄，压缩了实际车程，《加查到桑日》一片中两分钟转场对应实地约两小时山路，且未标注雨季塌方点。要看车程，找车头固定机位加GPS轨迹的片子。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 08 评论 -->
+    <section class="section" id="comments">
+      <div class="sec-head">
+        <div class="kicker">Comments</div>
+        <h2>十六条观众留言</h2>
+        <p class="sub">围绕具体条目与类型，保留中性评价。</p>
+      </div>
+      <div class="comment-list">
+        <div class="cmt"><div class="who"><span class="av">扎</span><span class="name">扎西平措</span><span class="time">11-07</span></div>《雅砻河谷的春耕》灌溉那段比点映版好，水渠分水口拍清楚了，我们村也是这么分的。</div>
+        <div class="cmt"><div class="who"><span class="av">青</span><span class="name">青稞粒</span><span class="time">11-06</span></div>氆氇那7条新的看了，有两条同一个工位换了个角度，内容重复度有点高。</div>
+        <div class="cmt"><div class="who"><span class="av">羊</span><span class="name">羊湖老司机</span><span class="time">11-05</span></div>S307沥青罩面那段是对的，10月26号我自己跑过，白地乡过去一路好走。片子里三处限速牌位置也准。</div>
+        <div class="cmt"><div class="who"><span class="av">木</span><span class="name">木碗不圆</span><span class="time">11-04</span></div>勒布沟旋木碗那条，刀具角度给得够近，看了两遍还是觉得三小时旋一个太快了。</div>
+        <div class="cmt"><div class="who"><span class="av">雪</span><span class="name">雪拉纸浆</span><span class="time">11-03</span></div>藏纸那条第7分钟口述配比，师傅说的是湿料重量还是干料？片子里没讲清，这个差别不小。</div>
+        <div class="cmt"><div class="who"><span class="av">措</span><span class="name">措美牧人</span><span class="time">11-02</span></div>格桑次仁说的“按户分不按人头”，我们这边也是这规矩。汉文字幕确实把那句否定省了。</div>
+        <div class="cmt"><div class="who"><span class="av">加</span><span class="name">加查路上</span><span class="time">11-01</span></div>两分钟转场对两小时山路，说得太对了。第一次看还以为很近，结果开了一上午。</div>
+        <div class="cmt"><div class="who"><span class="av">琼</span><span class="name">琼结香客</span><span class="time">10-30</span></div>藏香配比差两成那个，作坊主解释是原料变了，但没说是哪批原料，看完还是不敢照着做。</div>
+        <div class="cmt"><div class="who"><span class="av">推</span><span class="name">推瓦村口</span><span class="time">10-28</span></div>牛粪饼码放那段拍得实在，比一堆雪山空镜有用多了。</div>
+        <div class="cmt"><div class="who"><span class="av">洛</span><span class="name">洛扎小张</span><span class="time">10-27</span></div>能不能多拍点洛扎方向的？山南条目里洛扎、错那的太少，基本都在乃东和扎囊打转。</div>
+        <div class="cmt"><div class="who"><span class="av">路</span><span class="name">路过康巴</span><span class="time">10-26</span></div>字幕做得比去年那批好，至少标了乡镇。以前有些片子连县都不写。</div>
+        <div class="cmt"><div class="who"><span class="av">半</span><span class="name">半截话</span><span class="time">10-25</span></div>就是来看看。羊湖去过三次了，片子拍得还行。</div>
+        <div class="cmt"><div class="who"><span class="av">青</span><span class="name">青朴山下</span><span class="time">10-24</span></div>《山南牧场访谈》14分22秒那句，我特意倒回去对藏文字幕，确实汉文少了一层意思。</div>
+        <div class="cmt"><div class="who"><span class="av">打</span><span class="name">打铁匠人</span><span class="time">10-22</span></div>手作类片子节奏偏慢，一条十五分钟有点熬，能剪到八分钟更好。</div>
+        <div class="cmt"><div class="who"><span class="av">乃</span><span class="name">乃东阿佳</span><span class="time">10-20</span></div>昌珠镇口述那批什么时候上线？家里老人想听听同村人的录音。</div>
+        <div class="cmt"><div class="who"><span class="av">风</span><span class="name">风大不拍</span><span class="time">10-19</span></div>无人机转场看多了审美疲劳，还是喜欢车头机位，颠簸但真实。</div>
+      </div>
+    </section>
+
+    <!-- 09 资讯 -->
+    <section class="section" id="news">
+      <div class="sec-head">
+        <div class="kicker">News</div>
+        <h2>六条相关资讯</h2>
+      </div>
+      <div class="news-list">
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/newsyalong/600/400" width="600" height="400" loading="lazy" alt="《雅砻河谷的春耕》点映现场，观众与主创交流">
+          <div><div class="nd">2026年11月6日 · 影像上线</div><h4>《雅砻河谷的春耕》完整版上线，增补12分钟灌溉段落</h4><p>完整版片长47分钟，片尾新增三户受访者全名与拍摄起止时间，点映版中被剪掉的灌溉分水口镜头全部恢复。</p></div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/newszhanang/600/400" width="600" height="400" loading="lazy" alt="扎囊县德吉新村氆氇作坊织机">
+          <div><div class="nd">2026年11月4日 · 手作记录</div><h4>扎囊德吉新村氆氇作坊新增两位织娘工位记录</h4><p>新增7条短片里4条出自同一作坊，织机编号从原登记的第11至14号扩展到第15、16号，对应两位2026年新入行织娘。</p></div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/newss307/600/400" width="600" height="400" loading="lazy" alt="S307羊湖段沥青罩面后的公路">
+          <div><div class="nd">2026年11月2日 · 路况补拍</div><h4>S307羊湖段补拍完成，白地乡至浪卡子县城车程缩短约40分钟</h4><p>补拍覆盖沥青罩面完成路段，标注了3处限速牌与1处检查站位置，拍摄日期为10月27日至28日，两天均为晴天。</p></div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/newspasture/600/400" width="600" height="400" loading="lazy" alt="措美县古堆乡牧场转场前的牦牛群">
+          <div><div class="nd">2026年10月29日 · 访谈上线</div><h4>《山南牧场访谈》藏汉双语版发布，补充受访者乡镇标注</h4><p>片头新增“措美县古堆乡”与访谈日期2026年10月18日，藏文字幕保留当地读音，第14分22秒的否定句汉文未显式译出。</p></div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/newspaper/600/400" width="600" height="400" loading="lazy" alt="雪拉藏纸作坊抄纸工序与晾晒木框">
+          <div><div class="nd">2026年10月26日 · 条目修订</div><h4>雪拉藏纸短片修订口述段落，补入配比数字</h4><p>原第7分钟口述段落镜头模糊，修订版替换为近景并补入湿料、干料两组数字，但未说明称量基准。</p></div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/newsqiongjie/600/400" width="600" height="400" loading="lazy" alt="琼结县下水乡藏香作坊晾晒的香条">
+          <div><div class="nd">2026年10月18日 · 手作记录</div><h4>琼结藏香短片公布三组配比，其中一组与传统配方差约两成</h4><p>作坊主在第9分钟解释差异来自近两年原料品质变化，片中没有第三方检测，也未对比其他作坊配方。</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="section" id="rec">
+      <div class="sec-head">
+        <div class="kicker">More</div>
+        <h2>按方向找条目</h2>
+      </div>
+      <div class="rec-tags">
+        <a href="#picks">昌珠镇口述访谈</a>
+        <a href="#picks">勒布沟门巴木碗</a>
+        <a href="#picks">普莫雍错推瓦村冬储</a>
+        <a href="#picks">琼结下水乡藏香</a>
+        <a href="#picks">加查至桑日山路</a>
+        <a href="#picks">G219 洛扎段实拍</a>
+        <a href="#picks">藏语方言字幕对照</a>
+        <a href="#picks">青稞收割与打场</a>
+      </div>
+    </section>
+
+    <!-- 11 榜单 -->
+    <section class="section" id="board">
+      <div class="sec-head">
+        <div class="kicker">Ranking</div>
+        <h2>本周播放榜</h2>
+        <p class="sub">统计区间 11月1日—11月7日。</p>
+      </div>
+      <div class="rank">
+        <ol>
+          <li><span class="rk">1</span><span class="rname">雅砻河谷的春耕（完整版）</span><span class="rval"><b>4.2万</b> 播放</span></li>
+          <li><span class="rk">2</span><span class="rname">羊湖环线 S307 段两日实拍</span><span class="rval"><b>3.6万</b> 播放</span></li>
+          <li><span class="rk">3</span><span class="rname">扎囊氆氇·次仁卓嘎的一天</span><span class="rval"><b>2.9万</b> 播放</span></li>
+          <li><span class="rk">4</span><span class="rname">山南牧场访谈：冬季转场前的三天</span><span class="rval"><b>2.4万</b> 播放</span></li>
+          <li><span class="rk">5</span><span class="rname">雪拉藏纸：十一道工序</span><span class="rval"><b>1.9万</b> 播放</span></li>
+          <li><span class="rk">6</span><span class="rname">勒布沟木碗：旋刀下的三小时</span><span class="rval"><b>1.6万</b> 播放</span></li>
+          <li><span class="rk">7</span><span class="rname">推瓦村：海拔5070米的冬储</span><span class="rval"><b>1.3万</b> 播放</span></li>
+          <li><span class="rk">8</span><span class="rname">加查到桑日：两小时山路</span><span class="rval"><b>1.1万</b> 播放</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 12 投稿 -->
+    <section class="section" id="submit">
+      <div class="submit-band">
+        <div>
+          <h3>投稿与影像征集</h3>
+          <p>接受山南、拉萨、日喀则方向的纪录片、手作记录与路况实拍。路况类请注明拍摄月份与行车方式；手作类请附作坊名称与手艺人姓名。</p>
+        </div>
+        <div class="act">
+          <a href="#submit">上传作品</a>
+          <a class="ghost" href="#comments">参与讨论</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右侧辅助栏 -->
+  <aside class="aside-col">
+    <div class="aside-card">
+      <h3>实时热度</h3>
+      <ol class="hot-list">
+        <li><span class="n">1</span><div><a href="#picks">雅砻河谷的春耕</a><span class="hh">11月6日完整版</span></div></li>
+        <li><span class="n">2</span><div><a href="#picks">羊湖 S307 路况</a><span class="hh">10月底补拍</span></div></li>
+        <li><span class="n">3</span><div><a href="#picks">扎囊氆氇手作</a><span class="hh">新增 7 条</span></div></li>
+        <li><span class="n">4</span><div><a href="#picks">山南牧场访谈</a><span class="hh">双语字幕版</span></div></li>
+        <li><span class="n">5</span><div><a href="#picks">雪拉藏纸工序</a><span class="hh">10月26日修订</span></div></li>
+      </ol>
+    </div>
+    <div class="aside-card">
+      <h3>最近更新</h3>
+      <div class="upd-mini">
+        <div><b>11-06</b><span>春耕完整版上线</span></div>
+        <div><b>11-04</b><span>氆氇新增 7 条</span></div>
+        <div><b>11-02</b><span>S307 路况补拍</span></div>
+        <div><b>10-29</b><span>牧场访谈双语版</span></div>
+        <div><b>10-26</b><span>藏纸口述修订</span></div>
+      </div>
+    </div>
+    <div class="aside-card">
+      <h3>拍摄地标签</h3>
+      <div class="tag-cloud">
+        <a href="#picks">乃东区昌珠镇</a>
+        <a href="#picks">扎囊县德吉新村</a>
+        <a href="#picks">浪卡子县白地乡</a>
+        <a href="#picks">措美县古堆乡</a>
+        <a href="#picks">错那县勒布沟</a>
+        <a href="#picks">琼结县下水乡</a>
+        <a href="#picks">曲松县下江乡</a>
+        <a href="#picks">加查县</a>
+        <a href="#picks">桑日县</a>
+      </div>
+    </div>
+    <div class="aside-card">
+      <h3>本日可核对项</h3>
+      <div class="upd-mini">
+        <div><b>3</b><span>条含作坊编号</span></div>
+        <div><b>5</b><span>条含拍摄月份</span></div>
+        <div><b>2</b><span>条含藏汉字幕对照</span></div>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg viewBox="0 0 64 64" role="img" aria-label="尼玛搜页脚标识">
+            <rect width="64" height="64" rx="14" fill="#e8b54a"/>
+            <circle cx="32" cy="29" r="13" fill="none" stroke="#122a43" stroke-width="3"/>
+            <path d="M19 29h26M32 16v26" stroke="#122a43" stroke-width="2.4"/>
+            <path d="M13 49h38" stroke="#122a43" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <span>尼玛搜</span>
+        </div>
+        <p class="fdesc">影像条目覆盖2025年1月至2026年11月，以8—50分钟的纪录片、手作记录、路况实拍与口述访谈为主，更新节奏为每周3至6条，路况类条目随季节补拍。</p>
+      </div>
+      <div>
+        <h4>内容类型</h4>
+        <ul>
+          <li><a href="#picks">立项纪录片</a></li>
+          <li><a href="#picks">非遗手作短片</a></li>
+          <li><a href="#picks">高原旅行实拍</a></li>
+          <li><a href="#picks">口述与访谈</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>按拍摄地</h4>
+        <ul>
+          <li><a href="#picks">乃东区</a></li>
+          <li><a href="#picks">扎囊县</a></li>
+          <li><a href="#picks">浪卡子县</a></li>
+          <li><a href="#picks">错那县</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><a href="#submit">投稿与上传</a></li>
+          <li><a href="#comments">观众评论</a></li>
+          <li><a href="#board">本周播放榜</a></li>
+          <li><a href="#updates">更新记录</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>尼玛搜 · 藏地影像与山南风物内容索引。条目信息为示例整理，摄制方、作坊与日期以片尾字幕为准。</span>
+      <span class="upd">最近更新 2026年11月6日</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<div class="drawer-mask" id="mask"></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="移动端导航">
+  <h3>导航 <button id="drawerClose" aria-label="关闭菜单">×</button></h3>
+  <nav>
+    <a href="#overview">领域概览</a>
+    <a href="#picks">精选条目</a>
+    <a href="#updates">更新动态</a>
+    <a href="#cats">分类入口</a>
+    <a href="#deep">深度解析</a>
+    <a href="#guide">观看顺序</a>
+    <a href="#faq">常见问答</a>
+    <a href="#comments">用户评论</a>
+    <a href="#news">相关资讯</a>
+    <a href="#rec">相关推荐</a>
+    <a href="#board">热度榜</a>
+    <a href="#submit">投稿征集</a>
+  </nav>
+  <div class="dnote">拍摄地标签：乃东、扎囊、浪卡子、措美、错那、琼结。路况条目请以拍摄月份为准。</div>
+</div>
+
+<script>
+(function(){
+  var stickyHeader = document.querySelector('.sticky-top');
+  function syncOffset(){
+    var h = stickyHeader ? stickyHeader.getBoundingClientRect().height : 104;
+    document.documentElement.style.setProperty('--sticky-h', Math.round(h) + 'px');
+  }
+  syncOffset();
+  window.addEventListener('resize', syncOffset);
+
+  /* 回顶部 */
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 500){ toTop.classList.add('show'); }
+    else{ toTop.classList.remove('show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 抽屉 */
+  var mask = document.getElementById('mask');
+  var drawer = document.getElementById('drawer');
+  var ham = document.getElementById('hamburger');
+  var dClose = document.getElementById('drawerClose');
+  function openDrawer(){
+    drawer.classList.add('show'); mask.classList.add('show');
+    ham.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+    dClose.focus();
+  }
+  function closeDrawer(){
+    drawer.classList.remove('show'); mask.classList.remove('show');
+    ham.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+    ham.focus();
+  }
+  ham.addEventListener('click', openDrawer);
+  dClose.addEventListener('click', closeDrawer);
+  mask.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('nav a').forEach(function(a){
+    a.addEventListener('click', closeDrawer);
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && drawer.classList.contains('show')){ closeDrawer(); }
+  });
+
+  /* 频道高亮 */
+  var secs = [].slice.call(document.querySelectorAll('main .section[id]'));
+  var chLinks = [].slice.call(document.querySelectorAll('.channel-side a'));
+  function highlight(){
+    var pos = window.scrollY + (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--sticky-h')) || 104) + 30;
+    var curId = secs.length ? secs[0].id : '';
+    secs.forEach(function(s){ if(s.offsetTop <= pos){ curId = s.id; } });
+    chLinks.forEach(function(a){
+      a.classList.toggle('cur', a.getAttribute('href') === '#' + curId);
+    });
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  highlight();
+
+  /* 搜索 */
+  var input = document.getElementById('siteSearch');
+  var cards = [].slice.call(document.querySelectorAll('#cardGrid .card'));
+  var noResult = document.getElementById('noResult');
+  input.addEventListener('input', function(){
+    var q = input.value.trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(c){
+      var key = (c.getAttribute('data-key') || '').toLowerCase();
+      var text = c.textContent.toLowerCase();
+      var hit = !q || key.indexOf(q) > -1 || text.indexOf(q) > -1;
+      c.style.display = hit ? '' : 'none';
+      if(hit){ shown++; }
+    });
+    noResult.classList.toggle('show', shown === 0);
+  });
+
+  /* 分类筛选 */
+  var catBtns = [].slice.call(document.querySelectorAll('#catGrid .cat-btn'));
+  catBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      catBtns.forEach(function(b){ b.classList.remove('on'); });
+      btn.classList.add('on');
+      var cat = btn.getAttribute('data-cat');
+      var shown = 0;
+      cards.forEach(function(c){
+        var hit = (cat === 'all') || (c.getAttribute('data-key') || '').indexOf(cat) > -1;
+        c.style.display = hit ? '' : 'none';
+        if(hit){ shown++; }
+      });
+      noResult.classList.toggle('show', shown === 0);
+      if(cat !== 'all'){
+        var t = document.getElementById('picks');
+        if(t){ t.scrollIntoView({behavior:'smooth', block:'start'}); }
+      }
+    });
+  });
+})();
+</script>
+</body>
+        </html>
