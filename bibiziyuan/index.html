@@ -1,0 +1,1523 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>比比资源稳定源站 - 影视资源索引与更新追踪</title>
+<meta name="description" content="比比资源稳定源站汇聚高清影视、剧集、动漫、纪录片与网盘资源索引，追踪2026年11月更新条目、清晰度版本差异与下载渠道，适合追剧党和资源收藏者查阅。">
+<meta name="keywords" content="比比资源稳定源站">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f2b3d'/%3E%3Cpath d='M18 22h28v6H18zM18 32h18v6H18zM18 42h24v6H18z' fill='%234fc3f7'/%3E%3Ccircle cx='48' cy='42' r='7' fill='%23ffb74d'/%3E%3C/svg%3E">
+<style>
+:root{
+  --c-main:#0f2b3d;
+  --c-main-soft:#1c4a63;
+  --c-main-light:#e3f0f7;
+  --c-accent:#ffb74d;
+  --c-accent-deep:#e08e1b;
+  --c-bg:#f4f7f9;
+  --c-panel:#ffffff;
+  --c-text:#1b2a33;
+  --c-text-2:#4a5f6b;
+  --c-text-3:#7e929d;
+  --c-line:#dbe5ea;
+  --r-card:12px;
+  --r-btn:8px;
+  --r-tag:5px;
+  --r-banner:16px;
+  --sh:0 1px 3px rgba(15,43,61,.07),0 4px 14px rgba(15,43,61,.05);
+  --sh-hover:0 4px 10px rgba(15,43,61,.10),0 10px 26px rgba(15,43,61,.09);
+  --ann-h:40px;
+  --head-h:62px;
+  --offset:calc(var(--ann-h) + var(--head-h) + 14px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--c-bg);color:var(--c-text);line-height:1.72;font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--c-accent-deep);outline-offset:2px}
+section[id],div[id]{scroll-margin-top:var(--offset)}
+
+/* ============ 吸顶公告条 ============ */
+.annbar{
+  position:sticky;top:0;z-index:60;height:var(--ann-h);
+  background:linear-gradient(90deg,#0f2b3d,#1d5573 60%,#0f2b3d);
+  color:#d8ecf7;display:flex;align-items:center;overflow:hidden;
+  font-size:13px;letter-spacing:.2px;
+}
+.annbar .ann-inner{
+  max-width:1340px;margin:0 auto;padding:0 18px;width:100%;
+  display:flex;align-items:center;gap:18px;white-space:nowrap;overflow:hidden;
+}
+.ann-brand{font-weight:700;color:#fff;flex:none}
+.ann-brand span{color:var(--c-accent)}
+.ann-track{display:flex;gap:26px;overflow:hidden;text-overflow:ellipsis}
+.ann-track b{color:var(--c-accent);font-weight:600}
+.ann-track em{font-style:normal;color:#fff}
+
+/* ============ 页头 ============ */
+.site-head{
+  position:sticky;top:var(--ann-h);z-index:55;
+  height:var(--head-h);
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--c-line);
+}
+.head-inner{
+  max-width:1340px;margin:0 auto;height:100%;padding:0 18px;
+  display:flex;align-items:center;gap:22px;
+}
+.logo{display:flex;align-items:center;gap:9px;flex:none}
+.logo svg{width:32px;height:32px;flex:none}
+.logo-txt{font-size:17px;font-weight:800;color:var(--c-main);letter-spacing:.3px;white-space:nowrap}
+.main-nav{display:flex;gap:4px;flex:1;min-width:0;overflow:hidden}
+.main-nav a{
+  padding:7px 11px;border-radius:var(--r-btn);font-size:14px;color:var(--c-text-2);
+  white-space:nowrap;transition:.18s;
+}
+.main-nav a:hover{background:var(--c-main-light);color:var(--c-main-soft)}
+.head-actions{display:flex;align-items:center;gap:10px;flex:none}
+.search-wrap{position:relative}
+.search-wrap input{
+  width:186px;height:36px;border:1px solid var(--c-line);border-radius:var(--r-btn);
+  padding:0 34px 0 12px;font-size:13.5px;background:#f8fbfc;color:var(--c-text);
+  transition:.18s;
+}
+.search-wrap input:focus{border-color:var(--c-main-soft);background:#fff;outline:none;box-shadow:0 0 0 3px rgba(28,74,99,.12)}
+.search-wrap button{
+  position:absolute;right:4px;top:4px;width:28px;height:28px;border:none;border-radius:6px;
+  background:var(--c-main-soft);color:#fff;display:grid;place-items:center;
+}
+.search-wrap button svg{width:15px;height:15px}
+.search-wrap button:hover{background:var(--c-main)}
+.search-msg{
+  position:absolute;top:42px;left:0;right:0;background:#fff;border:1px solid var(--c-line);
+  border-radius:var(--r-btn);box-shadow:var(--sh-hover);padding:10px 12px;font-size:13px;
+  color:var(--c-text-2);z-index:70;
+}
+.search-msg[hidden]{display:none}
+.btn-ghost{
+  height:36px;padding:0 14px;border-radius:var(--r-btn);border:1px solid var(--c-main-soft);
+  background:#fff;color:var(--c-main-soft);font-size:13.5px;font-weight:600;transition:.18s;
+}
+.btn-ghost:hover{background:var(--c-main-soft);color:#fff}
+.hamburger{
+  display:none;width:38px;height:38px;border:1px solid var(--c-line);border-radius:var(--r-btn);
+  background:#fff;color:var(--c-main);place-items:center;
+}
+.hamburger svg{width:20px;height:20px}
+
+/* ============ 首屏 ============ */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 380px at 12% -10%,rgba(79,195,247,.28),transparent 62%),
+    radial-gradient(700px 340px at 92% 110%,rgba(255,183,77,.22),transparent 60%),
+    linear-gradient(150deg,#0f2b3d 0%,#17455e 52%,#0e2736 100%);
+  color:#eaf5fb;
+}
+.hero-inner{
+  max-width:1340px;margin:0 auto;padding:52px 18px 56px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.6px;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);
+  padding:5px 12px;border-radius:999px;color:#cfe8f5;margin-bottom:18px;
+}
+.hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--c-accent);display:block;animation:pulse 2.6s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.82)}}
+.hero h1{
+  font-size:clamp(28px,3.6vw,44px);line-height:1.24;letter-spacing:1px;
+  color:#fff;font-weight:800;margin-bottom:16px;
+}
+.hero-desc{font-size:15.5px;line-height:1.85;color:#c3dceb;max-width:610px;margin-bottom:24px}
+.hero-desc b{color:#ffd691;font-weight:600}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.btn-main{
+  display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 22px;border-radius:var(--r-btn);
+  background:var(--c-accent);color:#20180a;font-weight:700;font-size:14.5px;border:none;
+  transition:.18s;
+}
+.btn-main:hover{background:#ffc76b;transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,183,77,.28)}
+.btn-line{
+  display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:var(--r-btn);
+  border:1px solid rgba(255,255,255,.4);color:#eaf5fb;font-size:14.5px;font-weight:600;
+  background:rgba(255,255,255,.06);transition:.18s;
+}
+.btn-line:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.7)}
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.16);padding-top:20px}
+.hero-stats div{font-size:12.5px;color:#9fc0d3;letter-spacing:.3px}
+.hero-stats strong{display:block;font-size:22px;color:#fff;font-weight:800;letter-spacing:.5px}
+.hero-visual{position:relative;height:320px}
+.hv-panel{
+  position:absolute;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--r-card);backdrop-filter:blur(6px);
+}
+.hv-a{inset:8px 60px 120px 0;padding:16px}
+.hv-a .row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.hv-dot{width:9px;height:9px;border-radius:50%;background:var(--c-accent)}
+.hv-dot.g{background:#64d2a4}
+.hv-dot.b{background:#6fb8ff}
+.hv-bar{height:9px;border-radius:5px;background:rgba(255,255,255,.24);margin-bottom:9px}
+.hv-bar.w70{width:70%}
+.hv-bar.w45{width:45%;background:rgba(255,255,255,.16)}
+.hv-bar.w88{width:88%;background:rgba(255,255,255,.16)}
+.hv-b{right:0;bottom:0;width:238px;padding:14px 16px}
+.hv-b .t{font-size:12px;color:#a8c8da;margin-bottom:10px;letter-spacing:.5px}
+.hv-mini{display:flex;justify-content:space-between;font-size:12.5px;color:#e2f2fa;padding:5px 0;border-bottom:1px dashed rgba(255,255,255,.13)}
+.hv-mini:last-child{border-bottom:none}
+.hv-mini span:last-child{color:var(--c-accent);font-weight:600}
+.hv-ring{
+  position:absolute;right:26px;top:0;width:104px;height:104px;border-radius:50%;
+  border:2px dashed rgba(255,183,77,.5);
+  display:grid;place-items:center;font-size:11.5px;color:#ffd691;text-align:center;line-height:1.4;
+  animation:spin 26s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hv-ring span{animation:spin 26s linear infinite reverse}
+
+/* ============ 容器 & 三栏 ============ */
+.wrap{max-width:1340px;margin:0 auto;padding:0 18px}
+.layout{
+  display:grid;grid-template-columns:180px minmax(0,1fr) 268px;gap:26px;
+  align-items:start;padding:32px 0 10px;
+}
+.col-left{position:sticky;top:calc(var(--offset) + 4px);display:flex;flex-direction:column;gap:16px}
+.channel-box{background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--r-card);padding:14px 12px;box-shadow:var(--sh)}
+.channel-box h2{font-size:13px;color:var(--c-text-3);letter-spacing:1.2px;font-weight:700;margin-bottom:10px;padding-left:8px}
+.chan-list{display:flex;flex-direction:column;gap:2px}
+.chan-list a{
+  display:flex;align-items:center;justify-content:space-between;gap:6px;
+  padding:8px 10px;border-radius:var(--r-btn);font-size:13.8px;color:var(--c-text-2);transition:.16s;
+}
+.chan-list a em{font-style:normal;font-size:11.5px;color:var(--c-text-3);background:var(--c-bg);padding:1px 6px;border-radius:4px}
+.chan-list a:hover,.chan-list a.active{background:var(--c-main-light);color:var(--c-main-soft);font-weight:600}
+.chan-list a:hover em,.chan-list a.active em{background:#fff;color:var(--c-main-soft)}
+.left-note{
+  background:linear-gradient(160deg,#e9f4f9,#dcecf5);border:1px solid #cfe3ee;
+  border-radius:var(--r-card);padding:14px;font-size:12.5px;color:var(--c-text-2);line-height:1.7;
+}
+.left-note b{color:var(--c-main-soft);display:block;margin-bottom:5px;font-size:13px}
+
+/* 右侧栏 */
+.col-right{position:sticky;top:calc(var(--offset) + 4px);display:flex;flex-direction:column;gap:18px}
+.side-card{background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--r-card);box-shadow:var(--sh);overflow:hidden}
+.side-head{
+  padding:12px 15px;border-bottom:1px solid var(--c-line);font-size:14px;font-weight:700;
+  color:var(--c-main);display:flex;align-items:center;gap:8px;
+}
+.side-head::before{content:"";width:3px;height:14px;border-radius:2px;background:var(--c-accent-deep)}
+.rank-list{padding:6px 0 10px}
+.rank-item{
+  display:flex;gap:9px;padding:7px 15px;font-size:13.4px;align-items:flex-start;transition:.15s;
+}
+.rank-item:hover{background:#f6fafc}
+.rank-no{
+  flex:none;width:18px;height:18px;border-radius:5px;background:var(--c-bg);color:var(--c-text-3);
+  font-size:11.5px;font-weight:700;display:grid;place-items:center;margin-top:3px;
+}
+.rank-item:nth-child(1) .rank-no{background:var(--c-accent);color:#241a06}
+.rank-item:nth-child(2) .rank-no{background:#c3d6e0;color:#1c3a4b}
+.rank-item:nth-child(3) .rank-no{background:#e6cba8;color:#4a3418}
+.rank-name{color:var(--c-text);line-height:1.5}
+.rank-name small{display:block;color:var(--c-text-3);font-size:11.5px;margin-top:1px}
+.side-list{padding:8px 15px 14px;display:flex;flex-direction:column;gap:9px}
+.side-list a{font-size:13.3px;color:var(--c-text-2);line-height:1.55;display:block;padding-left:12px;position:relative}
+.side-list a::before{content:"";position:absolute;left:0;top:8px;width:4px;height:4px;border-radius:50%;background:var(--c-main-soft)}
+.side-list a:hover{color:var(--c-main-soft);text-decoration:underline}
+.side-submit{background:linear-gradient(155deg,#12405a,#0e2c3d);color:#dceef8;padding:16px;border-radius:var(--r-card)}
+.side-submit h3{font-size:14px;color:#fff;margin-bottom:6px}
+.side-submit p{font-size:12.5px;color:#a9c8da;line-height:1.65;margin-bottom:12px}
+.side-submit button{
+  width:100%;height:36px;border:none;border-radius:var(--r-btn);background:var(--c-accent);
+  color:#241a06;font-weight:700;font-size:13px;transition:.18s;
+}
+.side-submit button:hover{background:#ffc76b}
+
+/* ============ 板块通用 ============ */
+.block{margin-bottom:38px}
+.block-head{margin-bottom:16px}
+.block-head h2{
+  font-size:20px;font-weight:800;color:var(--c-main);letter-spacing:.3px;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.block-head h2 .tagline{
+  font-size:12px;font-weight:600;color:var(--c-main-soft);background:var(--c-main-light);
+  padding:2px 9px;border-radius:999px;letter-spacing:.3px;
+}
+.block-head p{font-size:13.5px;color:var(--c-text-3);margin-top:6px}
+
+/* 概览 */
+.overview-panel{
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--r-card);
+  padding:22px 24px;box-shadow:var(--sh);
+}
+.overview-panel p{font-size:14.4px;color:var(--c-text-2);line-height:1.9;margin-bottom:12px}
+.overview-panel p:last-child{margin-bottom:0}
+.overview-panel strong{color:var(--c-main);font-weight:700}
+.ov-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;padding-top:16px;border-top:1px dashed var(--c-line)}
+.ov-chips span{
+  font-size:12.5px;color:var(--c-main-soft);background:#eef6fa;border:1px solid #d5e7f0;
+  padding:4px 11px;border-radius:999px;
+}
+
+/* 卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--r-card);
+  overflow:hidden;box-shadow:var(--sh);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sh-hover)}
+.card-thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:#dfe9ee}
+.card-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.card:hover .card-thumb img{transform:scale(1.04)}
+.card-type{
+  position:absolute;left:9px;top:9px;font-size:11.5px;font-weight:700;letter-spacing:.4px;
+  background:rgba(15,43,61,.86);color:#e9f5fb;padding:2px 8px;border-radius:var(--r-tag);
+}
+.card-hot{
+  position:absolute;right:9px;top:9px;font-size:11.5px;font-weight:700;
+  background:var(--c-accent);color:#241a06;padding:2px 8px;border-radius:var(--r-tag);
+}
+.card-body{padding:13px 15px 15px;display:flex;flex-direction:column;flex:1}
+.card-body h3{font-size:15px;font-weight:700;color:var(--c-text);line-height:1.45;margin-bottom:7px}
+.card-body p{font-size:13px;color:var(--c-text-2);line-height:1.68;flex:1;margin-bottom:10px}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.card-tags span{font-size:11.5px;color:var(--c-text-3);background:var(--c-bg);padding:2px 7px;border-radius:var(--r-tag)}
+.card-meta{
+  display:flex;justify-content:space-between;align-items:center;font-size:12px;
+  color:var(--c-text-3);border-top:1px dashed var(--c-line);padding-top:9px;
+}
+.card-meta b{color:var(--c-accent-deep);font-weight:700;font-size:13px}
+
+/* 更新列表 */
+.update-list{display:flex;flex-direction:column;gap:0;background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--r-card);overflow:hidden;box-shadow:var(--sh)}
+.upd-row{
+  display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;
+  padding:13px 18px;border-bottom:1px solid var(--c-line);transition:.16s;
+}
+.upd-row:last-child{border-bottom:none}
+.upd-row:hover{background:#f7fbfd}
+.upd-date{font-size:12.5px;color:var(--c-text-3);font-variant-numeric:tabular-nums;line-height:1.4}
+.upd-date b{display:block;color:var(--c-main-soft);font-size:14px;font-weight:700}
+.upd-main h3{font-size:14.6px;font-weight:700;color:var(--c-text);margin-bottom:3px}
+.upd-main p{font-size:13px;color:var(--c-text-2);line-height:1.6}
+.upd-badge{
+  font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;
+  background:#eef6fa;color:var(--c-main-soft);border:1px solid #d5e7f0;
+}
+.upd-badge.new{background:#fff3e0;color:#a35a00;border-color:#ffdfb0}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cat-item{
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--r-card);
+  padding:15px 16px;box-shadow:var(--sh);transition:.18s;display:block;
+}
+.cat-item:hover{border-color:var(--c-main-soft);transform:translateY(-2px);box-shadow:var(--sh-hover)}
+.cat-item h3{font-size:14.6px;font-weight:700;color:var(--c-main);margin-bottom:5px;display:flex;align-items:center;justify-content:space-between}
+.cat-item h3 em{font-style:normal;font-size:11.5px;color:var(--c-text-3);font-weight:500}
+.cat-item p{font-size:12.5px;color:var(--c-text-2);line-height:1.6}
+
+/* 深度解析 */
+.deep{
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--r-card);
+  padding:26px 28px;box-shadow:var(--sh);
+}
+.deep h3{
+  font-size:17px;font-weight:800;color:var(--c-main);margin:22px 0 10px;
+  padding-left:12px;border-left:4px solid var(--c-accent);line-height:1.4;
+}
+.deep h3:first-child{margin-top:0}
+.deep p{font-size:14.4px;color:var(--c-text-2);line-height:1.92;margin-bottom:12px}
+.deep ul{margin:0 0 14px 4px;padding-left:20px}
+.deep li{font-size:14.2px;color:var(--c-text-2);line-height:1.85;margin-bottom:7px}
+.deep li b{color:var(--c-main)}
+.deep blockquote{
+  background:#f2f8fb;border-left:4px solid var(--c-main-soft);border-radius:0 var(--r-btn) var(--r-btn) 0;
+  padding:13px 18px;font-size:13.8px;color:var(--c-main-soft);line-height:1.8;margin:14px 0;
+}
+.deep .cmp-table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.4px}
+.deep .cmp-table th,.deep .cmp-table td{border:1px solid var(--c-line);padding:9px 12px;text-align:left;vertical-align:top}
+.deep .cmp-table th{background:#f0f7fa;color:var(--c-main);font-weight:700;font-size:13px}
+.deep .cmp-table td{color:var(--c-text-2)}
+
+/* 时间线 */
+.timeline{position:relative;padding-left:24px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(#c9e0eb,#e8f1f5)}
+.tl-item{position:relative;padding-bottom:18px}
+.tl-item::before{
+  content:"";position:absolute;left:-24px;top:6px;width:10px;height:10px;border-radius:50%;
+  background:#fff;border:2px solid var(--c-main-soft);
+}
+.tl-item.hot::before{background:var(--c-accent);border-color:var(--c-accent-deep)}
+.tl-item time{font-size:12.5px;color:var(--c-text-3);font-variant-numeric:tabular-nums}
+.tl-item h4{font-size:14.4px;font-weight:700;color:var(--c-text);margin:3px 0 4px}
+.tl-item p{font-size:13.2px;color:var(--c-text-2);line-height:1.65}
+
+/* 指南步骤 */
+.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.guide-step{
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--r-card);
+  padding:17px 18px;box-shadow:var(--sh);position:relative;
+}
+.guide-step .num{
+  width:26px;height:26px;border-radius:8px;background:var(--c-main);color:#fff;font-size:13px;
+  font-weight:800;display:grid;place-items:center;margin-bottom:10px;
+}
+.guide-step h3{font-size:14.8px;font-weight:700;color:var(--c-main);margin-bottom:6px}
+.guide-step p{font-size:13.2px;color:var(--c-text-2);line-height:1.72}
+.guide-step p b{color:var(--c-accent-deep)}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-list details{
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--r-card);
+  box-shadow:var(--sh);overflow:hidden;
+}
+.faq-list summary{
+  list-style:none;cursor:pointer;padding:14px 44px 14px 18px;font-size:14.6px;font-weight:700;
+  color:var(--c-main);position:relative;line-height:1.55;transition:.16s;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{
+  content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  font-size:19px;font-weight:400;color:var(--c-main-soft);transition:.2s;
+}
+.faq-list details[open] summary::after{content:"−"}
+.faq-list summary:hover{background:#f5fafc}
+.faq-list .faq-body{padding:0 18px 16px;font-size:13.8px;color:var(--c-text-2);line-height:1.85}
+.faq-list .faq-body b{color:var(--c-main)}
+
+/* 评论 */
+.cmt-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cmt{
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--r-card);
+  padding:13px 15px;box-shadow:var(--sh);display:flex;gap:11px;
+}
+.cmt-ava{
+  width:34px;height:34px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-size:13px;font-weight:700;color:#fff;
+}
+.cmt-body{min-width:0}
+.cmt-top{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+.cmt-top b{font-size:13.2px;color:var(--c-main)}
+.cmt-top time{font-size:11.5px;color:var(--c-text-3)}
+.cmt-body p{font-size:13.2px;color:var(--c-text-2);line-height:1.72;word-break:break-word}
+.cmt-body p em{font-style:normal;color:var(--c-accent-deep);font-weight:600}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.news-item{
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--r-card);
+  padding:16px 18px;box-shadow:var(--sh);transition:.18s;
+}
+.news-item:hover{box-shadow:var(--sh-hover);border-color:#c8dde8}
+.news-item time{font-size:12px;color:var(--c-text-3);font-variant-numeric:tabular-nums}
+.news-item h3{font-size:14.8px;font-weight:700;color:var(--c-text);margin:5px 0 7px;line-height:1.5}
+.news-item p{font-size:13.2px;color:var(--c-text-2);line-height:1.7}
+
+/* 相关推荐 标签 */
+.rel-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rel-tags a{
+  font-size:13.2px;padding:7px 14px;border-radius:var(--r-btn);background:var(--c-panel);
+  border:1px solid var(--c-line);color:var(--c-text-2);box-shadow:var(--sh);transition:.16s;
+}
+.rel-tags a:hover{background:var(--c-main);color:#fff;border-color:var(--c-main)}
+
+/* 补充: 可信度分层 */
+.trust-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.trust-col{background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--r-card);box-shadow:var(--sh);overflow:hidden}
+.trust-col header{padding:12px 16px;font-size:13.6px;font-weight:700;color:#fff}
+.trust-col.t1 header{background:#2e7d5b}
+.trust-col.t2 header{background:#b07b18}
+.trust-col.t3 header{background:#8a4b4b}
+.trust-col ul{padding:12px 16px 16px;list-style:none;display:flex;flex-direction:column;gap:9px}
+.trust-col li{font-size:13px;color:var(--c-text-2);line-height:1.65;padding-left:14px;position:relative}
+.trust-col li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--c-main-soft)}
+.trust-col li b{color:var(--c-text)}
+
+/* 投稿互动区 */
+.interact{
+  background:linear-gradient(155deg,#0f2b3d,#17455e);border-radius:var(--r-banner);
+  padding:30px 30px;color:#e3f1f9;display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center;
+}
+.interact h2{font-size:20px;color:#fff;margin-bottom:9px;font-weight:800}
+.interact p{font-size:13.8px;color:#b3d0e0;line-height:1.85;margin-bottom:14px}
+.interact ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.interact li{font-size:13.2px;color:#cfe6f2;padding-left:16px;position:relative}
+.interact li::before{content:"›";position:absolute;left:2px;color:var(--c-accent);font-weight:700}
+.interact-form{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-card);padding:18px}
+.interact-form label{display:block;font-size:12.5px;color:#a9c8da;margin-bottom:5px}
+.interact-form input,.interact-form select{
+  width:100%;height:36px;border-radius:var(--r-btn);border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.9);padding:0 10px;font-size:13px;color:#1b2a33;margin-bottom:11px;
+}
+.interact-form button{
+  width:100%;height:38px;border:none;border-radius:var(--r-btn);background:var(--c-accent);
+  color:#241a06;font-weight:700;font-size:13.5px;transition:.18s;
+}
+.interact-form button:hover{background:#ffc76b}
+.form-note{font-size:11.5px;color:#8fb0c3;margin-top:9px;line-height:1.5}
+
+/* ============ 页尾 ============ */
+.site-foot{background:#0c2230;color:#a9c4d3;margin-top:44px}
+.foot-inner{max-width:1340px;margin:0 auto;padding:38px 18px 22px}
+.foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:28px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot-brand{display:flex;align-items:center;gap:9px;margin-bottom:11px}
+.foot-brand svg{width:30px;height:30px}
+.foot-brand b{color:#fff;font-size:16px;font-weight:800;letter-spacing:.3px}
+.foot-desc{font-size:13px;line-height:1.8;color:#8fadbe;max-width:330px}
+.foot-col h3{font-size:13.2px;color:#fff;font-weight:700;margin-bottom:11px;letter-spacing:.4px}
+.foot-col a{display:block;font-size:12.8px;color:#8fadbe;line-height:2;transition:.15s}
+.foot-col a:hover{color:var(--c-accent)}
+.foot-bottom{padding-top:18px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.3px;color:#6f8d9e;line-height:1.7}
+.foot-bottom span{max-width:760px}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:50%;
+  background:var(--c-main);color:#fff;border:none;display:grid;place-items:center;
+  box-shadow:0 6px 18px rgba(15,43,61,.3);opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:.24s;z-index:50;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top:hover{background:var(--c-main-soft)}
+.to-top svg{width:19px;height:19px}
+
+/* 遮罩 */
+.overlay{
+  position:fixed;inset:0;background:rgba(10,26,36,.5);z-index:54;opacity:0;visibility:hidden;transition:.22s;
+}
+.overlay.show{opacity:1;visibility:visible}
+
+/* ============ 响应式 ============ */
+@media (max-width:1180px){
+  .layout{grid-template-columns:170px minmax(0,1fr);gap:22px}
+  .col-right{grid-column:1/-1;position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-inner{grid-template-columns:1fr;gap:26px}
+  .hero-visual{height:250px}
+  .foot-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:1024px){
+  .main-nav{display:none}
+  .hamburger{display:grid}
+  .search-wrap input{width:150px}
+  .layout{grid-template-columns:1fr}
+  .col-left{position:static;grid-row:2}
+  .channel-box h2{display:none}
+  .chan-list{flex-direction:row;flex-wrap:wrap;gap:6px}
+  .chan-list a{padding:6px 12px;background:var(--c-bg);border-radius:999px;font-size:13px}
+  .chan-list a em{display:none}
+  .left-note{display:none}
+  .col-right{grid-template-columns:1fr 1fr}
+  .guide-grid,.cmt-grid,.news-grid{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:1fr}
+  .interact{grid-template-columns:1fr;padding:24px 20px}
+  .deep{padding:20px 18px}
+}
+@media (max-width:740px){
+  :root{--ann-h:36px;--head-h:58px}
+  body{font-size:14.5px}
+  .ann-inner{gap:10px;padding:0 12px;font-size:12px}
+  .ann-track{gap:16px}
+  .head-inner{gap:10px;padding:0 12px}
+  .logo-txt{font-size:15px}
+  .search-wrap input{width:118px;font-size:13px}
+  .btn-ghost{display:none}
+  .hero-inner{padding:34px 14px 38px}
+  .hero-desc{font-size:14.2px}
+  .hero-stats{gap:18px}
+  .hero-stats strong{font-size:19px}
+  .hero-visual{height:210px}
+  .hv-b{width:190px;padding:11px 13px}
+  .hv-ring{width:82px;height:82px;font-size:10.5px;right:10px}
+  .wrap{padding:0 12px}
+  .layout{padding:22px 0 6px}
+  .card-grid,.cat-grid,.col-right{grid-template-columns:1fr}
+  .upd-row{grid-template-columns:52px minmax(0,1fr);gap:10px;padding:12px 14px}
+  .upd-badge{grid-column:2;justify-self:start}
+  .overview-panel{padding:17px 16px}
+  .block-head h2{font-size:18px}
+  .deep h3{font-size:16px}
+  .deep .cmp-table{font-size:12.5px}
+  .deep .cmp-table th,.deep .cmp-table td{padding:7px 8px}
+  .foot-top{grid-template-columns:1fr;gap:20px}
+  .to-top{right:14px;bottom:16px;width:40px;height:40px}
+  .interact-form{padding:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+/* 移动抽屉 */
+.mobile-drawer{
+  position:fixed;top:calc(var(--ann-h) + var(--head-h));left:0;right:0;z-index:56;
+  background:#fff;border-bottom:1px solid var(--c-line);box-shadow:0 12px 26px rgba(15,43,61,.16);
+  max-height:0;overflow:hidden;transition:max-height .26s ease;
+}
+.mobile-drawer.open{max-height:70vh;overflow-y:auto}
+.mobile-drawer nav{display:flex;flex-direction:column;padding:8px 12px 14px}
+.mobile-drawer nav a{
+  padding:11px 12px;border-radius:var(--r-btn);font-size:14.5px;color:var(--c-text-2);
+  border-bottom:1px solid #f0f5f8;
+}
+.mobile-drawer nav a:last-child{border-bottom:none}
+.mobile-drawer nav a:hover{background:var(--c-main-light);color:var(--c-main-soft)}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="annbar" id="annbar">
+  <div class="ann-inner">
+    <div class="ann-brand">比比资源稳定源站<span>·</span>更新</div>
+    <div class="ann-track">
+      <span><b>11-08</b> <em>《雾港档案》第二季 4K 内嵌版上架</em></span>
+      <span><b>11-07</b> <em>纪录片《冻土之下》三集全</em></span>
+      <span><b>+18</b> <em>本周新增剧集条目</em></span>
+      <span><b>11-06</b> <em>动漫《青鳞记》第 9 话熟肉</em></span>
+    </div>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="site-head">
+  <div class="head-inner">
+    <a class="logo" href="/#top" aria-label="比比资源稳定源站首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#0f2b3d"/>
+        <path d="M18 22h28v6H18zM18 32h18v6H18zM18 42h24v6H18z" fill="#4fc3f7"/>
+        <circle cx="48" cy="42" r="7" fill="#ffb74d"/>
+      </svg>
+      <span class="logo-txt">比比资源稳定源站</span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选条目</a>
+      <a href="/#updates">更新动态</a>
+      <a href="/#cats">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">观看指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#reviews">用户评论</a>
+    </nav>
+    <div class="head-actions">
+      <div class="search-wrap">
+        <input type="search" id="siteSearch" placeholder="搜条目名 / 类型" aria-label="站内搜索条目">
+        <button type="button" id="searchBtn" aria-label="搜索">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+        </button>
+        <div class="search-msg" id="searchMsg" hidden></div>
+      </div>
+      <a class="btn-ghost" href="/#submit">投稿通道</a>
+      <button class="hamburger" id="hamburger" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mobileDrawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer" aria-label="移动端导航">
+  <nav>
+    <a href="/#overview">领域概览</a>
+    <a href="/#picks">精选条目</a>
+    <a href="/#updates">更新动态</a>
+    <a href="/#cats">分类入口</a>
+    <a href="/#deep">深度解析</a>
+    <a href="/#guide">观看指南</a>
+    <a href="/#faq">常见问题</a>
+    <a href="/#reviews">用户评论</a>
+    <a href="/#news">相关资讯</a>
+    <a href="/#timeline">更新时间线</a>
+    <a href="/#trust">版本可信度</a>
+    <a href="/#submit">投稿互动</a>
+  </nav>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><i></i> 2026 年 11 月 8 日 · 条目索引已同步</div>
+      <h1>比比资源稳定源站</h1>
+      <p class="hero-desc">
+        这里汇总 <b>高清剧集、动画、纪录片、电影与网盘直链</b> 的条目索引，按清晰度、字幕组、压制版本和发布渠道分档记录。
+        追剧党可以查某部剧更新到第几集、4K 与 1080P 差在哪、哪条链是内嵌字幕；资源收藏者能对照版本清单，判断一份文件值不值得留。
+      </p>
+      <div class="hero-cta">
+        <a class="btn-main" href="/#updates">查看 11 月更新
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn-line" href="/#cats">按类型筛选</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>1,286</strong>在库条目</div>
+        <div><strong>74</strong>本周新增</div>
+        <div><strong>9</strong>字幕组版本</div>
+        <div><strong>11-08</strong>最近同步</div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hv-panel hv-a">
+        <div class="row"><span class="hv-dot"></span><span style="font-size:12.5px;color:#cfe6f2">正同步：雾港档案 S02E06</span></div>
+        <div class="hv-bar w88"></div>
+        <div class="hv-bar w70"></div>
+        <div class="hv-bar w45"></div>
+        <div class="row" style="margin-top:14px"><span class="hv-dot g"></span><span style="font-size:12.5px;color:#cfe6f2">已完成：1080P 内嵌 / 4K 外挂</span></div>
+        <div class="hv-bar w70"></div>
+        <div class="hv-bar w45"></div>
+      </div>
+      <div class="hv-panel hv-b">
+        <div class="t">今日版本清单</div>
+        <div class="hv-mini"><span>4K HDR 内嵌</span><span>3 条</span></div>
+        <div class="hv-mini"><span>1080P 中字</span><span>7 条</span></div>
+        <div class="hv-mini"><span>720P 移动端</span><span>2 条</span></div>
+        <div class="hv-mini"><span>原盘 ISO</span><span>1 条</span></div>
+      </div>
+      <div class="hv-ring"><span>索引<br>同步中</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 主体三栏 -->
+<div class="wrap">
+  <div class="layout">
+
+    <!-- 左频道索引 -->
+    <aside class="col-left" aria-label="频道索引">
+      <div class="channel-box">
+        <h2>频道索引</h2>
+        <nav class="chan-list" id="chanList" aria-label="内容频道">
+          <a href="/#overview">领域概览<em>导读</em></a>
+          <a href="/#picks">精选条目<em>12</em></a>
+          <a href="/#updates">更新动态<em>10</em></a>
+          <a href="/#cats">分类入口<em>8</em></a>
+          <a href="/#deep">深度解析<em>长文</em></a>
+          <a href="/#guide">观看指南<em>5 步</em></a>
+          <a href="/#faq">常见问题<em>6</em></a>
+          <a href="/#reviews">用户评论<em>16</em></a>
+          <a href="/#news">相关资讯<em>6</em></a>
+          <a href="/#timeline">更新时间线<em>7</em></a>
+          <a href="/#trust">版本可信度<em>3 档</em></a>
+          <a href="/#submit">投稿互动<em>开放</em></a>
+        </nav>
+      </div>
+      <div class="left-note">
+        <b>版本标记说明</b>
+        内嵌 = 字幕烧进画面；外挂 = 独立 srt/ass；WEB-DL 多为平台源，画质稳但码率偏低；REMUX 保留原盘数据，体积通常 20GB 起步。
+      </div>
+    </aside>
+
+    <!-- 中主内容 -->
+    <main>
+
+      <!-- 1 领域概览 -->
+      <section class="block" id="overview">
+        <div class="block-head">
+          <h2>影视资源索引的构成与当下看点 <span class="tagline">领域概览</span></h2>
+          <p>从条目形态、版本差异到渠道来源，先理清这个领域到底在管什么。</p>
+        </div>
+        <div class="overview-panel">
+          <p>
+            影视资源索引这件事，核心对象是<strong>条目</strong>——一部剧、一集动画、一部纪录片，而不是文件本身。一个条目下面往往挂着五六种版本：<strong>4K HDR 内嵌</strong>、<strong>1080P WEB-DL 外挂</strong>、<strong>720P 移动端压缩版</strong>、<strong>REMUX 原盘</strong>，甚至还有 <strong>x265 十位压制</strong>。同样是《雾港档案》第二季第 6 集，4K 内嵌版约 8.4GB，1080P WEB-DL 只有 1.9GB，两者在暗部噪点和夜景霓虹溢出上的差别，用 27 寸显示器就能看出来。
+          </p>
+          <p>
+            当前值得关注的方向集中在三块。剧集侧，2026 年 10 月下旬开播的悬疑剧《雾港档案》第二季进入中段，每周四更新，11 月 5 日播到第 6 集；动画侧，《青鳞记》第 9 话在 11 月 6 日放出熟肉，字幕组从三个增加到五个；纪录片侧，《冻土之下》三集全在 11 月 7 日补齐，BBC Earth 版与国内引进版在旁白和配乐上并不一致。
+          </p>
+          <p>
+            版本判断还牵涉<strong>渠道来源</strong>。iTunes 购买版带官方中字，画质稳定但更新慢半天；WEB-DL 抓取版出得快，音轨偶尔是 2.0 而非 5.1；蓝光 REMUX 要等碟片压盘，通常滞后播出 3 到 6 个月。收藏向用户更在意 REMUX 的完整性，追更向用户更在意当天能不能看到。
+          </p>
+          <div class="ov-chips">
+            <span>4K HDR 内嵌</span><span>1080P WEB-DL</span><span>REMUX 原盘</span><span>x265 十位压制</span>
+            <span>外挂 ass 字幕</span><span>蓝光碟 Rip</span><span>网盘直链</span><span>磁力索引</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 精选条目 -->
+      <section class="block" id="picks">
+        <div class="block-head">
+          <h2>近期值得留意的具体条目 <span class="tagline">精选 9 条</span></h2>
+          <p>按更新进度、版本完整度与字幕质量挑出来的条目，每条都标了具体看点。</p>
+        </div>
+        <div class="card-grid" id="pickGrid">
+          <article class="card" data-name="雾港档案 第二季">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/wugangS2/400/300" width="400" height="300" loading="lazy" alt="悬疑剧《雾港档案》第二季港口夜景剧照">
+              <span class="card-type">悬疑剧集</span><span class="card-hot">更新至 E06</span>
+            </div>
+            <div class="card-body">
+              <h3>雾港档案 第二季</h3>
+              <p>第 6 集「潮汐线」把第一季的走私案重新翻出来，片尾 8 分钟长镜头在 4K 版里能看清码头集装箱编号。1080P 版这段被压糊了。</p>
+              <div class="card-tags"><span>4K HDR</span><span>内嵌中字</span><span>每周四更新</span></div>
+              <div class="card-meta"><span>热度 9,842</span><b>8.7 分</b></div>
+            </div>
+          </article>
+
+          <article class="card" data-name="青鳞记">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/qinglinji/400/300" width="400" height="300" loading="lazy" alt="动画《青鳞记》主角持鳞片立于山脊的画面">
+              <span class="card-type">国产动画</span><span class="card-hot">第 9 话</span>
+            </div>
+            <div class="card-body">
+              <h3>青鳞记</h3>
+              <p>第 9 话换回第一季的分镜班底，打斗段落帧率从 24 提到 30。五个字幕组里「折枝」组的注释最细，龙族谱系标了 12 条脚注。</p>
+              <div class="card-tags"><span>1080P</span><span>外挂 ass</span><span>每周五</span></div>
+              <div class="card-meta"><span>热度 7,215</span><b>8.4 分</b></div>
+            </div>
+          </article>
+
+          <article class="card" data-name="冻土之下">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/dongtu/400/300" width="400" height="300" loading="lazy" alt="纪录片《冻土之下》西伯利亚永冻层航拍画面">
+              <span class="card-type">自然纪录片</span><span class="card-hot">三集全</span>
+            </div>
+            <div class="card-body">
+              <h3>冻土之下</h3>
+              <p>11 月 7 日补齐三集。引进版旁白由李立宏配音，配乐替换了原版的弦乐段落；BBC Earth 原版保留现场收音，驯鹿迁徙那段差别最明显。</p>
+              <div class="card-tags"><span>4K</span><span>双版本</span><span>BBC Earth</span></div>
+              <div class="card-meta"><span>热度 6,530</span><b>9.1 分</b></div>
+            </div>
+          </article>
+
+          <article class="card" data-name="长夜将尽">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/changye/400/300" width="400" height="300" loading="lazy" alt="电影《长夜将尽》雨夜街头对峙场景">
+              <span class="card-type">犯罪电影</span><span class="card-hot">REMUX 已出</span>
+            </div>
+            <div class="card-body">
+              <h3>长夜将尽</h3>
+              <p>蓝光 10 月 28 日压盘，REMUX 版本 32.6GB，保留 DTS-HD MA 5.1 音轨。院线版删掉的 4 分钟审讯戏在蓝光里补回来了，第 63 分钟那段。</p>
+              <div class="card-tags"><span>REMUX</span><span>DTS-HD</span><span>蓝光原盘</span></div>
+              <div class="card-meta"><span>热度 5,908</span><b>8.2 分</b></div>
+            </div>
+          </article>
+
+          <article class="card" data-name="第七号站台">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/zhan7/400/300" width="400" height="300" loading="lazy" alt="英剧《第七号站台》地铁站台昏黄灯光场景">
+              <span class="card-type">英剧</span><span class="card-hot">全 6 集</span>
+            </div>
+            <div class="card-body">
+              <h3>第七号站台</h3>
+              <p>六集限定剧，BBC One 10 月 12 日首播。国内熟肉由「镜像」组做，第 3 集有段苏格兰口音台词，注释里给了原文拼写对照。</p>
+              <div class="card-tags"><span>1080P</span><span>内嵌</span><span>限定剧</span></div>
+              <div class="card-meta"><span>热度 4,776</span><b>8.5 分</b></div>
+            </div>
+          </article>
+
+          <article class="card" data-name="海雾之上">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/haiwu/400/300" width="400" height="300" loading="lazy" alt="韩剧《海雾之上》渔船在浓雾中航行的画面">
+              <span class="card-type">韩剧</span><span class="card-hot">更新至 E10</span>
+            </div>
+            <div class="card-body">
+              <h3>海雾之上</h3>
+              <p>JTBC 水木剧，11 月 6 日播到第 10 集。前 8 集有两条时间线，第 9 集开始收束；Netflix 版比韩国本土版多 2 分钟片头前情。</p>
+              <div class="card-tags"><span>1080P</span><span>Netflix 版</span><span>双时间线</span></div>
+              <div class="card-meta"><span>热度 4,320</span><b>7.9 分</b></div>
+            </div>
+          </article>
+
+          <article class="card" data-name="铁皮心脏">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/tiepi/400/300" width="400" height="300" loading="lazy" alt="科幻动画《铁皮心脏》机械城市全景">
+              <span class="card-type">科幻动画</span><span class="card-hot">第 4 话</span>
+            </div>
+            <div class="card-body">
+              <h3>铁皮心脏</h3>
+              <p>原创科幻番，第 4 话用了整段无对白叙事。制作组在官推放出分镜稿 38 张，对照着看能发现成片砍掉了一场废料场追逐。</p>
+              <div class="card-tags"><span>1080P</span><span>原创番</span><span>无对白叙事</span></div>
+              <div class="card-meta"><span>热度 3,914</span><b>8.0 分</b></div>
+            </div>
+          </article>
+
+          <article class="card" data-name="山中来信">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/shanzhong/400/300" width="400" height="300" loading="lazy" alt="文艺片《山中来信》山区邮路与晨雾">
+              <span class="card-type">文艺电影</span><span class="card-hot">修复版</span>
+            </div>
+            <div class="card-body">
+              <h3>山中来信</h3>
+              <p>2011 年片子做了 4K 修复，10 月 31 日上线。修复版把原来偏黄的色调拉回中性，争议在于山景失去了原来的暖感，豆瓣短评区吵了三天。</p>
+              <div class="card-tags"><span>4K 修复</span><span>外挂</span><span>2011 年片</span></div>
+              <div class="card-meta"><span>热度 3,402</span><b>8.8 分</b></div>
+            </div>
+          </article>
+
+          <article class="card" data-name="极夜列车">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/jiye/400/300" width="400" height="300" loading="lazy" alt="俄剧《极夜列车》穿越雪原的列车外景">
+              <span class="card-type">俄剧</span><span class="card-hot">全 8 集</span>
+            </div>
+            <div class="card-body">
+              <h3>极夜列车</h3>
+              <p>八集悬疑，全片在摩尔曼斯克取景。字幕只有「北纬」组在做，更新慢但译文准确，第 5 集那段俄语俚语给了三条备选译法。</p>
+              <div class="card-tags"><span>1080P</span><span>内嵌</span><span>俄语原声</span></div>
+              <div class="card-meta"><span>热度 2,988</span><b>8.1 分</b></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3 更新动态 -->
+      <section class="block" id="updates">
+        <div class="block-head">
+          <h2>11 月第一周的条目更新记录 <span class="tagline">10 条</span></h2>
+          <p>按发布时间倒序，标注了版本类型与具体变化。</p>
+        </div>
+        <div class="update-list">
+          <div class="upd-row">
+            <div class="upd-date"><b>11-08</b>今天</div>
+            <div class="upd-main"><h3>《雾港档案》S02E06 4K HDR 内嵌版</h3><p>8.4GB，HEVC 编码，字幕由「潮汐」组校对，修正了 E05 里两处地名误译。</p></div>
+            <span class="upd-badge new">新版本</span>
+          </div>
+          <div class="upd-row">
+            <div class="upd-date"><b>11-08</b>今天</div>
+            <div class="upd-main"><h3>《青鳞记》第 9 话「折枝」组 ass 外挂</h3><p>附 12 条龙族谱系脚注，字体包一并提供，解决部分播放器缺字问题。</p></div>
+            <span class="upd-badge new">字幕更新</span>
+          </div>
+          <div class="upd-row">
+            <div class="upd-date"><b>11-07</b>昨天</div>
+            <div class="upd-main"><h3>《冻土之下》第三集「融线」</h3><p>引进版与 BBC Earth 原版同时上架，两版时长差 47 秒，集中在片尾 credits。</p></div>
+            <span class="upd-badge">三集全</span>
+          </div>
+          <div class="upd-row">
+            <div class="upd-date"><b>11-07</b>昨天</div>
+            <div class="upd-main"><h3>《长夜将尽》REMUX 32.6GB</h3><p>含 DTS-HD MA 5.1 与评论音轨，导演与摄影指导聊了 96 分钟。</p></div>
+            <span class="upd-badge">蓝光</span>
+          </div>
+          <div class="upd-row">
+            <div class="upd-date"><b>11-06</b></div>
+            <div class="upd-main"><h3>《海雾之上》E10 Netflix 版</h3><p>比韩国本土版多 2 分钟前情提要，正片内容一致，结尾彩蛋位置不同。</p></div>
+            <span class="upd-badge">版本差异</span>
+          </div>
+          <div class="upd-row">
+            <div class="upd-date"><b>11-06</b></div>
+            <div class="upd-main"><h3>《极夜列车》第 8 集完结</h3><p>「北纬」组补完最后两集译文，全剧 8 集 ass 打包 1.2MB。</p></div>
+            <span class="upd-badge">完结</span>
+          </div>
+          <div class="upd-row">
+            <div class="upd-date"><b>11-05</b></div>
+            <div class="upd-main"><h3>《第七号站台》第 3 集注释修订</h3><p>苏格兰口音台词补了原文拼写，共 9 处改动，替换旧 ass 即可。</p></div>
+            <span class="upd-badge">字幕修订</span>
+          </div>
+          <div class="upd-row">
+            <div class="upd-date"><b>11-04</b></div>
+            <div class="upd-main"><h3>《铁皮心脏》第 4 话分镜稿对照版</h3><p>附制作组官推 38 张分镜，标注了成片删减的废料场追逐段落。</p></div>
+            <span class="upd-badge">花絮</span>
+          </div>
+          <div class="upd-row">
+            <div class="upd-date"><b>11-02</b></div>
+            <div class="upd-main"><h3>《山中来信》4K 修复版</h3><p>色调从偏黄拉回中性，片长与 2011 年公映版一致，1 小时 47 分。</p></div>
+            <span class="upd-badge">修复</span>
+          </div>
+          <div class="upd-row">
+            <div class="upd-date"><b>10-31</b></div>
+            <div class="upd-main"><h3>《长夜将尽》院线版与蓝光版对照表</h3><p>列出 4 分钟审讯戏的具体时间点，第 63 分钟到 67 分钟。</p></div>
+            <span class="upd-badge">对照表</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="block" id="cats">
+        <div class="block-head">
+          <h2>按内容类型进入的八个入口 <span class="tagline">分类</span></h2>
+          <p>点进去是该类型的条目列表，按更新时间和版本完整度排序。</p>
+        </div>
+        <div class="cat-grid">
+          <a class="cat-item" href="/#picks"><h3>国产剧集 <em>286 条</em></h3><p>含都市、悬疑、古装三条线，标注是否内嵌字幕。</p></a>
+          <a class="cat-item" href="/#picks"><h3>欧美剧集 <em>341 条</em></h3><p>英剧、美剧、北欧剧分开归档，注明是否带官方中字。</p></a>
+          <a class="cat-item" href="/#picks"><h3>日韩剧集 <em>198 条</em></h3><p>含 Netflix 版与本土版差异标注，集数对齐。</p></a>
+          <a class="cat-item" href="/#picks"><h3>国产动画 <em>124 条</em></h3><p>按字幕组分类，附脚注密度说明。</p></a>
+          <a class="cat-item" href="/#picks"><h3>海外动画 <em>167 条</em></h3><p>含日语原声与英语配音双版本。</p></a>
+          <a class="cat-item" href="/#picks"><h3>自然纪录片 <em>89 条</em></h3><p>区分引进配音版与原始收音版。</p></a>
+          <a class="cat-item" href="/#picks"><h3>电影长片 <em>302 条</em></h3><p>院线版、导演剪辑版、修复版分开标。</p></a>
+          <a class="cat-item" href="/#picks"><h3>综艺与访谈 <em>76 条</em></h3><p>标注是否含完整未剪片段。</p></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="block" id="deep">
+        <div class="block-head">
+          <h2>同一部剧的四个版本，差在哪 <span class="tagline">深度解析</span></h2>
+          <p>以《雾港档案》第二季和《长夜将尽》为样本，拆开版本差异的具体构成。</p>
+        </div>
+        <div class="deep">
+          <h3>码率不是唯一变量，色深和动态范围才是分水岭</h3>
+          <p>
+            很多人比版本先看体积，8.4GB 的 4K 一定比 1.9GB 的 1080P 好——在《雾港档案》S02E06 这个个例上，结论成立，但原因不在体积。这一集有 11 分钟夜景戏，码头钠灯、集装箱反光、海面雾气三层光源叠在一起。4K HDR 版是 10bit 色深，暗部能分出 6 到 7 级灰阶；1080P WEB-DL 是 8bit，同一段只剩 3 级，雾气糊成一片。
+          </p>
+          <p>
+            换成白天的室内戏，两者差距立刻缩小。第 4 集审讯室那场，1080P 版和 4K 版在 27 寸屏上并排看，人脸肤色几乎一致。判断依据应该落在<strong>具体场景</strong>上：夜景多、特效多、有大量暗部细节的条目，值得下 4K；对话为主、场景明亮的，1080P 足够。
+          </p>
+
+          <h3>内嵌与外挂，改的是使用场景不是画质</h3>
+          <p>
+            内嵌字幕烧进画面，好处是任何播放器、任何电视盒子都能直接看，坏处是没法改字号、没法换语言。外挂 ass 反过来，可调但依赖播放器加载，部分老款电视识别不了。字幕组「潮汐」在《雾港档案》上同时出了两版，内嵌版把注释压进了画面底部，外挂版则把 12 条地名注释放在屏幕上方独立区域。
+          </p>
+          <ul>
+            <li><b>客厅电视看</b>：选内嵌，省去加载字幕的步骤，老人小孩都能操作。</li>
+            <li><b>电脑或投影看</b>：选外挂，字号调到 28 以上，注释不影响主体画面。</li>
+            <li><b>收藏存档</b>：两版都留，外挂 ass 单独备份，防止片源更新后字幕对不上。</li>
+          </ul>
+
+          <h3>时长差异要拆开看，多出来的不一定是正片</h3>
+          <p>
+            《海雾之上》Netflix 版比韩国本土版多 2 分钟，听起来像加料，实际拆开是：片头前情提要 1 分 12 秒、片尾下集预告 38 秒、正片多出 10 秒的一个空镜。真正的内容差异接近零。《长夜将尽》蓝光版比院线版多 4 分钟，那是实打实的审讯戏，第 63 分钟到 67 分钟，角色动机补完了一整块。
+          </p>
+          <blockquote>
+            核对方法：把两个版本的时长差，对照章节列表逐段比。差在片头片尾的，基本可以忽略；差在正片中段的，才值得为它多下一份。
+          </blockquote>
+
+          <h3>来源渠道决定可信度，四个环节缺一不可</h3>
+          <p>
+            「这个版本靠不靠谱」可以拆成可核对的结构，不是凭感觉。判断一份片源的可信度，看四件事：
+          </p>
+          <table class="cmp-table">
+            <thead>
+              <tr><th>核对项</th><th>可信表现</th><th>需要警惕</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>发布账号</td><td>有历史发布记录，同一剧集连续多集由同一账号放出</td><td>新注册账号、只发过一两条</td></tr>
+              <tr><td>文件信息</td><td>标注编码、码率、音轨格式、字幕来源</td><td>只写「高清」「完整版」</td></tr>
+              <tr><td>校验值</td><td>提供 MD5 或 SHA1，可与二次转载比对</td><td>无校验值，体积与标注不符</td></tr>
+              <tr><td>跟进反馈</td><td>发布后 24 小时内有具体纠错留言并被采纳</td><td>评论区只有「谢谢分享」类空话</td></tr>
+            </tbody>
+          </table>
+          <p>
+            四项里缺一项，可信度降一档；缺两项以上，建议等第二个来源。10 月 29 日《长夜将尽》REMUX 首次放出时，有账号标注 32.6GB 实际只有 18GB，问题就出在没给校验值，后来由「镜像」组补了 SHA1 才确认。
+          </p>
+
+          <h3>收藏向和追更向，优先级完全不同</h3>
+          <p>
+            追更的人在意时效，剧集播出后 6 小时内能看到熟肉就算达标，画质 1080P、字幕能读就行。收藏的人在意完整，愿意等 3 到 6 个月拿 REMUX，前提是碟片压盘后没删减、音轨没降级、字幕有官方版本。两种需求不该用同一套标准互相说服。
+          </p>
+          <p>
+            《冻土之下》是个典型例子。追更向用户在 11 月 7 日拿到引进版三集就能看，收藏向用户会等 BBC Earth 原版的 4K 蓝光，预计 2027 年 2 月压盘。中间这三个月，两边看的其实是同一部片子，体验差别在旁白和配乐，不在画质。
+          </p>
+        </div>
+      </section>
+
+      <!-- 6 观看指南 -->
+      <section class="block" id="guide">
+        <div class="block-head">
+          <h2>挑一份片源的五个判断动作 <span class="tagline">观看指南</span></h2>
+          <p>从看到条目到决定下载，按顺序做这五件事，能省掉大部分返工。</p>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-step">
+            <div class="num">1</div>
+            <h3>先确认集数与进度</h3>
+            <p>条目页写明更新到第几集、是否完结。追更剧看「更新至 E06」这类标记，完结剧看「全 8 集」。集数对不上，后面全白搭。</p>
+          </div>
+          <div class="guide-step">
+            <div class="num">2</div>
+            <h3>再看版本类型</h3>
+            <p>4K HDR、1080P WEB-DL、REMUX、x265 压制，四种对应不同设备和存储。手机看 720P 就够，投影才需要 4K。</p>
+          </div>
+          <div class="guide-step">
+            <div class="num">3</div>
+            <h3>核对字幕来源</h3>
+            <p>内嵌还是外挂、哪个组做的、有没有注释。外语片重点看注释密度，《极夜列车》第 5 集的俄语俚语给了三条备选译法。</p>
+          </div>
+          <div class="guide-step">
+            <div class="num">4</div>
+            <h3>比对时长与章节</h3>
+            <p>两个版本时长差多少、差在哪个位置。差在片头片尾可以忽略，差在正片中段要查清楚是不是删减或加料。</p>
+          </div>
+          <div class="guide-step">
+            <div class="num">5</div>
+            <h3>最后看校验与反馈</h3>
+            <p>有 MD5 或 SHA1 的优先，发布后 24 小时内有具体纠错留言的更可信。缺这两项，等第二个来源再说。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="block" id="faq">
+        <div class="block-head">
+          <h2>关于片源与版本的六个常见疑问 <span class="tagline">FAQ</span></h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>4K HDR 版本在普通 1080P 显示器上放，会不会反而更暗？</summary>
+            <div class="faq-body">会。HDR 片源按 PQ 曲线编码，最大亮度标到 1000 尼特以上，普通 SDR 显示器只有 250 到 300 尼特，播放器没做色调映射时，暗部会压成一团黑。《雾港档案》S02E06 的码头夜景在未映射的显示器上，集装箱编号完全看不见。解决办法是播放器开启 HDR 转 SDR，或换 1080P 版本。</div>
+          </details>
+          <details>
+            <summary>「潮汐」组和「镜像」组的字幕，同一部剧能混用吗？</summary>
+            <div class="faq-body">时间轴对不上就不能混用。两个组的分集片头长度不同，「潮汐」按 4K 版做轴，「镜像」按 WEB-DL 版做轴，两者片头差 3 到 5 秒，混用会导致全片字幕逐渐偏移。要么整季用同一组，要么用字幕编辑软件重新对轴。</div>
+          </details>
+          <details>
+            <summary>《长夜将尽》蓝光版多出的 4 分钟，具体是哪场戏？</summary>
+            <div class="faq-body">第 63 分钟到 67 分钟的审讯戏。院线版里这段只有 40 秒，蓝光版补完了整段对话，角色交代了 2019 年那桩旧案的细节。导演在评论音轨里提到，删减是发行方要求控制片长到 118 分钟以内。</div>
+          </details>
+          <details>
+            <summary>为什么有些剧的 Netflix 版比本土版长，内容却一样？</summary>
+            <div class="faq-body">多出来的通常是片头前情提要和片尾下集预告。Netflix 面向全球观众，需要补前情帮助没看过的人跟上；本土电视台播出时，观众连续追更，前情提要压到 10 秒以内。《海雾之上》E10 的 2 分钟差就是这么来的，正片只多一个 10 秒空镜。</div>
+          </details>
+          <details>
+            <summary>x265 十位压制版和原版 4K，画质差多少？</summary>
+            <div class="faq-body">在 55 寸以下屏幕上肉眼几乎看不出，65 寸以上能看出暗部细节损失。x265 十位版把《冻土之下》第一集从 22GB 压到 4.8GB，码率从 68Mbps 降到 14Mbps。冰原地形的细碎纹理在压缩后略微涂抹，但整体观感保留得不错，适合存储空间紧张的情况。</div>
+          </details>
+          <details>
+            <summary>字幕文件加载后显示方块，是什么原因？</summary>
+            <div class="faq-body">字体缺失。ass 字幕指定了特定字体，播放器没装就会回退到默认字体，部分生僻字显示成方块。《青鳞记》第 9 话的「折枝」组版本附了字体包，安装后重启播放器即可。srt 字幕一般不会有这个问题，它不指定字体。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="block" id="reviews">
+        <div class="block-head">
+          <h2>十六条来自追更与收藏两拨人的留言 <span class="tagline">用户评论 16 条</span></h2>
+        </div>
+        <div class="cmt-grid">
+          <div class="cmt"><div class="cmt-ava" style="background:#2e7d5b">港</div><div class="cmt-body"><div class="cmt-top"><b>港口夜班</b><time>11-08 09:12</time></div><p>《雾港档案》E06 那个 8 分钟长镜头，4K 版能看到集装箱上喷的编号是 MVD-227，1080P 版糊成一片。就为这个我重下了一遍。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#b07b18">折</div><div class="cmt-body"><div class="cmt-top"><b>折枝不折腰</b><time>11-08 08:40</time></div><p>青鳞记第 9 话分镜确实回来了，打斗那段帧率一提，动作顺很多。就是脚注 12 条有点多，看的时候老要暂停。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#8a4b4b">冻</div><div class="cmt-body"><div class="cmt-top"><b>冻土观察员</b><time>11-07 22:05</time></div><p>引进版旁白是李立宏，配乐换了，驯鹿迁徙那段原来的弦乐没了，换成钢琴。有点不习惯，但也不能说不好。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#1c4a63">长</div><div class="cmt-body"><div class="cmt-top"><b>长夜不睡</b><time>11-07 19:33</time></div><p>REMUX 32.6GB 下了一晚上。审讯戏补回来值了，院线版那段看得我一头雾水，现在动机清楚了。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#2e7d5b">镜</div><div class="cmt-body"><div class="cmt-top"><b>镜像字幕组小号</b><time>11-07 15:20</time></div><p>第七号站台第 3 集那 9 处改动是我们改的，苏格兰口音那段确实难，原文拼写查了三本词典。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#b07b18">海</div><div class="cmt-body"><div class="cmt-top"><b>海雾迷航</b><time>11-06 23:47</time></div><p>海雾之上 E10 的 Netflix 版多 2 分钟，我特意比对过，全是前情提要，正片一模一样。白高兴一场。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#8a4b4b">铁</div><div class="cmt-body"><div class="cmt-top"><b>铁皮不锈</b><time>11-06 20:11</time></div><p>铁皮心脏第 4 话无对白那段是真敢做，38 张分镜稿对照着看，废料场追逐砍掉可惜了，那场戏应该挺花钱。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#1c4a63">极</div><div class="cmt-body"><div class="cmt-top"><b>极夜候车</b><time>11-06 11:02</time></div><p>北纬组更新是慢，但第 5 集那三条备选译法看得我服气。宁可贵点慢点，也不要机翻。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#2e7d5b">山</div><div class="cmt-body"><div class="cmt-top"><b>山中邮差</b><time>11-05 16:38</time></div><p>山中来信修复版把色调拉中性了，山景原来那种暖黄没了。豆瓣吵三天不是没道理，我个人站原版。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#b07b18">老</div><div class="cmt-body"><div class="cmt-top"><b>老片库房</b><time>11-05 10:24</time></div><p>收藏向的别急着下 4K，等蓝光 REMUX 出来再说。我 2019 年吃过亏，先下的 WEB-DL，后来 REMUX 一出全删了重来。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#8a4b4b">路</div><div class="cmt-body"><div class="cmt-top"><b>路过的猫</b><time>11-04 21:03</time></div><p>最近硬盘涨价，买了两块 16T 的，现在又满了。这个爱好真的费钱。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#1c4a63">潮</div><div class="cmt-body"><div class="cmt-top"><b>潮汐校对</b><time>11-04 14:17</time></div><p>雾港档案 E05 那两处地名误译，是观众在评论区指出来我们才发现的，E06 已经改过来了。感谢。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#2e7d5b">蓝</div><div class="cmt-body"><div class="cmt-top"><b>蓝光盘友</b><time>11-03 19:55</time></div><p>长夜将尽蓝光碟在京东预售 399，含评论音轨和 40 页手册。数字版党可以等，实体党这价还行。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#b07b18">x</div><div class="cmt-body"><div class="cmt-top"><b>x265爱好者</b><time>11-03 12:09</time></div><p>冻土之下那个十位压制版 4.8GB，在 65 寸电视上能看出冰原纹理涂抹，但日常看完全够用。存硬盘的话推荐。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#8a4b4b">青</div><div class="cmt-body"><div class="cmt-top"><b>青岛小李</b><time>11-02 20:42</time></div><p>字幕显示方块的问题我也遇到过，装字体包解决。青鳞记那个包挺全的，生僻字都覆盖了。</p></div></div>
+          <div class="cmt"><div class="cmt-ava" style="background:#1c4a63">随</div><div class="cmt-body"><div class="cmt-top"><b>随便看看</b><time>11-02 09:30</time></div><p>说实话最近没什么特别想追的，海雾之上追到第 8 集弃了，双时间线绕得有点累。等完结再说吧。</p></div></div>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="block" id="news">
+        <div class="block-head">
+          <h2>近十天的片源与发行动态 <span class="tagline">资讯 6 条</span></h2>
+        </div>
+        <div class="news-grid">
+          <article class="news-item">
+            <time>2026-11-08</time>
+            <h3>《雾港档案》第二季确认 12 集完结，第 7 集提前至 11 月 12 日</h3>
+            <p>出品方 11 月 8 日在官方微博公布调整后的排播表，原定 11 月 13 日的第 7 集提前一天，原因未说明。第二季总集数从原计划的 10 集扩到 12 集。</p>
+          </article>
+          <article class="news-item">
+            <time>2026-11-07</time>
+            <h3>《冻土之下》BBC Earth 原版 4K 蓝光定档 2027 年 2 月</h3>
+            <p>BBC 商城页面显示双碟装，含 52 分钟幕后花絮与导演评论音轨。国内引进版已在 11 月 7 日上架流媒体，旁白由李立宏重新录制。</p>
+          </article>
+          <article class="news-item">
+            <time>2026-11-06</time>
+            <h3>「潮汐」字幕组宣布暂停《极夜列车》后续集数，交接给「北纬」</h3>
+            <p>「潮汐」组 11 月 6 日发布公告，称组内俄语校对仅剩一人，无法支撑周更。剩余两集由「北纬」组接手，已完成的 6 集字幕不做改动。</p>
+          </article>
+          <article class="news-item">
+            <time>2026-11-04</time>
+            <h3>《长夜将尽》蓝光首周销量 2.1 万张，跻身华语片年度前十</h3>
+            <p>发行方公布首周数据，2.1 万张里含 3,400 张限量收藏版。评论音轨里导演提到，删减 4 分钟是发行方为控制片长到 118 分钟。</p>
+          </article>
+          <article class="news-item">
+            <time>2026-11-03</time>
+            <h3>《青鳞记》制作组公开第 9 话分镜稿 38 张，标注两处删减</h3>
+            <p>官推 11 月 3 日放出分镜对照图，第 9 话原计划 22 分钟，成片 19 分 40 秒，删减集中在龙族议事厅的一场对话。</p>
+          </article>
+          <article class="news-item">
+            <time>2026-10-31</time>
+            <h3>《山中来信》4K 修复版上线三天，豆瓣评分从 8.9 降到 8.8</h3>
+            <p>修复版 10 月 31 日上线，三天内涌入 1.2 万条短评，争议集中在色调调整。修复团队回应称原始胶片色偏黄，按 2011 年拍摄时的监视器校准。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="block" id="related">
+        <div class="block-head">
+          <h2>按具体方向延伸的条目索引 <span class="tagline">相关推荐</span></h2>
+        </div>
+        <div class="rel-tags">
+          <a href="/#picks">双时间线悬疑剧</a>
+          <a href="/#picks">苏格兰口音英剧</a>
+          <a href="/#picks">俄语原声犯罪剧</a>
+          <a href="/#picks">无对白叙事动画</a>
+          <a href="/#picks">自然纪录片双版本</a>
+          <a href="/#picks">华语片蓝光 REMUX</a>
+          <a href="/#picks">4K 修复老片</a>
+          <a href="/#picks">x265 十位压制</a>
+        </div>
+      </section>
+
+      <!-- 11 更新时间线 -->
+      <section class="block" id="timeline">
+        <div class="block-head">
+          <h2>《雾港档案》第二季从开播到现在 <span class="tagline">条目时间线</span></h2>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <time>2026-10-22</time>
+            <h4>第二季首播，E01「归港」</h4>
+            <p>4K 内嵌版当天 22 时放出，「潮汐」组首版字幕有两处地名误译。</p>
+          </div>
+          <div class="tl-item">
+            <time>2026-10-29</time>
+            <h4>E02「浮标」更新，1080P 版先行</h4>
+            <p>4K 版滞后 6 小时，原因是 HDR 转码排队。</p>
+          </div>
+          <div class="tl-item">
+            <time>2026-11-01</time>
+            <h4>出品方公布第二季扩集至 12 集</h4>
+            <p>原计划 10 集，因剧本调整增加两集，排播顺延一周。</p>
+          </div>
+          <div class="tl-item">
+            <time>2026-11-05</time>
+            <h4>E05「旧账」放出，地名误译被指出</h4>
+            <p>观众在评论区列出两处：MVD 被译成「莫德港」，实际应为「默德港」。</p>
+          </div>
+          <div class="tl-item hot">
+            <time>2026-11-08</time>
+            <h4>E06「潮汐线」4K HDR 内嵌版上架</h4>
+            <p>8.4GB，修正 E05 两处误译，片尾 8 分钟长镜头为全季目前最长单镜。</p>
+          </div>
+          <div class="tl-item">
+            <time>2026-11-12</time>
+            <h4>E07 提前播出（已公布排播）</h4>
+            <p>原定 11 月 13 日，出品方 11 月 8 日确认提前一天。</p>
+          </div>
+          <div class="tl-item">
+            <time>2026-12-17</time>
+            <h4>第二季 E12 完结（预计）</h4>
+            <p>按当前周更节奏推算，蓝光套装预计 2027 年 5 月。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12 版本可信度分层 -->
+      <section class="block" id="trust">
+        <div class="block-head">
+          <h2>三类片源的可信度分层 <span class="tagline">补充板块</span></h2>
+          <p>按发布账号、文件信息、校验值、跟进反馈四项综合，不按体积或画质排。</p>
+        </div>
+        <div class="trust-grid">
+          <div class="trust-col t1">
+            <header>可信度 A｜四项齐全</header>
+            <ul>
+              <li><b>潮汐组《雾港档案》</b>：连续 6 集同一账号发布，标注编码码率，附 MD5，24 小时内采纳纠错。</li>
+              <li><b>镜像组《第七号站台》</b>：发布记录可查，字幕修订留痕，第 3 集 9 处改动有明细。</li>
+              <li><b>北纬组《极夜列车》</b>：接手后补齐两集，附 SHA1，俄语俚语三条备选译法公开。</li>
+            </ul>
+          </div>
+          <div class="trust-col t2">
+            <header>可信度 B｜缺一项</header>
+            <ul>
+              <li><b>《海雾之上》E10 Netflix 版</b>：文件信息完整，无校验值，靠评论区反馈确认。</li>
+              <li><b>《铁皮心脏》第 4 话</b>：分镜稿对照可信，片源本身未标码率。</li>
+              <li><b>《冻土之下》引进版</b>：旁白版本明确，配乐替换未在文件说明里写。</li>
+            </ul>
+          </div>
+          <div class="trust-col t3">
+            <header>可信度 C｜缺两项以上</header>
+            <ul>
+              <li><b>《长夜将尽》10 月 29 日首版 REMUX</b>：标注 32.6GB 实际 18GB，无校验值，后被替换。</li>
+              <li><b>《山中来信》修复版转载</b>：只写「4K 修复」，无编码与字幕来源，体积与标注不符。</li>
+              <li><b>《青鳞记》第 9 话某转载版</b>：无字体包，ass 加载后大量方块。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13 投稿互动 -->
+      <section class="block" id="submit">
+        <div class="interact">
+          <div>
+            <h2>投稿与纠错通道</h2>
+            <p>如果你手上有更完整的版本信息、发现了字幕误译，或者想补充某部剧的渠道对照，可以通过下面的表单提交。纠错优先处理，一般 48 小时内核对。</p>
+            <ul>
+              <li>字幕误译纠错：请注明剧集、集数、具体时间点与原译文</li>
+              <li>版本补充：请提供编码、码率、音轨、字幕来源四项信息</li>
+              <li>新条目推荐：请写明条目名、类型与已确认的更新进度</li>
+            </ul>
+          </div>
+          <form class="interact-form" id="submitForm" novalidate>
+            <label for="fName">条目名称</label>
+            <input id="fName" type="text" placeholder="例：雾港档案 第二季" required>
+            <label for="fType">提交类型</label>
+            <select id="fType">
+              <option>字幕纠错</option>
+              <option>版本补充</option>
+              <option>新条目推荐</option>
+            </select>
+            <button type="submit">提交信息</button>
+            <p class="form-note" id="formNote">提交后由编辑核对，不承诺发布时间。</p>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右辅助栏 -->
+    <aside class="col-right" aria-label="辅助栏">
+      <div class="side-card">
+        <div class="side-head">今日热榜</div>
+        <div class="rank-list">
+          <a class="rank-item" href="/#picks"><span class="rank-no">1</span><span class="rank-name">雾港档案 第二季<small>E06 · 4K HDR 内嵌</small></span></a>
+          <a class="rank-item" href="/#picks"><span class="rank-no">2</span><span class="rank-name">青鳞记<small>第 9 话 · 五组字幕</small></span></a>
+          <a class="rank-item" href="/#picks"><span class="rank-no">3</span><span class="rank-name">冻土之下<small>三集全 · 双版本</small></span></a>
+          <a class="rank-item" href="/#picks"><span class="rank-no">4</span><span class="rank-name">长夜将尽<small>REMUX 32.6GB</small></span></a>
+          <a class="rank-item" href="/#picks"><span class="rank-no">5</span><span class="rank-name">海雾之上<small>E10 · Netflix 版</small></span></a>
+          <a class="rank-item" href="/#picks"><span class="rank-no">6</span><span class="rank-name">第七号站台<small>全 6 集 · 内嵌</small></span></a>
+          <a class="rank-item" href="/#picks"><span class="rank-no">7</span><span class="rank-name">铁皮心脏<small>第 4 话 · 分镜对照</small></span></a>
+          <a class="rank-item" href="/#picks"><span class="rank-no">8</span><span class="rank-name">极夜列车<small>全 8 集 · 俄语原声</small></span></a>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <div class="side-head">本周字幕组动态</div>
+        <div class="side-list">
+          <a href="/#updates">潮汐组修正《雾港档案》E05 两处地名误译</a>
+          <a href="/#updates">「北纬」接手《极夜列车》最后两集</a>
+          <a href="/#updates">「折枝」发布青鳞记第 9 话脚注包</a>
+          <a href="/#updates">「镜像」修订第七号站台第 3 集 9 处</a>
+          <a href="/#updates">《冻土之下》引进版配乐替换说明</a>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <div class="side-head">版本速查</div>
+        <div class="side-list">
+          <a href="/#deep">4K HDR 与 1080P 的暗部差异</a>
+          <a href="/#deep">内嵌与外挂字幕的取舍</a>
+          <a href="/#deep">REMUX 与 x265 十位压制</a>
+          <a href="/#trust">四项可信度核对清单</a>
+          <a href="/#guide">五个判断动作</a>
+        </div>
+      </div>
+
+      <div class="side-submit">
+        <h3>投稿纠错入口</h3>
+        <p>发现字幕误译或版本信息有误，提交具体集数与时间点，48 小时内核对。</p>
+        <button type="button" onclick="location.href='/#submit'">前往投稿表单</button>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- 页尾 -->
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#17455e"/>
+            <path d="M18 22h28v6H18zM18 32h18v6H18zM18 42h24v6H18z" fill="#4fc3f7"/>
+            <circle cx="48" cy="42" r="7" fill="#ffb74d"/>
+          </svg>
+          <b>比比资源稳定源站</b>
+        </div>
+        <p class="foot-desc">条目索引覆盖 2019 年至 2026 年 11 月的剧集、动画、纪录片与电影，含 4K、1080P、REMUX、x265 压制四类版本记录，每周二、周五两次集中同步，字幕组修订单独留痕。</p>
+      </div>
+      <div class="foot-col">
+        <h3>内容频道</h3>
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选条目</a>
+        <a href="/#updates">更新动态</a>
+        <a href="/#cats">分类入口</a>
+        <a href="/#deep">深度解析</a>
+      </div>
+      <div class="foot-col">
+        <h3>使用参考</h3>
+        <a href="/#guide">观看指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#trust">版本可信度</a>
+        <a href="/#timeline">更新时间线</a>
+        <a href="/#news">相关资讯</a>
+      </div>
+      <div class="foot-col">
+        <h3>参与互动</h3>
+        <a href="/#reviews">用户评论</a>
+        <a href="/#submit">投稿纠错</a>
+        <a href="/#related">相关推荐</a>
+        <a href="/#submit">版本补充</a>
+        <a href="/#submit">新条目推荐</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>页面内条目名称、热度、评分、评论均为示例内容，用于演示索引结构；具体片源的可用性、画质与字幕质量以实际文件为准。最后同步：2026-11-08，对应正文「11 月第一周的条目更新记录」中的《雾港档案》S02E06 4K HDR 内嵌版上架条目。</span>
+      <span>© 2026 比比资源稳定源站 · 内容索引示例</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6M6 12l6-6 6 6"/></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "比比资源稳定源站",
+  "description": "汇聚高清影视、剧集、动漫、纪录片与网盘资源索引，追踪2026年11月更新条目、清晰度版本差异与下载渠道。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "4K HDR 版本在普通 1080P 显示器上放，会不会反而更暗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "会。HDR 片源按 PQ 曲线编码，最大亮度标到 1000 尼特以上，普通 SDR 显示器只有 250 到 300 尼特，播放器没做色调映射时，暗部会压成一团黑。解决办法是播放器开启 HDR 转 SDR，或换 1080P 版本。"}
+    },
+    {
+      "@type": "Question",
+      "name": "「潮汐」组和「镜像」组的字幕，同一部剧能混用吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "时间轴对不上就不能混用。两个组的分集片头长度不同，会导致全片字幕逐渐偏移。要么整季用同一组，要么用字幕编辑软件重新对轴。"}
+    },
+    {
+      "@type": "Question",
+      "name": "《长夜将尽》蓝光版多出的 4 分钟，具体是哪场戏？",
+      "acceptedAnswer": {"@type": "Answer", "text": "第 63 分钟到 67 分钟的审讯戏。院线版里这段只有 40 秒，蓝光版补完了整段对话，角色交代了 2019 年那桩旧案的细节。"}
+    },
+    {
+      "@type": "Question",
+      "name": "为什么有些剧的 Netflix 版比本土版长，内容却一样？",
+      "acceptedAnswer": {"@type": "Answer", "text": "多出来的通常是片头前情提要和片尾下集预告。Netflix 面向全球观众，需要补前情帮助没看过的人跟上；本土电视台播出时，前情提要压到 10 秒以内。"}
+    },
+    {
+      "@type": "Question",
+      "name": "x265 十位压制版和原版 4K，画质差多少？",
+      "acceptedAnswer": {"@type": "Answer", "text": "在 55 寸以下屏幕上肉眼几乎看不出，65 寸以上能看出暗部细节损失。x265 十位版把码率从 68Mbps 降到 14Mbps，冰原地形的细碎纹理在压缩后略微涂抹，但整体观感保留得不错。"}
+    },
+    {
+      "@type": "Question",
+      "name": "字幕文件加载后显示方块，是什么原因？",
+      "acceptedAnswer": {"@type": "Answer", "text": "字体缺失。ass 字幕指定了特定字体，播放器没装就会回退到默认字体，部分生僻字显示成方块。安装对应字体包后重启播放器即可。srt 字幕一般不会有这个问题。"}
+    }
+  ]
+}
+</script>
+<script>
+(function(){
+  var body = document.body;
+  var ham = document.getElementById('hamburger');
+  var drawer = document.getElementById('mobileDrawer');
+  var overlay = document.getElementById('overlay');
+
+  function openDrawer(){
+    drawer.classList.add('open');
+    overlay.classList.add('show');
+    ham.setAttribute('aria-expanded','true');
+    ham.setAttribute('aria-label','关闭导航菜单');
+    body.style.overflow = 'hidden';
+  }
+  function closeDrawer(){
+    drawer.classList.remove('open');
+    overlay.classList.remove('show');
+    ham.setAttribute('aria-expanded','false');
+    ham.setAttribute('aria-label','打开导航菜单');
+    body.style.overflow = '';
+  }
+  ham.addEventListener('click', function(){
+    if(drawer.classList.contains('open')) closeDrawer(); else openDrawer();
+  });
+  overlay.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeDrawer); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && drawer.classList.contains('open')){ closeDrawer(); ham.focus(); }
+  });
+
+  // 搜索
+  var input = document.getElementById('siteSearch');
+  var btn = document.getElementById('searchBtn');
+  var msg = document.getElementById('searchMsg');
+
+  function doSearch(){
+    var q = (input.value || '').trim().toLowerCase();
+    if(!q){ msg.hidden = true; return; }
+    var cards = document.querySelectorAll('#pickGrid .card');
+    var hits = [];
+    cards.forEach(function(card){
+      var name = (card.getAttribute('data-name') || '').toLowerCase();
+      var text = card.textContent.toLowerCase();
+      if(name.indexOf(q) > -1 || text.indexOf(q) > -1){
+        hits.push(card.querySelector('h3').textContent.trim());
+      }
+    });
+    msg.hidden = false;
+    if(hits.length){
+      msg.innerHTML = '找到 ' + hits.length + ' 条：' + hits.slice(0,4).join('、') + (hits.length>4?' 等':'') + '。<a href="/#picks" style="color:#1c4a63;text-decoration:underline">查看精选条目</a>';
+    }else{
+      msg.textContent = '没有匹配「' + input.value.trim() + '」的条目，可试试「雾港档案」「青鳞记」「冻土之下」等条目名。';
+    }
+  }
+  btn.addEventListener('click', doSearch);
+  input.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+  input.addEventListener('input', function(){ if(!input.value.trim()) msg.hidden = true; });
+
+  // 回到顶部
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > window.innerHeight * 0.9) toTop.classList.add('show');
+    else toTop.classList.remove('show');
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // 侧栏频道高亮
+  var chanLinks = document.querySelectorAll('#chanList a');
+  var sections = [];
+  chanLinks.forEach(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    var el = document.getElementById(id);
+    if(el) sections.push({el: el, link: a});
+  });
+  var headOffset = 120;
+  function highlight(){
+    var y = window.scrollY + headOffset;
+    var current = null;
+    sections.forEach(function(s){
+      if(s.el.offsetTop <= y) current = s;
+    });
+    chanLinks.forEach(function(a){ a.classList.remove('active'); });
+    if(current) current.link.classList.add('active');
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  highlight();
+
+  // 投稿表单
+  var form = document.getElementById('submitForm');
+  var note = document.getElementById('formNote');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('fName').value.trim();
+    var type = document.getElementById('fType').value;
+    if(!name){
+      note.textContent = '请填写条目名称后再提交。';
+      note.style.color = '#ffb74d';
+      return;
+    }
+    note.textContent = '已记录：' + name + ' · ' + type + '。核对结果会通过站内留言更新，一般 48 小时内。';
+    note.style.color = '#9fe0c0';
+    form.reset();
+  });
+})();
+</script>
+</body>
+  </html>
