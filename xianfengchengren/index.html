@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>先锋成人资源站 - 影像资料库与类型档案</title>
+<meta name="description" content="先锋成人资源站是面向成年观众的影像资料聚合页面，收录剧情长片、纪实访谈、艺术短片、类型档案与创作者专栏，提供分级提示、条目看点、更新动态与消费路径参考。">
+<meta name="keywords" content="先锋成人资源站">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1b23'/%3E%3Cpath d='M20 46V18h9c8 0 13 5 13 14s-5 14-13 14h-9z' fill='none' stroke='%23e8a33d' stroke-width='5'/%3E%3Ccircle cx='47' cy='46' r='4' fill='%23c9553e'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b1b23;
+  --ink-soft:#3a3a48;
+  --text:#22222c;
+  --text-2:#5b5b6b;
+  --text-3:#8a8a99;
+  --line:#e3e0da;
+  --line-strong:#cfcabf;
+  --bg:#f7f4ee;
+  --panel:#ffffff;
+  --panel-2:#fbf8f2;
+  --brand:#a8352c;
+  --brand-2:#c9553e;
+  --brand-soft:#f6e6e2;
+  --brand-deep:#7a231c;
+  --gold:#e8a33d;
+  --gold-soft:#fbf0dc;
+  --teal:#2f6b63;
+  --teal-soft:#e3efec;
+  --radius-card:12px;
+  --radius-btn:8px;
+  --radius-tag:999px;
+  --radius-banner:16px;
+  --shadow:0 1px 2px rgba(27,27,35,.06),0 4px 14px rgba(27,27,35,.05);
+  --shadow-hover:0 4px 10px rgba(27,27,35,.08),0 12px 28px rgba(27,27,35,.10);
+  --stick-h:96px;
+  --maxw:1340px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--stick-h) + 14px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  font-size:15.5px;line-height:1.75;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.32;font-weight:700;letter-spacing:.01em}
+p{margin:0 0 .85em}
+ul,ol{margin:0 0 .9em;padding-left:1.25em}
+li{margin:.22em 0}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+
+/* ---------- 吸顶区 ---------- */
+.stickwrap{position:sticky;top:0;z-index:60}
+.ticker{
+  background:var(--ink);color:#efeae1;font-size:13px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.ticker-inner{
+  max-width:var(--maxw);margin:0 auto;padding:7px 22px;
+  display:flex;align-items:center;gap:14px;overflow:hidden;
+}
+.ticker .badge{
+  flex:0 0 auto;background:var(--brand);color:#fff;border-radius:var(--radius-tag);
+  padding:1px 10px;font-size:12px;letter-spacing:.06em;
+}
+.ticker-list{
+  display:flex;gap:26px;list-style:none;margin:0;padding:0;
+  white-space:nowrap;overflow:hidden;flex:1 1 auto;
+}
+.ticker-list li{display:flex;gap:8px;align-items:baseline;margin:0}
+.ticker-list .t-date{color:var(--gold);font-variant-numeric:tabular-nums}
+.ticker-list .t-name{color:#efeae1}
+.ticker-list .t-note{color:#a8a49c;font-size:12px}
+
+.sitehead{
+  background:rgba(251,248,242,.92);
+  backdrop-filter:saturate(1.6) blur(10px);
+  border-bottom:1px solid var(--line-strong);
+}
+.head-inner{
+  max-width:var(--maxw);margin:0 auto;padding:12px 22px;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand-mark{
+  width:40px;height:40px;border-radius:11px;background:var(--ink);
+  display:grid;place-items:center;box-shadow:var(--shadow);
+}
+.brand-mark svg{width:26px;height:26px}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-name{font-size:18px;font-weight:800;letter-spacing:.02em;color:var(--ink)}
+.brand-sub{font-size:11.5px;color:var(--text-3);letter-spacing:.14em}
+.mainnav{display:flex;gap:2px;flex-wrap:wrap;flex:1 1 auto}
+.mainnav a{
+  padding:6px 11px;border-radius:var(--radius-btn);font-size:14px;color:var(--text-2);
+  transition:background .18s,color .18s;
+}
+.mainnav a:hover{background:var(--brand-soft);color:var(--brand-deep)}
+.mainnav a.active{background:var(--ink);color:#fbf8f2}
+.head-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.searchbox{position:relative;display:flex;align-items:center}
+.searchbox input{
+  width:186px;padding:7px 30px 7px 11px;border:1px solid var(--line-strong);
+  border-radius:var(--radius-tag);background:#fff;font-size:13.5px;color:var(--text);
+  transition:width .2s,border-color .2s;
+}
+.searchbox input:focus{width:220px;border-color:var(--brand-2);outline:none}
+.searchbox .sicon{
+  position:absolute;right:10px;width:15px;height:15px;color:var(--text-3);pointer-events:none;
+}
+.btn-ghost{
+  border:1px solid var(--line-strong);background:#fff;border-radius:var(--radius-tag);
+  padding:6px 13px;font-size:13.5px;color:var(--text-2);
+}
+.btn-ghost:hover{border-color:var(--brand-2);color:var(--brand-deep)}
+.burger{display:none;border:1px solid var(--line-strong);background:#fff;border-radius:var(--radius-btn);padding:6px 10px;}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);margin:3px 0;border-radius:2px}
+.search-feedback{
+  max-width:var(--maxw);margin:0 auto;padding:0 22px 10px;font-size:13px;color:var(--brand-deep);
+  display:none;
+}
+.search-feedback.show{display:block}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 380px at 88% -12%,rgba(232,163,61,.30),transparent 62%),
+    radial-gradient(700px 320px at 6% 108%,rgba(168,53,44,.16),transparent 60%),
+    linear-gradient(168deg,#1b1b23 0%,#262631 56%,#33262a 100%);
+  color:#f4efe6;
+}
+.hero-inner{
+  max-width:var(--maxw);margin:0 auto;padding:44px 22px 40px;
+  display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:36px;align-items:center;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.16em;
+  color:var(--gold);border:1px solid rgba(232,163,61,.45);border-radius:var(--radius-tag);
+  padding:3px 12px;margin-bottom:14px;
+}
+.hero h1{
+  font-size:clamp(30px,4.4vw,50px);font-weight:800;letter-spacing:.02em;
+  color:#fff;margin-bottom:14px;
+}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero-lead{
+  font-size:16px;line-height:1.85;color:#d9d3c8;max-width:56ch;margin-bottom:20px;
+}
+.hero-lead strong{color:#fff;font-weight:600}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.btn-primary{
+  background:var(--brand);color:#fff;border:none;border-radius:var(--radius-btn);
+  padding:10px 20px;font-size:14.5px;font-weight:600;box-shadow:var(--shadow);
+  transition:transform .18s,box-shadow .18s,background .18s;
+}
+.btn-primary:hover{background:var(--brand-deep);transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.btn-line{
+  background:transparent;color:#f0e9dd;border:1px solid rgba(240,233,221,.42);
+  border-radius:var(--radius-btn);padding:10px 18px;font-size:14.5px;
+  transition:background .18s,border-color .18s;
+}
+.btn-line:hover{background:rgba(255,255,255,.08);border-color:rgba(240,233,221,.75)}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.14);padding-top:16px}
+.hero-stats div{display:flex;flex-direction:column}
+.hero-stats b{font-size:21px;color:var(--gold);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.hero-stats span{font-size:12.5px;color:#aaa49a;letter-spacing:.06em}
+.hero-art{position:relative;min-height:290px}
+.hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 16px 30px rgba(0,0,0,.35))}
+.hero-art .float{
+  position:absolute;right:2%;bottom:0;background:rgba(27,27,35,.86);
+  border:1px solid rgba(232,163,61,.4);border-radius:10px;padding:9px 13px;font-size:12.5px;
+  color:#e9e2d6;line-height:1.5;max-width:220px;
+}
+.hero-art .float b{color:var(--gold);display:block;font-size:13px;margin-bottom:2px}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.hero-art .ring{animation:drift 7s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){
+  .hero-art .ring{animation:none}
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+
+/* ---------- 布局骨架 ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.layout{
+  max-width:var(--maxw);margin:0 auto;padding:30px 22px 10px;
+  display:grid;grid-template-columns:180px minmax(0,1fr) 262px;gap:26px;align-items:start;
+}
+.colnav{position:sticky;top:calc(var(--stick-h) + 12px)}
+.colnav .navcard{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:14px 12px;box-shadow:var(--shadow);
+}
+.navcard h2{font-size:12.5px;letter-spacing:.14em;color:var(--text-3);margin-bottom:10px;font-weight:700}
+.navcard ul{list-style:none;margin:0;padding:0}
+.navcard li{margin:0}
+.navcard a{
+  display:flex;justify-content:space-between;align-items:center;gap:6px;
+  padding:6px 8px;border-radius:6px;font-size:13.8px;color:var(--text-2);
+  transition:background .16s,color .16s;
+}
+.navcard a:hover{background:var(--panel-2);color:var(--brand-deep)}
+.navcard a.active{background:var(--brand-soft);color:var(--brand-deep);font-weight:600}
+.navcard a .cnt{font-size:11.5px;color:var(--text-3);font-variant-numeric:tabular-nums}
+.navcard .navfoot{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--text-3);line-height:1.6}
+
+/* 主列 */
+main{min-width:0}
+.sec{margin-bottom:44px;scroll-margin-top:calc(var(--stick-h) + 14px)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:6px;flex-wrap:wrap}
+.sec-head h2{font-size:22px;color:var(--ink);letter-spacing:.01em}
+.sec-head h2 small{font-size:12.5px;color:var(--text-3);font-weight:500;letter-spacing:.1em;margin-left:8px}
+.sec-desc{font-size:13.8px;color:var(--text-2);margin:0 0 16px;max-width:74ch}
+.sec-link{font-size:13px;color:var(--brand);border-bottom:1px solid rgba(168,53,44,.3);padding-bottom:1px}
+.sec-link:hover{color:var(--brand-deep);border-color:var(--brand-deep)}
+
+/* 概览 */
+.overview{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-banner);
+  padding:22px 24px;box-shadow:var(--shadow);
+}
+.overview p{font-size:15px;color:var(--text);line-height:1.9}
+.overview p:last-child{margin-bottom:0}
+.overview .kw{color:var(--brand-deep);font-weight:600}
+
+/* 卡片网格 */
+.cardgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);
+  transition:transform .18s,box-shadow .18s,border-color .18s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--line-strong)}
+.card .thumb{aspect-ratio:4/3;overflow:hidden;background:var(--panel-2)}
+.card .thumb img{width:100%;height:100%;object-fit:cover}
+.card-body{padding:12px 13px 13px;display:flex;flex-direction:column;gap:7px;flex:1 1 auto}
+.card-title{font-size:15.5px;font-weight:700;color:var(--ink);line-height:1.42}
+.card:hover .card-title{color:var(--brand-deep)}
+.tagrow{display:flex;gap:6px;flex-wrap:wrap}
+.tag{
+  font-size:11.5px;padding:1px 9px;border-radius:var(--radius-tag);
+  background:var(--panel-2);color:var(--text-2);border:1px solid var(--line);white-space:nowrap;
+}
+.tag.kind{background:var(--brand-soft);color:var(--brand-deep);border-color:rgba(168,53,44,.18)}
+.tag.doc{background:var(--teal-soft);color:var(--teal);border-color:rgba(47,107,99,.18)}
+.tag.art{background:var(--gold-soft);color:#8a5c11;border-color:rgba(232,163,61,.3)}
+.card-look{font-size:13.4px;color:var(--text-2);line-height:1.68;flex:1 1 auto}
+.card-meta{
+  display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text-3);
+  border-top:1px dashed var(--line);padding-top:8px;font-variant-numeric:tabular-nums;
+}
+.card-meta .heat{color:var(--brand);font-weight:600}
+
+/* 动态列表 */
+.updates{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden}
+.update-item{
+  display:grid;grid-template-columns:74px minmax(0,1fr) auto;gap:14px;align-items:baseline;
+  padding:12px 16px;border-bottom:1px solid var(--line);
+}
+.update-item:last-child{border-bottom:none}
+.update-item:hover{background:var(--panel-2)}
+.up-name{font-size:14.6px;font-weight:600;color:var(--ink)}
+.up-sum{font-size:13.3px;color:var(--text-2);line-height:1.6;margin-top:2px}
+.up-date{font-size:12.5px;color:var(--text-3);font-variant-numeric:tabular-nums}
+.up-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:7px;vertical-align:1px}
+
+/* 分类入口 */
+.catgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cat{
+  display:flex;flex-direction:column;gap:4px;padding:14px 15px;background:var(--panel);
+  border:1px solid var(--line);border-radius:var(--radius-card);box-shadow:var(--shadow);
+  transition:border-color .18s,transform .18s,background .18s;text-align:left;
+}
+.cat:hover{border-color:var(--brand-2);transform:translateY(-2px);background:#fff}
+.cat b{font-size:15px;color:var(--ink)}
+.cat span{font-size:12.6px;color:var(--text-3);line-height:1.55}
+.cat[aria-pressed="true"]{background:var(--ink);border-color:var(--ink)}
+.cat[aria-pressed="true"] b{color:#fff}
+.cat[aria-pressed="true"] span{color:#b8b3aa}
+
+/* 深度解析 */
+.deep{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-banner);
+  padding:26px 28px;box-shadow:var(--shadow);
+}
+.deep h3{font-size:17.5px;color:var(--brand-deep);margin:22px 0 8px;padding-left:11px;border-left:4px solid var(--gold)}
+.deep h3:first-of-type{margin-top:6px}
+.deep p{font-size:15px;line-height:1.92;color:var(--text)}
+.deep ul{margin:.4em 0 1em}
+.deep li{font-size:14.6px;line-height:1.8;color:var(--text-2)}
+.deep li b{color:var(--ink)}
+.callout{
+  background:var(--panel-2);border:1px solid var(--line);border-left:4px solid var(--teal);
+  border-radius:8px;padding:13px 16px;margin:14px 0;font-size:14.4px;color:var(--text-2);line-height:1.8;
+}
+.callout b{color:var(--ink)}
+.tablewrap{overflow-x:auto;margin:12px 0 16px}
+table{border-collapse:collapse;width:100%;font-size:13.8px;min-width:520px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel-2);color:var(--text-2);font-weight:600;font-size:13px;white-space:nowrap}
+td b{color:var(--ink)}
+
+/* 指南步骤 */
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.step{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:16px 17px;box-shadow:var(--shadow);display:flex;gap:13px;
+}
+.step .num{
+  flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--gold);
+  display:grid;place-items:center;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;
+}
+.step h3{font-size:15px;color:var(--ink);margin-bottom:5px}
+.step p{font-size:13.6px;color:var(--text-2);line-height:1.72;margin:0}
+
+/* FAQ */
+.faq{border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;background:var(--panel)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:last-child{border-bottom:none}
+.faq summary{
+  list-style:none;cursor:pointer;padding:14px 18px;font-size:14.8px;font-weight:600;color:var(--ink);
+  display:flex;justify-content:space-between;gap:12px;align-items:flex-start;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--brand);font-size:18px;line-height:1;flex:0 0 auto}
+.faq details[open] summary::after{content:"–"}
+.faq details[open] summary{background:var(--panel-2);color:var(--brand-deep)}
+.faq .ans{padding:2px 18px 16px;font-size:14px;color:var(--text-2);line-height:1.82}
+.faq .ans b{color:var(--ink)}
+
+/* 评论 */
+.cmtmeta{font-size:13px;color:var(--text-3);margin-bottom:12px}
+.cmtgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cmt{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:13px 15px;box-shadow:var(--shadow);
+}
+.cmt header{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.avatar{
+  width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  font-size:12px;font-weight:700;color:#fff;background:var(--brand);flex:0 0 auto;
+}
+.avatar.b{background:var(--teal)}
+.avatar.c{background:#7a5c2e}
+.avatar.d{background:#4b4b8a}
+.cmt .nick{font-size:13.4px;font-weight:600;color:var(--ink)}
+.cmt .when{font-size:11.5px;color:var(--text-3);margin-left:auto;font-variant-numeric:tabular-nums}
+.cmt p{font-size:13.6px;color:var(--text-2);line-height:1.72;margin:0}
+.cmt .obj{color:var(--brand-deep);font-weight:600}
+.cmt .mini{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.cmt .mini span{font-size:11.5px;color:var(--text-3);border:1px solid var(--line);border-radius:var(--radius-tag);padding:0 8px}
+
+/* 资讯 */
+.news{display:grid;gap:12px}
+.news-item{
+  display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  overflow:hidden;box-shadow:var(--shadow);transition:border-color .18s,box-shadow .18s;
+}
+.news-item:hover{border-color:var(--line-strong);box-shadow:var(--shadow-hover)}
+.news-item img{width:100%;height:100%;min-height:104px;object-fit:cover}
+.news-body{padding:12px 15px 13px}
+.news-body h3{font-size:15.2px;color:var(--ink);margin-bottom:5px;line-height:1.45}
+.news-body .nd{font-size:12px;color:var(--brand);font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.news-body p{font-size:13.4px;color:var(--text-2);line-height:1.68;margin:5px 0 0}
+
+/* 推荐标签索引 */
+.tagindex{display:flex;flex-wrap:wrap;gap:9px}
+.tagindex a{
+  font-size:13.4px;padding:6px 13px;border-radius:var(--radius-tag);
+  background:var(--panel);border:1px solid var(--line-strong);color:var(--text-2);
+  transition:background .16s,color .16s,border-color .16s;
+}
+.tagindex a:hover{background:var(--brand-soft);color:var(--brand-deep);border-color:rgba(168,53,44,.35)}
+.tagindex a.hot{border-color:var(--gold);background:var(--gold-soft);color:#8a5c11}
+
+/* 榜单 */
+.rank{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden}
+.rank ol{list-style:none;margin:0;padding:0}
+.rank li{
+  display:grid;grid-template-columns:30px minmax(0,1fr) auto;gap:12px;align-items:center;
+  padding:11px 16px;border-bottom:1px solid var(--line);
+}
+.rank li:last-child{border-bottom:none}
+.rank .no{
+  font-size:15px;font-weight:800;color:var(--text-3);font-variant-numeric:tabular-nums;text-align:center;
+}
+.rank li:nth-child(-n+3) .no{color:var(--brand)}
+.rank .rn{font-size:14.5px;font-weight:600;color:var(--ink)}
+.rank .rs{font-size:12.4px;color:var(--text-3);margin-top:1px}
+.rank .rv{font-size:12.5px;color:var(--teal);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* 互动征集 */
+.callfor{
+  background:linear-gradient(140deg,#1b1b23,#33262a);color:#f2ece1;
+  border-radius:var(--radius-banner);padding:24px 26px;box-shadow:var(--shadow);
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;
+}
+.callfor h2{font-size:20px;color:#fff;margin-bottom:8px}
+.callfor p{font-size:14px;color:#c9c2b6;line-height:1.8;margin:0 0 10px}
+.callfor ul{margin:0;padding-left:1.1em;font-size:13.4px;color:#b5aea2}
+.callfor ul li{margin:.15em 0}
+.callfor .btn-primary{white-space:nowrap}
+
+/* 侧栏 */
+aside{min-width:0;position:sticky;top:calc(var(--stick-h) + 12px);display:flex;flex-direction:column;gap:18px}
+.sidecard{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:15px 16px;box-shadow:var(--shadow)}
+.sidecard h2{font-size:13px;letter-spacing:.12em;color:var(--text-3);margin-bottom:11px;font-weight:700}
+.hotlist{list-style:none;margin:0;padding:0;counter-reset:h}
+.hotlist li{counter-increment:h;display:grid;grid-template-columns:20px minmax(0,1fr);gap:9px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.hotlist li:last-child{border-bottom:none}
+.hotlist li::before{
+  content:counter(h);font-size:12.5px;font-weight:800;color:var(--text-3);
+  font-variant-numeric:tabular-nums;line-height:1.7;
+}
+.hotlist li:nth-child(-n+3)::before{color:var(--brand)}
+.hotlist .hname{font-size:13.6px;font-weight:600;color:var(--ink);line-height:1.5}
+.hotlist .hinfo{font-size:11.8px;color:var(--text-3);margin-top:1px}
+.sidecard .more{display:inline-block;margin-top:10px;font-size:12.6px;color:var(--brand)}
+.sidecard .more:hover{color:var(--brand-deep)}
+
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{position:relative;padding:0 0 14px 16px;border-left:2px solid var(--line)}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{
+  content:"";position:absolute;left:-5px;top:6px;width:8px;height:8px;border-radius:50%;
+  background:var(--gold);border:2px solid var(--panel);
+}
+.timeline .td{font-size:11.8px;color:var(--brand);font-variant-numeric:tabular-nums;letter-spacing:.03em}
+.timeline .tt{font-size:13.4px;color:var(--ink);font-weight:600;line-height:1.5}
+.timeline .tx{font-size:12.2px;color:var(--text-3);line-height:1.55}
+
+.noticecard{background:var(--gold-soft);border:1px solid rgba(232,163,61,.4)}
+.noticecard h2{color:#8a5c11}
+.noticecard p{font-size:13px;color:#6f4d12;line-height:1.7;margin:0 0 8px}
+.noticecard p:last-child{margin-bottom:0}
+
+/* 页尾 */
+.sitefoot{background:#141419;color:#b9b3a8;margin-top:26px}
+.foot-inner{max-width:var(--maxw);margin:0 auto;padding:36px 22px 22px}
+.foot-top{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,.9fr));gap:26px;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot-brand .brand-name{color:#fff}
+.foot-brand .brand-sub{color:#8a857c}
+.foot-pos{font-size:13.5px;line-height:1.8;color:#a8a29a;margin:14px 0 0;max-width:40ch}
+.footcol h3{font-size:13px;color:#fff;letter-spacing:.08em;margin-bottom:10px}
+.footcol ul{list-style:none;margin:0;padding:0}
+.footcol li{margin:.28em 0}
+.footcol a{font-size:13.2px;color:#a8a29a}
+.footcol a:hover{color:var(--gold)}
+.foot-bottom{padding-top:16px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.4px;color:#7d786f;line-height:1.7}
+.foot-bottom .upd{color:#9a948b}
+
+/* 回顶 */
+.totop{
+  position:fixed;right:20px;bottom:24px;z-index:50;width:42px;height:42px;border-radius:50%;
+  background:var(--ink);color:#f4efe6;border:1px solid rgba(255,255,255,.16);
+  display:grid;place-items:center;box-shadow:var(--shadow-hover);opacity:0;visibility:hidden;
+  transition:opacity .22s,visibility .22s,transform .18s;
+}
+.totop.show{opacity:1;visibility:visible}
+.totop:hover{transform:translateY(-3px);background:var(--brand-deep)}
+.totop svg{width:18px;height:18px}
+
+/* 遮罩 */
+.scrim{
+  position:fixed;inset:0;background:rgba(20,20,25,.5);z-index:55;display:none;
+}
+.scrim.show{display:block}
+
+/* 响应式 */
+@media (max-width:1180px){
+  .layout{grid-template-columns:168px minmax(0,1fr) 236px;gap:20px}
+  .cardgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .catgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:1024px){
+  .layout{grid-template-columns:minmax(0,1fr);padding-top:20px}
+  .colnav{position:static;order:2}
+  .colnav .navcard{display:none}
+  aside{position:static;order:3;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .hero-inner{grid-template-columns:minmax(0,1fr);gap:26px}
+  .hero-art{min-height:auto;max-width:520px}
+  .mainnav{
+    position:fixed;left:0;right:0;top:calc(var(--stick-h) + 0px);bottom:0;
+    background:var(--panel);flex-direction:column;gap:0;padding:14px 18px;
+    overflow-y:auto;z-index:56;display:none;border-top:1px solid var(--line-strong);
+  }
+  .mainnav.open{display:flex}
+  .mainnav a{padding:12px 8px;border-radius:var(--radius-btn);font-size:15.5px;border-bottom:1px solid var(--line)}
+  .burger{display:block}
+  .searchbox input{width:150px}
+  .searchbox input:focus{width:180px}
+  .callfor{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:740px){
+  :root{--stick-h:104px}
+  body{font-size:15px}
+  .ticker-inner{padding:6px 14px;gap:9px}
+  .ticker-list{gap:18px}
+  .ticker-list li:nth-child(n+3){display:none}
+  .head-inner{padding:10px 14px;gap:10px}
+  .brand-name{font-size:16.5px}
+  .brand-sub{font-size:10.5px}
+  .head-tools{gap:8px}
+  .searchbox input{width:118px;padding:6px 26px 6px 9px;font-size:13px}
+  .searchbox input:focus{width:150px}
+  .btn-ghost{padding:5px 10px;font-size:12.6px}
+  .wrap,.layout,.foot-inner,.hero-inner{padding-left:14px;padding-right:14px}
+  .hero-inner{padding-top:30px;padding-bottom:28px}
+  .hero-lead{font-size:14.8px}
+  .hero-stats{gap:18px}
+  .hero-stats b{font-size:18px}
+  .cardgrid,.catgrid,.steps,.cmtgrid{grid-template-columns:minmax(0,1fr)}
+  aside{grid-template-columns:minmax(0,1fr)}
+  .update-item{grid-template-columns:minmax(0,1fr);gap:3px;padding:11px 14px}
+  .up-date{font-size:11.8px}
+  .news-item{grid-template-columns:minmax(0,1fr)}
+  .news-item img{min-height:150px;max-height:170px}
+  .overview,.deep{padding:18px 16px}
+  .deep h3{font-size:16px}
+  .foot-top{grid-template-columns:minmax(0,1fr);gap:20px}
+  .sec-head h2{font-size:19px}
+  .callfor{padding:20px 18px}
+  .totop{right:14px;bottom:16px;width:38px;height:38px}
+  .rank li{padding:10px 13px;gap:9px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="stickwrap">
+  <div class="ticker" role="region" aria-label="更新公告">
+    <div class="ticker-inner">
+      <span class="badge">更新</span>
+      <ul class="ticker-list">
+        <li><span class="t-date">11-08</span><span class="t-name">《雾港夜班》第三单元上线</span><span class="t-note">4K修复</span></li>
+        <li><span class="t-date">11-07</span><span class="t-name">新增 27 条「纪录片」类型档案</span></li>
+        <li><span class="t-date">11-06</span><span class="t-name">导演访谈《镜头之外》第 4 期</span></li>
+        <li><span class="t-date">11-05</span><span class="t-name">分级提示体系升级至 v3</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="sitehead">
+    <div class="head-inner">
+      <a class="brand" href="/#top" aria-label="先锋成人资源站 首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img">
+            <path d="M18 48V16h10c9 0 14.5 5.8 14.5 16S37 48 28 48H18z" fill="none" stroke="#e8a33d" stroke-width="5" stroke-linejoin="round"/>
+            <circle cx="49" cy="47" r="4.2" fill="#c9553e"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">先锋成人资源站</span>
+          <span class="brand-sub">ADULT ARCHIVE · 18+</span>
+        </span>
+      </a>
+
+      <nav class="mainnav" id="mainnav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选条目</a>
+        <a href="/#updates">更新动态</a>
+        <a href="/#cats">分类档案</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">观看路径</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#news">资讯</a>
+        <a href="/#submit">投稿征集</a>
+      </nav>
+
+      <div class="head-tools">
+        <div class="searchbox">
+          <label for="q" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">站内查找条目</label>
+          <input type="search" id="q" placeholder="查找条目 / 类型" autocomplete="off">
+          <svg class="sicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2"/></svg>
+        </div>
+        <a class="btn-ghost" href="/#submit">投稿</a>
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mainnav" aria-label="展开导航菜单">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+  </header>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-kicker">18+ · 影像资料聚合 · 分级提示</span>
+      <h1>先锋成人资源站</h1>
+      <p class="hero-lead">
+        汇聚<strong>剧情长片、纪实访谈、艺术短片、类型档案</strong>四类成年向影像资料，每条目附分级提示、制作信息与看点拆解。
+        站点按类型、创作者、年份三层归档，适合想系统看片而非随手刷的成年观众。
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="/#picks">浏览精选条目</a>
+        <a class="btn-line" href="/#deep">读类型解析</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>1,286</b><span>在档条目</span></div>
+        <div><b>42</b><span>创作者专栏</span></div>
+        <div><b>11-08</b><span>最近更新</span></div>
+        <div><b>v3</b><span>分级提示版本</span></div>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 320" role="img">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#e8a33d" stop-opacity=".95"/>
+            <stop offset="100%" stop-color="#c9553e" stop-opacity=".7"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f4efe6" stop-opacity=".18"/>
+            <stop offset="100%" stop-color="#f4efe6" stop-opacity=".02"/>
+          </linearGradient>
+        </defs>
+        <rect x="26" y="26" width="368" height="268" rx="18" fill="url(#g2)" stroke="rgba(244,239,230,.22)"/>
+        <g class="ring">
+          <circle cx="210" cy="150" r="86" fill="none" stroke="url(#g1)" stroke-width="2.4"/>
+          <circle cx="210" cy="150" r="62" fill="none" stroke="rgba(244,239,230,.28)" stroke-width="1.6" stroke-dasharray="4 7"/>
+          <path d="M188 118l52 32-52 32z" fill="url(#g1)"/>
+        </g>
+        <g stroke="rgba(244,239,230,.3)" stroke-width="1.4">
+          <line x1="26" y1="96" x2="86" y2="96"/>
+          <line x1="26" y1="132" x2="62" y2="132"/>
+          <line x1="334" y1="228" x2="394" y2="228"/>
+          <line x1="358" y1="264" x2="394" y2="264"/>
+        </g>
+        <g fill="rgba(244,239,230,.55)" font-size="11" font-family="monospace">
+          <text x="30" y="82">REEL 03 · 2026</text>
+          <text x="300" y="252">ARCHIVE 1286</text>
+        </g>
+        <circle cx="86" cy="228" r="5" fill="#e8a33d"/>
+        <circle cx="112" cy="228" r="5" fill="rgba(244,239,230,.35)"/>
+        <circle cx="138" cy="228" r="5" fill="rgba(244,239,230,.35)"/>
+      </svg>
+      <div class="float">
+        <b>今日新增</b>
+        《雾港夜班》第三单元 · 4K 修复版 · 时长 78 分钟
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="layout">
+
+  <!-- 左频道索引 -->
+  <nav class="colnav" aria-label="频道索引">
+    <div class="navcard">
+      <h2>频道索引</h2>
+      <ul id="navlist">
+        <li><a href="/#overview" data-target="overview">领域概览</a></li>
+        <li><a href="/#picks" data-target="picks">精选条目<span class="cnt">12</span></a></li>
+        <li><a href="/#updates" data-target="updates">更新动态<span class="cnt">10</span></a></li>
+        <li><a href="/#cats" data-target="cats">分类档案<span class="cnt">8</span></a></li>
+        <li><a href="/#deep" data-target="deep">深度解析</a></li>
+        <li><a href="/#guide" data-target="guide">观看路径</a></li>
+        <li><a href="/#faq" data-target="faq">常见问答<span class="cnt">6</span></a></li>
+        <li><a href="/#comments" data-target="comments">观众评论<span class="cnt">16</span></a></li>
+        <li><a href="/#news" data-target="news">相关资讯<span class="cnt">6</span></a></li>
+        <li><a href="/#tags" data-target="tags">相关推荐</a></li>
+        <li><a href="/#rank" data-target="rank">口碑榜</a></li>
+        <li><a href="/#submit" data-target="submit">投稿征集</a></li>
+      </ul>
+      <div class="navfoot">分级提示 v3 · 全站 18+<br>条目信息以制作方公开资料为准</div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- 1 概览 -->
+    <section class="sec" id="overview">
+      <div class="sec-head"><h2>成年向影像资料的类型地图<small>OVERVIEW</small></h2></div>
+      <div class="overview">
+        <p>
+          成年向影像并不是单一品类。按制作形态拆开，至少能分出四类：<span class="kw">剧情长片</span>（60—120 分钟，有完整叙事线，代表如 2025 年上线的《雾港夜班》系列）、<span class="kw">纪实访谈</span>（以从业者口述为主，如《镜头之外》导演访谈第 1—4 期）、<span class="kw">艺术短片</span>（10—25 分钟，重摄影与声音设计，多见于欧洲独立影展的午夜单元）、<span class="kw">类型档案</span>（按年代、地区、题材归档的目录式条目，不提供完整播放，只做编目与考据）。
+        </p>
+        <p>
+          2026 年值得注意的变化集中在两处。一是修复：至少 9 部 1990 年代作品在 2026 年完成 4K 扫描，画面噪点与色偏问题被部分解决，但部分修复版重混了音轨，原声与新版差异明显。二是分级：制作方开始主动在片头标注「强度提示」，列出裸露程度、暴力暗示、语言强度三项，比过去只写「18+」更具体。站内 v3 提示体系就是在这套片头标注基础上扩展的。
+        </p>
+        <p>
+          观众结构也在变。以站内 2026 年 10 月的条目点击分布看，剧情长片占 46%，纪实访谈占 21%，艺术短片占 19%，类型档案占 14%。纪实访谈的点击量比 2025 年同期上升约 8 个百分点，主要来自 25—34 岁观众——他们更关心「谁拍的、怎么拍的」，而不只是成片。
+        </p>
+      </div>
+    </section>
+
+    <!-- 2 精选 -->
+    <section class="sec" id="picks">
+      <div class="sec-head">
+        <h2>精选条目<small>12 条在档</small></h2>
+        <a class="sec-link" href="/#cats">按类型筛选</a>
+      </div>
+      <p class="sec-desc">每条含制作年份、片长、分级提示与一段看点拆解。点击卡片标题可查看完整档案页。</p>
+
+      <div class="cardgrid" id="cardgrid">
+
+        <article class="card" data-cat="剧情长片">
+          <div class="thumb"><img src="https://picsum.photos/seed/wugang01/400/300" width="400" height="300" loading="lazy" alt="《雾港夜班》第三单元夜戏场景，码头灯光与雨幕"></div>
+          <div class="card-body">
+            <h3 class="card-title">雾港夜班 · 第三单元</h3>
+            <div class="tagrow"><span class="tag kind">剧情长片</span><span class="tag">4K 修复</span><span class="tag">78 分钟</span></div>
+            <p class="card-look">以港口夜班工人为主线的三段式叙事，第三单元把前两部的旁白全部撤掉，改用环境声推进。修复版重混了雨声轨，低频更厚。</p>
+            <div class="card-meta"><span class="heat">热度 9,420</span><span>11-08 更新</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="纪实访谈">
+          <div class="thumb"><img src="https://picsum.photos/seed/jingtou04/400/300" width="400" height="300" loading="lazy" alt="《镜头之外》访谈现场，导演坐在监视器前"></div>
+          <div class="card-body">
+            <h3 class="card-title">镜头之外 · 第 4 期</h3>
+            <div class="tagrow"><span class="tag doc">纪实访谈</span><span class="tag">导演口述</span><span class="tag">52 分钟</span></div>
+            <p class="card-look">受访者是《雾港夜班》的摄影指导，谈 1998 年用 16mm 拍夜戏时如何靠路灯补光，以及修复时为何坚持保留颗粒感。</p>
+            <div class="card-meta"><span class="heat">热度 7,150</span><span>11-06 上线</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="艺术短片">
+          <div class="thumb"><img src="https://picsum.photos/seed/redroom02/400/300" width="400" height="300" loading="lazy" alt="艺术短片《红房间》中的红色布景与单侧光"></div>
+          <div class="card-body">
+            <h3 class="card-title">红房间（2024）</h3>
+            <div class="tagrow"><span class="tag art">艺术短片</span><span class="tag">18 分钟</span><span class="tag">单场景</span></div>
+            <p class="card-look">全片只有一个房间、两名演员、一盏侧灯。导演把对白压到不足 40 句，靠镜头位移制造压迫感。2024 年鹿特丹短片单元入围。</p>
+            <div class="card-meta"><span class="heat">热度 6,880</span><span>11-04 入库</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="类型档案">
+          <div class="thumb"><img src="https://picsum.photos/seed/archive90s/400/300" width="400" height="300" loading="lazy" alt="1990 年代录像带封面档案排列"></div>
+          <div class="card-body">
+            <h3 class="card-title">1990 年代录像带目录</h3>
+            <div class="tagrow"><span class="tag kind">类型档案</span><span class="tag">编目</span><span class="tag">217 条</span></div>
+            <p class="card-look">按发行年份与地区归档的 217 条录像带条目，标注了原始片长、剪辑版本差异与现存拷贝状态。其中 31 条仅有 VHS 转录。</p>
+            <div class="card-meta"><span class="heat">热度 5,940</span><span>11-03 更新</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="剧情长片">
+          <div class="thumb"><img src="https://picsum.photos/seed/summer95/400/300" width="400" height="300" loading="lazy" alt="《夏日九十五》海边黄昏场景"></div>
+          <div class="card-body">
+            <h3 class="card-title">夏日九十五</h3>
+            <div class="tagrow"><span class="tag kind">剧情长片</span><span class="tag">96 分钟</span><span class="tag">胶片</span></div>
+            <p class="card-look">1995 年拍摄、2026 年首次完整放映。胶片在仓库受潮，前 12 分钟有不可逆的水渍痕，修复方选择保留而不做数字填补。</p>
+            <div class="card-meta"><span class="heat">热度 5,210</span><span>11-02 上线</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="纪实访谈">
+          <div class="thumb"><img src="https://picsum.photos/seed/editor03/400/300" width="400" height="300" loading="lazy" alt="剪辑师工作台与时间线界面"></div>
+          <div class="card-body">
+            <h3 class="card-title">剪辑台上的十二小时</h3>
+            <div class="tagrow"><span class="tag doc">纪实访谈</span><span class="tag">幕后</span><span class="tag">44 分钟</span></div>
+            <p class="card-look">跟拍一位剪辑师处理 2025 年一部争议作品的最终剪辑，记录了从 214 分钟粗剪压到 96 分钟的取舍过程，含 3 段被删场景说明。</p>
+            <div class="card-meta"><span class="heat">热度 4,860</span><span>10-29 上线</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="艺术短片">
+          <div class="thumb"><img src="https://picsum.photos/seed/glasswave/400/300" width="400" height="300" loading="lazy" alt="短片《玻璃波纹》水下摄影画面"></div>
+          <div class="card-body">
+            <h3 class="card-title">玻璃波纹</h3>
+            <div class="tagrow"><span class="tag art">艺术短片</span><span class="tag">22 分钟</span><span class="tag">水下摄影</span></div>
+            <p class="card-look">水下实拍占全片 70%，没有后期合成。摄影师用改装防水壳在 4 米深度完成长镜头，声音全部来自水下收音。</p>
+            <div class="card-meta"><span class="heat">热度 4,420</span><span>10-27 入库</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="剧情长片">
+          <div class="thumb"><img src="https://picsum.photos/seed/nightbus/400/300" width="400" height="300" loading="lazy" alt="《夜班巴士》车厢内景，窗外霓虹"></div>
+          <div class="card-body">
+            <h3 class="card-title">夜班巴士</h3>
+            <div class="tagrow"><span class="tag kind">剧情长片</span><span class="tag">83 分钟</span><span class="tag">长镜头</span></div>
+            <p class="card-look">全片 11 个长镜头，最长一段 14 分钟不切。拍摄期只有 9 天，演员在真实夜班巴士上完成大部分表演，乘客为真实乘客。</p>
+            <div class="card-meta"><span class="heat">热度 4,150</span><span>10-25 上线</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="类型档案">
+          <div class="thumb"><img src="https://picsum.photos/seed/festivalmap/400/300" width="400" height="300" loading="lazy" alt="欧洲午夜影展单元分布地图"></div>
+          <div class="card-body">
+            <h3 class="card-title">欧洲午夜单元地图</h3>
+            <div class="tagrow"><span class="tag kind">类型档案</span><span class="tag">影展</span><span class="tag">1998—2025</span></div>
+            <p class="card-look">整理鹿特丹、柏林、锡切斯三地午夜单元 1998—2025 年的入选片目，标注了 64 部作品的版本差异与删减记录。</p>
+            <div class="card-meta"><span class="heat">热度 3,980</span><span>10-24 更新</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="艺术短片">
+          <div class="thumb"><img src="https://picsum.photos/seed/twogirls/400/300" width="400" height="300" loading="lazy" alt="短片《两个人的房间》双人构图"></div>
+          <div class="card-body">
+            <h3 class="card-title">两个人的房间</h3>
+            <div class="tagrow"><span class="tag art">艺术短片</span><span class="tag">15 分钟</span><span class="tag">黑白</span></div>
+            <p class="card-look">黑白 16mm 拍摄，全片没有配乐，只有钟表声与呼吸声。导演在映后谈里说，剪掉了原本 6 分钟的对话段落。</p>
+            <div class="card-meta"><span class="heat">热度 3,720</span><span>10-22 入库</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="纪实访谈">
+          <div class="thumb"><img src="https://picsum.photos/seed/sound01/400/300" width="400" height="300" loading="lazy" alt="声音设计师在混音棚工作"></div>
+          <div class="card-body">
+            <h3 class="card-title">声音设计师的八小时</h3>
+            <div class="tagrow"><span class="tag doc">纪实访谈</span><span class="tag">声音</span><span class="tag">38 分钟</span></div>
+            <p class="card-look">记录一位声音设计师为一部 78 分钟作品做终混的过程，重点在环境声层次与低频处理，含两版混音 A/B 对比片段。</p>
+            <div class="card-meta"><span class="heat">热度 3,540</span><span>10-20 上线</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="剧情长片">
+          <div class="thumb"><img src="https://picsum.photos/seed/lastfloor/400/300" width="400" height="300" loading="lazy" alt="《顶层》酒店走廊尽头场景"></div>
+          <div class="card-body">
+            <h3 class="card-title">顶层</h3>
+            <div class="tagrow"><span class="tag kind">剧情长片</span><span class="tag">108 分钟</span><span class="tag">三幕</span></div>
+            <p class="card-look">三幕全部发生在同一家酒店的顶层套房，靠时间跳跃区分。第二幕与第三幕之间隔了七年，布景细节的变化是唯一线索。</p>
+            <div class="card-meta"><span class="heat">热度 3,310</span><span>10-18 上线</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 3 更新动态 -->
+    <section class="sec" id="updates">
+      <div class="sec-head"><h2>更新动态<small>近 7 天</small></h2></div>
+      <p class="sec-desc">按入库时间排序，含修复、新片、档案补录与提示标注变更。</p>
+      <div class="updates">
+        <div class="update-item">
+          <span class="up-date">11-08</span>
+          <div><div class="up-name"><span class="up-dot"></span>雾港夜班 · 第三单元</div><div class="up-sum">4K 修复版上线，重混雨声轨，补入 3 分钟删减片段说明。</div></div>
+          <span class="up-date">剧情长片</span>
+        </div>
+        <div class="update-item">
+          <span class="up-date">11-08</span>
+          <div><div class="up-name"><span class="up-dot"></span>分级提示 v3 全站生效</div><div class="up-sum">裸露程度、暴力暗示、语言强度改为三项独立标注，替换原单一 18+ 标签。</div></div>
+          <span class="up-date">体系</span>
+        </div>
+        <div class="update-item">
+          <span class="up-date">11-07</span>
+          <div><div class="up-name"><span class="up-dot"></span>纪录片类型档案补录 27 条</div><div class="up-sum">新增 1998—2004 年访谈类作品，标注原始播出平台与现存介质。</div></div>
+          <span class="up-date">类型档案</span>
+        </div>
+        <div class="update-item">
+          <span class="up-date">11-06</span>
+          <div><div class="up-name"><span class="up-dot"></span>镜头之外 · 第 4 期</div><div class="up-sum">摄影指导口述 16mm 夜戏补光方案，附 1998 年现场工作照 6 张。</div></div>
+          <span class="up-date">纪实访谈</span>
+        </div>
+        <div class="update-item">
+          <span class="up-date">11-05</span>
+          <div><div class="up-name"><span class="up-dot"></span>夏日九十五</div><div class="up-sum">首次完整放映，前 12 分钟保留胶片水渍痕，附修复说明文档。</div></div>
+          <span class="up-date">剧情长片</span>
+        </div>
+        <div class="update-item">
+          <span class="up-date">11-04</span>
+          <div><div class="up-name"><span class="up-dot"></span>红房间</div><div class="up-sum">入库并补入鹿特丹短片单元入围记录与导演映后谈节选。</div></div>
+          <span class="up-date">艺术短片</span>
+        </div>
+        <div class="update-item">
+          <span class="up-date">11-03</span>
+          <div><div class="up-name"><span class="up-dot"></span>1990 年代录像带目录</div><div class="up-sum">新增 14 条 VHS 转录条目，其中 3 条标注「仅存转录，无原始母带」。</div></div>
+          <span class="up-date">类型档案</span>
+        </div>
+        <div class="update-item">
+          <span class="up-date">10-29</span>
+          <div><div class="up-name"><span class="up-dot"></span>剪辑台上的十二小时</div><div class="up-sum">上线跟拍纪录片，公开 214 分钟粗剪压到 96 分钟的取舍记录。</div></div>
+          <span class="up-date">纪实访谈</span>
+        </div>
+        <div class="update-item">
+          <span class="up-date">10-27</span>
+          <div><div class="up-name"><span class="up-dot"></span>玻璃波纹</div><div class="up-sum">补入水下摄影设备清单与 4 米深度长镜头的拍摄日志。</div></div>
+          <span class="up-date">艺术短片</span>
+        </div>
+        <div class="update-item">
+          <span class="up-date">10-25</span>
+          <div><div class="up-name"><span class="up-dot"></span>夜班巴士</div><div class="up-sum">上线并标注「乘客为真实乘客」，附 9 天拍摄期日程表。</div></div>
+          <span class="up-date">剧情长片</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 分类 -->
+    <section class="sec" id="cats">
+      <div class="sec-head"><h2>分类档案<small>点选筛选精选条目</small></h2></div>
+      <p class="sec-desc">8 个分类按制作形态与使用场景划分，点选后下方精选条目区只显示对应类型。</p>
+      <div class="catgrid" id="catgrid" role="group" aria-label="按类型筛选精选条目">
+        <button class="cat" type="button" data-cat="剧情长片" aria-pressed="false"><b>剧情长片</b><span>60—120 分钟完整叙事，含修复与未公开版本</span></button>
+        <button class="cat" type="button" data-cat="纪实访谈" aria-pressed="false"><b>纪实访谈</b><span>从业者口述、幕后跟拍、剪辑与声音工作记录</span></button>
+        <button class="cat" type="button" data-cat="艺术短片" aria-pressed="false"><b>艺术短片</b><span>10—25 分钟，重摄影与声音设计，影展午夜单元</span></button>
+        <button class="cat" type="button" data-cat="类型档案" aria-pressed="false"><b>类型档案</b><span>按年代、地区、题材编目，只做考据不提供播放</span></button>
+        <button class="cat" type="button" data-cat="" aria-pressed="true"><b>全部条目</b><span>取消筛选，恢复 12 条精选</span></button>
+        <button class="cat" type="button" data-cat="剧情长片" aria-pressed="false"><b>4K 修复</b><span>2026 年完成扫描与重混的作品，附修复前后对比</span></button>
+        <button class="cat" type="button" data-cat="纪实访谈" aria-pressed="false"><b>幕后工作流</b><span>剪辑、混音、摄影三工种的跟拍记录</span></button>
+        <button class="cat" type="button" data-cat="类型档案" aria-pressed="false"><b>影展片目</b><span>鹿特丹、柏林、锡切斯午夜单元入选记录</span></button>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="sec" id="deep">
+      <div class="sec-head"><h2>类型差异与判断标准<small>深度解析</small></h2></div>
+      <div class="deep">
+        <p>
+          成年向影像的评价体系与一般剧情片不同。它同时受三套标准拉扯：叙事完成度、感官强度、制作透明度。三者经常互相冲突——一部感官强度高的作品，叙事往往被压缩；一部制作透明度高的作品，往往因为访谈比重过大而失去观看节奏。理解这三套标准的权重，比记住片单更有用。
+        </p>
+
+        <h3>一、修复版与原版的差异，往往在声音</h3>
+        <p>
+          2026 年完成的 9 部 4K 修复作品中，有 6 部重混了音轨。以《雾港夜班》第一单元为例，1998 年原版雨声轨是单声道，动态范围约 42dB；2026 年修复版改为 5.1 声道，动态范围扩到 58dB，低频下潜从 80Hz 延到 45Hz。听起来更「厚」，但原版那种雨声压过对白的粗糙感消失了。
+        </p>
+        <p>
+          判断一部修复版是否值得优先看，可以核对三项：
+        </p>
+        <ul>
+          <li><b>扫描分辨率与母带状态</b>：4K 扫描不代表画面更好，若母带本身有霉斑或划痕，扫描只会把损伤放得更大。</li>
+          <li><b>音轨是否重混</b>：重混通常意味着原始声场被重新设计，偏爱原版的观众应优先找未重混版本。</li>
+          <li><b>是否补入删减片段</b>：补入片段常与主线画质不一致，形成明显的接缝。</li>
+        </ul>
+        <div class="callout">
+          <b>可核对结构：修复版可信度拆解</b><br>
+          来源缺失项 → 母带存放记录未公开；介质项 → 仅有 VHS 转录、无原始胶片；版本项 → 存在 3 个剪辑版本但未标注差异；标注项 → 片头无强度提示。四项中缺两项以上，条目页会标「版本存疑」，而不是笼统写「修复版」。
+        </div>
+
+        <h3>二、纪实访谈的价值不在信息量，在可核对性</h3>
+        <p>
+          《镜头之外》第 4 期里，摄影指导提到 1998 年拍夜戏时「路灯不够，用汽车大灯补了 40 分钟」。这句话的价值不在于它多惊人，而在于它可以被核对：同期的拍摄日志、现场工作照、以及修复版里那段明显偏硬的光比，三者能对上。反过来，如果一段访谈只有情绪描述、没有时间、地点、设备型号，它的参考价值就要打折。
+        </p>
+        <p>
+          站内对访谈类条目做了一层「可核对性」标注，把口述内容拆成三类：
+        </p>
+        <ol>
+          <li><b>可核对事实</b>：有时间、地点、设备、人员，能与第三方记录对上。</li>
+          <li><b>当事人回应</b>：受访者对争议的解释，属于立场表达，不作为事实。</li>
+          <li><b>媒体转述</b>：二手报道，需回溯原始出处。</li>
+        </ol>
+        <p>
+          三类混在一起，访谈就容易变成宣传材料。分开标注之后，同一期访谈里哪些能引用、哪些只能当观点，一目了然。
+        </p>
+
+        <h3>三、艺术短片的强度，靠镜头时长与声音密度</h3>
+        <p>
+          《红房间》全片 18 分钟，只有 41 句对白，平均镜头时长 27 秒；《玻璃波纹》22 分钟，平均镜头时长 34 秒，但声音密度高出约一倍——水下收音带来持续的低频环境声。两部片子都不靠情节推进，靠的是观众对画面与声音的耐受度。
+        </p>
+        <div class="tablewrap">
+          <table>
+            <caption style="text-align:left;font-size:12.5px;color:var(--text-3);padding-bottom:6px">三部短片的节奏参数对照（据站内档案整理）</caption>
+            <thead>
+              <tr><th>条目</th><th>片长</th><th>平均镜头时长</th><th>对白句数</th><th>声音层次</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>红房间</b></td><td>18 分钟</td><td>27 秒</td><td>41 句</td><td>单声道，以钟表声为主</td></tr>
+              <tr><td><b>玻璃波纹</b></td><td>22 分钟</td><td>34 秒</td><td>12 句</td><td>水下收音，低频持续</td></tr>
+              <tr><td><b>两个人的房间</b></td><td>15 分钟</td><td>19 秒</td><td>0 句（原 6 分钟对话被删）</td><td>无配乐，仅呼吸与钟表</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          这组参数的意义在于：它把「看不看得下去」这个主观感受，拆成了可比较的指标。平均镜头时长超过 30 秒、对白少于 20 句的作品，对习惯快节奏的观众来说，前 5 分钟就是一道坎。
+        </p>
+
+        <h3>四、分级提示 v3 的三项标注怎么用</h3>
+        <p>
+          v3 把原来的单一「18+」拆成裸露程度、暴力暗示、语言强度三项，各分 1—3 级。以《夜班巴士》为例，三项分别是 2、1、2；《顶层》是 3、2、2。三项都到 3 的作品，站内会在条目页顶部加一条黄色提示条，并在播放页保留 3 秒静止画面。
+        </p>
+        <p>
+          三项分开之后，观众可以按自己的接受度组合筛选。比如只想避开暴力暗示，就把暴力项限定在 1 级，裸露与语言不限。这比整片打一个「18+」有用得多。
+        </p>
+
+        <h3>五、一个容易被忽略的判断：条目页的更新记录</h3>
+        <p>
+          同一部作品在站内可能有多次更新：入库、补入访谈、修正片长、更换分级标注。更新记录本身是判断条目可靠性的线索。以《夏日九十五》为例，条目页记录了 2026-10-12 入库、10-19 修正片长（从 92 分钟改为 96 分钟）、11-05 补入修复说明，三次更新都有具体依据。相比之下，只有一次入库记录、之后再无修正的条目，信息往往停留在最初录入时的水平。
+        </p>
+      </div>
+    </section>
+
+    <!-- 6 观看路径 -->
+    <section class="sec" id="guide">
+      <div class="sec-head"><h2>观看路径与投入判断<small>GUIDE</small></h2></div>
+      <p class="sec-desc">按时间成本与接受度安排顺序，四步走完一轮，比随机点开更省时间。</p>
+      <div class="steps">
+        <div class="step">
+          <span class="num">1</span>
+          <div>
+            <h3>先看 15—25 分钟的短片</h3>
+            <p>用《两个人的房间》《红房间》试自己的耐受度。两部都在 20 分钟以内，看完能大致判断自己更适合叙事型还是氛围型。</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <div>
+            <h3>再读一期纪实访谈</h3>
+            <p>《镜头之外》第 4 期或《声音设计师的八小时》。访谈的信息密度低于成片，但能补上「怎么拍的」这一层，后续看片时对技术细节更敏感。</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <div>
+            <h3>挑一部 80—110 分钟的剧情长片</h3>
+            <p>《夜班巴士》83 分钟、《顶层》108 分钟，两部都在两小时以内。先看条目页的分级三项，再决定是否投入整段时间。</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">4</span>
+          <div>
+            <h3>最后进类型档案做横向比较</h3>
+            <p>《1990 年代录像带目录》与《欧洲午夜单元地图》适合在看完几部之后回看，把单个作品放回年代与影展脉络里，判断会稳一些。</p>
+          </div>
+        </div>
+      </div>
+      <p class="sec-desc" style="margin-top:16px">
+        判断一个条目值不值得投入时间，可以看三项：片长是否在自己的可支配时段内；分级三项里有没有自己明确不接受的项目；条目页是否有至少一次带依据的更新记录。三项都过，再点开。
+      </p>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="sec" id="faq">
+      <div class="sec-head"><h2>常见问答<small>6 问</small></h2></div>
+      <div class="faq">
+        <details>
+          <summary>4K 修复版一定比原版好看吗？</summary>
+          <div class="ans">不一定。修复解决的是介质老化问题，比如霉斑、划痕、色偏；它不改变原始拍摄条件。1998 年用 16mm 拍的夜戏，扫描到 4K 之后颗粒会更明显，如果修复方选择降噪，画面反而变「滑」，失去胶片质感。《雾港夜班》修复版就保留了颗粒，但重混了雨声轨，原版的单声道粗糙感没有了。</div>
+        </details>
+        <details>
+          <summary>分级提示里的三项分别指什么？</summary>
+          <div class="ans">裸露程度、暴力暗示、语言强度，各分 1—3 级。裸露项看画面暴露程度与持续时间；暴力项看是否有直接呈现或仅暗示；语言项看粗口密度与攻击性用词。三项独立标注，可以只避开其中一项，不必整片放弃。</div>
+        </details>
+        <details>
+          <summary>纪实访谈和幕后花絮有什么区别？</summary>
+          <div class="ans">幕后花絮以宣传为目的，时长多在 5—10 分钟，内容偏向趣事与团队氛围。纪实访谈以工作方法为核心，通常 40 分钟以上，会涉及设备型号、拍摄日程、剪辑取舍等可核对细节。《剪辑台上的十二小时》记录了 214 分钟粗剪压到 96 分钟的具体取舍，这类内容不属于花絮范畴。</div>
+        </details>
+        <details>
+          <summary>只有 VHS 转录的条目还能看吗？</summary>
+          <div class="ans">能看，但要降低画质预期。VHS 转录的分辨率大约相当于 240—300 线，色彩容易偏，音频有底噪。站内对这类条目会标注「仅存转录，无原始母带」，并在条目页说明转录设备与年份。如果条目本身有完整的版本记录与访谈佐证，画质损失不影响它的档案价值。</div>
+        </details>
+        <details>
+          <summary>艺术短片为什么经常没有完整对白？</summary>
+          <div class="ans">短片时长有限，对白会占用大量时间。《两个人的房间》原版有 6 分钟对话，导演在终剪时全部删掉，改成靠钟表声与呼吸声推进。删掉对白之后，画面信息与声音层次承担了叙事功能，观众需要更主动地读画面。这类处理在影展午夜单元里比较常见，不代表所有短片都这样。</div>
+        </details>
+        <details>
+          <summary>条目页的更新记录有什么用？</summary>
+          <div class="ans">更新记录反映条目信息的修正过程。片长改过、分级标注调过、访谈补入过，都会留下带日期的记录。修正次数多且有具体依据的条目，信息通常更可靠；只有一条入库记录、之后再无修正的条目，信息可能停留在最初录入时的水平，参考时要更谨慎。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8 评论 -->
+    <section class="sec" id="comments">
+      <div class="sec-head"><h2>观众评论<small>16 条</small></h2></div>
+      <p class="cmtmeta">按时间倒序，含中性评价与不同意见。评论内容不代表站内立场。</p>
+      <div class="cmtgrid">
+
+        <article class="cmt">
+          <header><span class="avatar">林</span><span class="nick">林间有雾</span><span class="when">11-08 21:14</span></header>
+          <p><span class="obj">《雾港夜班》第三单元</span>把旁白全撤了，前十分钟有点懵，看到第二段才反应过来是在用环境声接戏。雨声那轨确实厚，戴耳机看差别明显。</p>
+          <div class="mini"><span>剧情长片</span><span>4K 修复</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar b">陈</span><span class="nick">陈默不默</span><span class="when">11-08 19:02</span></header>
+          <p>修复版把原版的粗糙感磨掉了，我反而更想找 1998 年的单声道版本。不是嫌新版不好，是那种雨声压过对白的质感没了。</p>
+          <div class="mini"><span>版本差异</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar c">周</span><span class="nick">周三加班</span><span class="when">11-08 17:40</span></header>
+          <p><span class="obj">《镜头之外》第 4 期</span>里说用汽车大灯补了 40 分钟，我特意回去看修复版那段，光比确实硬得不像路灯。这种能对上的细节，比讲情怀有用。</p>
+          <div class="mini"><span>纪实访谈</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar d">吴</span><span class="nick">吴所谓</span><span class="when">11-07 23:11</span></header>
+          <p>分级三项分开之后好用多了。之前整片打 18+，我根本不知道是哪一项不合适，现在能只避开暴力那项。</p>
+          <div class="mini"><span>分级提示</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar">赵</span><span class="nick">赵四小姐</span><span class="when">11-07 20:36</span></header>
+          <p><span class="obj">《红房间》</span>41 句对白我数了一下，差不多。18 分钟看下来不累，但也没有特别想再看一遍。可能我不太吃单场景这一路。</p>
+          <div class="mini"><span>艺术短片</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar b">孙</span><span class="nick">孙半仙</span><span class="when">11-07 15:22</span></header>
+          <p>《夜班巴士》那个 14 分钟长镜头，我暂停了三次才看完。不是不好，是太长了，中间总想看看还有多久。</p>
+          <div class="mini"><span>剧情长片</span><span>长镜头</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar c">郑</span><span class="nick">郑在听雨</span><span class="when">11-06 22:48</span></header>
+          <p><span class="obj">《玻璃波纹》</span>水下收音那段，低频一直压着，用音箱放有点闷。换成耳机好一些。摄影确实厉害，4 米深还能拍长镜头。</p>
+          <div class="mini"><span>艺术短片</span><span>声音</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar d">冯</span><span class="nick">冯唐易老</span><span class="when">11-06 18:03</span></header>
+          <p>录像带目录里那 31 条只剩转录的，画质是真的糊。但条目写清楚了转录设备是哪年的，这点还行，至少知道糊在哪。</p>
+          <div class="mini"><span>类型档案</span><span>VHS</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar">何</span><span class="nick">何日君再来</span><span class="when">11-05 23:57</span></header>
+          <p><span class="obj">《夏日九十五》</span>前 12 分钟的水渍痕，我觉得留着是对的。填平了反而假。96 分钟这个片长也比我预期的长，原本以为就 90 分钟出头。</p>
+          <div class="mini"><span>剧情长片</span><span>修复</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar b">许</span><span class="nick">许愿不灵</span><span class="when">11-05 20:19</span></header>
+          <p>《剪辑台上的十二小时》里说从 214 分钟压到 96 分钟，删掉的那些场景其实有几段挺好的，不知道为什么不留。</p>
+          <div class="mini"><span>纪实访谈</span><span>剪辑</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar c">曹</span><span class="nick">曹阿瞒</span><span class="when">11-05 13:05</span></header>
+          <p>《顶层》三幕隔七年这个设定，第二幕和第三幕之间我看了两遍才反应过来。布景细节变化太细了，不仔细看根本发现不了。</p>
+          <div class="mini"><span>剧情长片</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar d">邓</span><span class="nick">邓不利多</span><span class="when">11-04 22:41</span></header>
+          <p>欧洲午夜单元地图那 64 部的版本差异整理得挺细，但我觉得还可以加上每部的放映介质，有些只有 35mm 拷贝，这条信息挺关键的。</p>
+          <div class="mini"><span>类型档案</span><span>影展</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar">刘</span><span class="nick">刘浪汉</span><span class="when">11-04 16:28</span></header>
+          <p>《声音设计师的八小时》那两版混音 A/B 对比，我在音箱和耳机各听了一遍，差别主要在低频。音箱上更明显。</p>
+          <div class="mini"><span>纪实访谈</span><span>声音</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar b">沈</span><span class="nick">沈腰潘鬓</span><span class="when">11-03 21:50</span></header>
+          <p><span class="obj">《两个人的房间》</span>全片没配乐，只有钟表声和呼吸声，15 分钟看下来反而比有配乐的更集中。删掉 6 分钟对话这个决定我服。</p>
+          <div class="mini"><span>艺术短片</span><span>黑白</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar c">韩</span><span class="nick">韩梅梅</span><span class="when">11-03 11:07</span></header>
+          <p>看完《夜班巴士》再去坐夜班公交，感觉完全不一样了。这个纯属题外话，但确实是这样。</p>
+          <div class="mini"><span>弱相关</span></div>
+        </article>
+
+        <article class="cmt">
+          <header><span class="avatar d">杨</span><span class="nick">杨不悔</span><span class="when">11-02 20:33</span></header>
+          <p>条目页的更新记录我一般会扫一眼。改过片长、补过访谈的，我点开前会更有底。只有一条入库记录的，我就当它信息还没整理完。</p>
+          <div class="mini"><span>条目信息</span></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 9 资讯 -->
+    <section class="sec" id="news">
+      <div class="sec-head"><h2>相关资讯<small>6 条</small></h2></div>
+      <div class="news">
+
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/news-restore/600/400" width="600" height="400" loading="lazy" alt="修复工作室内的胶片扫描设备">
+          <div class="news-body">
+            <span class="nd">2026-11-08</span>
+            <h3>《雾港夜班》修复版重混音轨，5.1 声道替换原单声道</h3>
+            <p>修复方在说明文档里列了 14 项改动，其中 9 项与声音相关；低频下潜由 80Hz 延至 45Hz，原版雨声压过对白的段落被单独标出。</p>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/news-festival/600/400" width="600" height="400" loading="lazy" alt="鹿特丹影展午夜单元放映厅入口">
+          <div class="news-body">
+            <span class="nd">2026-11-06</span>
+            <h3>鹿特丹午夜单元公布 2027 年首批 12 部入选片目</h3>
+            <p>12 部中有 4 部为 1990 年代作品修复后首映，2 部为水下实拍短片；主办方称 2027 年起入选片目将统一标注强度三项。</p>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/news-interview/600/400" width="600" height="400" loading="lazy" alt="访谈节目录制现场，摄影指导面对镜头">
+          <div class="news-body">
+            <span class="nd">2026-11-05</span>
+            <h3>《镜头之外》确认第 5 期受访者为《夏日九十五》修复负责人</h3>
+            <p>节目组透露，第 5 期将围绕「前 12 分钟水渍痕是否该保留」展开，片长约 61 分钟，计划 11 月下旬上线。</p>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/news-vhs/600/400" width="600" height="400" loading="lazy" alt="录像带转录设备与成排 VHS 磁带">
+          <div class="news-body">
+            <span class="nd">2026-11-03</span>
+            <h3>1990 年代录像带目录新增 14 条，3 条标注「无原始母带」</h3>
+            <p>新增条目全部来自同一批私人收藏，转录设备为 2003 年购入的 Panasonic 机型；整理方称这 14 条中有 5 条存在剪辑版本差异。</p>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/news-grading/600/400" width="600" height="400" loading="lazy" alt="分级提示标注界面示意">
+          <div class="news-body">
+            <span class="nd">2026-10-30</span>
+            <h3>分级提示 v3 完成全站覆盖，三项标注替代单一 18+ 标签</h3>
+            <p>覆盖 1,286 条在档条目，其中 87 条因信息不足暂标「待补」；三项均达 3 级的作品共 19 部，条目页顶部加黄色提示条。</p>
+          </div>
+        </article>
+
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/news-editing/600/400" width="600" height="400" loading="lazy" alt="剪辑时间线与被删片段标记">
+          <div class="news-body">
+            <span class="nd">2026-10-29</span>
+            <h3>《剪辑台上的十二小时》公开 214 分钟粗剪压至 96 分钟取舍记录</h3>
+            <p>片中列出被删的 3 段场景，合计 38 分钟；剪辑师在片尾说明里提到，其中一段因「节奏重复」被删，另两段与主线时间线冲突。</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="sec" id="tags">
+      <div class="sec-head"><h2>相关推荐<small>按方向索引</small></h2></div>
+      <p class="sec-desc">用于按具体方向找条目，与精选区的角度不同：这里按技术环节、版本状态与影展线索分类。</p>
+      <div class="tagindex">
+        <a href="/#picks" class="hot">4K 修复版</a>
+        <a href="/#picks">16mm 夜戏补光</a>
+        <a href="/#picks">水下实拍短片</a>
+        <a href="/#picks">单场景叙事</a>
+        <a href="/#picks">长镜头 10 分钟以上</a>
+        <a href="/#picks">VHS 转录条目</a>
+        <a href="/#picks">鹿特丹午夜单元</a>
+        <a href="/#picks">锡切斯入选片目</a>
+        <a href="/#picks">剪辑取舍记录</a>
+        <a href="/#picks">声音设计跟拍</a>
+        <a href="/#picks" class="hot">分级三项标注</a>
+        <a href="/#picks">胶片水渍痕保留</a>
+        <a href="/#picks">黑白 16mm</a>
+        <a href="/#picks">删减片段说明</a>
+        <a href="/#picks">幕后工作流</a>
+        <a href="/#picks">1990 年代档案</a>
+      </div>
+    </section>
+
+    <!-- 11 榜单 -->
+    <section class="sec" id="rank">
+      <div class="sec-head"><h2>口碑榜<small>按条目页收藏与完播统计</small></h2></div>
+      <div class="rank">
+        <ol>
+          <li><span class="no">1</span><div><div class="rn">雾港夜班 · 第三单元</div><div class="rs">剧情长片 · 78 分钟 · 11-08 更新</div></div><span class="rv">完播 82%</span></li>
+          <li><span class="no">2</span><div><div class="rn">镜头之外 · 第 4 期</div><div class="rs">纪实访谈 · 52 分钟 · 11-06 上线</div></div><span class="rv">完播 76%</span></li>
+          <li><span class="no">3</span><div><div class="rn">红房间</div><div class="rs">艺术短片 · 18 分钟 · 11-04 入库</div></div><span class="rv">完播 71%</span></li>
+          <li><span class="no">4</span><div><div class="rn">剪辑台上的十二小时</div><div class="rs">纪实访谈 · 44 分钟 · 10-29 上线</div></div><span class="rv">完播 69%</span></li>
+          <li><span class="no">5</span><div><div class="rn">夜班巴士</div><div class="rs">剧情长片 · 83 分钟 · 10-25 上线</div></div><span class="rv">完播 64%</span></li>
+          <li><span class="no">6</span><div><div class="rn">玻璃波纹</div><div class="rs">艺术短片 · 22 分钟 · 10-27 入库</div></div><span class="rv">完播 58%</span></li>
+          <li><span class="no">7</span><div><div class="rn">夏日九十五</div><div class="rs">剧情长片 · 96 分钟 · 11-05 上线</div></div><span class="rv">完播 54%</span></li>
+          <li><span class="no">8</span><div><div class="rn">1990 年代录像带目录</div><div class="rs">类型档案 · 217 条 · 11-03 更新</div></div><span class="rv">浏览 3,210</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 12 投稿征集 -->
+    <section class="sec" id="submit">
+      <div class="callfor">
+        <div>
+          <h2>条目投稿与档案共建</h2>
+          <p>如果你手上有未整理的版本信息、拍摄日志、影展放映记录，或者一段可核对的口述，可以提交到档案组。稿件经核对后进入「待补条目」队列，标注来源与核对状态。</p>
+          <ul>
+            <li>接受：版本差异记录、修复前后对比、影展片目、访谈文字稿</li>
+            <li>需附：时间、地点、设备或当事人，至少一项可核对信息</li>
+            <li>处理：7 个工作日内回复核对结果，未通过会说明缺哪一项</li>
+          </ul>
+        </div>
+        <a class="btn-primary" href="/#submit">提交条目线索</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右辅助栏 -->
+  <aside aria-label="辅助信息">
+    <section class="sidecard">
+      <h2>本日热榜</h2>
+      <ol class="hotlist">
+        <li><div><div class="hname">雾港夜班 · 第三单元</div><div class="hinfo">11-08 更新 · 热度 9,420</div></div></li>
+        <li><div><div class="hname">镜头之外 · 第 4 期</div><div class="hinfo">11-06 上线 · 热度 7,150</div></div></li>
+        <li><div><div class="hname">红房间</div><div class="hinfo">11-04 入库 · 热度 6,880</div></div></li>
+        <li><div><div class="hname">1990 年代录像带目录</div><div class="hinfo">11-03 更新 · 217 条</div></div></li>
+        <li><div><div class="hname">夏日九十五</div><div class="hinfo">11-05 上线 · 96 分钟</div></div></li>
+      </ol>
+      <a class="more" href="/#rank">查看完整口碑榜 →</a>
+    </section>
+
+    <section class="sidecard">
+      <h2>更新日历</h2>
+      <ul class="timeline">
+        <li><div class="td">11-08</div><div class="tt">雾港夜班 第三单元</div><div class="tx">4K 修复版，重混雨声轨</div></li>
+        <li><div class="td">11-07</div><div class="tt">纪录片档案补录</div><div class="tx">新增 27 条，1998—2004</div></li>
+        <li><div class="td">11-06</div><div class="tt">镜头之外 第 4 期</div><div class="tx">摄影指导口述，52 分钟</div></li>
+        <li><div class="td">11-05</div><div class="tt">分级提示 v3</div><div class="tx">三项标注全站生效</div></li>
+        <li><div class="td">11-03</div><div class="tt">录像带目录</div><div class="tx">新增 14 条 VHS 转录</div></li>
+      </ul>
+    </section>
+
+    <section class="sidecard noticecard">
+      <h2>观看前提示</h2>
+      <p>本页内容仅面向 18 岁以上成年观众。条目页的分级三项需在播放前确认。</p>
+      <p>三项均达 3 级的作品共 19 部，播放页保留 3 秒静止画面提示。</p>
+      <p>「待补」标注条目表示分级信息不完整，建议先看条目页说明再决定。</p>
+    </section>
+
+    <section class="sidecard">
+      <h2>技术参数速查</h2>
+      <ul class="timeline">
+        <li><div class="td">4K 修复</div><div class="tt">2026 年完成 9 部</div><div class="tx">其中 6 部重混音轨</div></li>
+        <li><div class="td">VHS 转录</div><div class="tt">31 条仅存转录</div><div class="tx">约 240—300 线分辨率</div></li>
+        <li><div class="td">平均镜头</div><div class="tt">短片 19—34 秒</div><div class="tx">长片 14 分钟长镜一段</div></li>
+      </ul>
+    </section>
+  </aside>
+
+</div>
+
+<footer class="sitefoot">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64">
+              <path d="M18 48V16h10c9 0 14.5 5.8 14.5 16S37 48 28 48H18z" fill="none" stroke="#e8a33d" stroke-width="5" stroke-linejoin="round"/>
+              <circle cx="49" cy="47" r="4.2" fill="#c9553e"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">先锋成人资源站</span>
+            <span class="brand-sub">ADULT ARCHIVE · 18+</span>
+          </span>
+        </div>
+        <p class="foot-pos">
+          覆盖 1990 年代至 2026 年的 1,286 条在档条目，其中 217 条为目录式档案、42 个创作者专栏、9 部 2026 年完成 4K 修复的作品。每周三、周六集中入库，修复与访谈类条目单独在工作日更新。
+        </p>
+      </div>
+      <div class="footcol">
+        <h3>内容类型</h3>
+        <ul>
+          <li><a href="/#picks">剧情长片</a></li>
+          <li><a href="/#picks">纪实访谈</a></li>
+          <li><a href="/#picks">艺术短片</a></li>
+          <li><a href="/#cats">类型档案</a></li>
+          <li><a href="/#picks">4K 修复</a></li>
+        </ul>
+      </div>
+      <div class="footcol">
+        <h3>查阅入口</h3>
+        <ul>
+          <li><a href="/#updates">更新动态</a></li>
+          <li><a href="/#deep">类型解析</a></li>
+          <li><a href="/#guide">观看路径</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+      <div class="footcol">
+        <h3>参与</h3>
+        <ul>
+          <li><a href="/#submit">条目投稿</a></li>
+          <li><a href="/#submit">档案共建</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#rank">口碑榜</a></li>
+          <li><a href="/#tags">方向索引</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>本页条目信息为示例数据，分级提示与版本记录以制作方公开资料为准。全站内容仅面向 18 岁以上成年观众。</span>
+      <span class="upd">页面更新时间 2026-11-08 · 对应条目：《雾港夜班》第三单元 4K 修复上线</span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" type="button" aria-label="回到页面顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V6"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"先锋成人资源站",
+  "description":"面向成年观众的影像资料聚合页面，收录剧情长片、纪实访谈、艺术短片、类型档案与创作者专栏，提供分级提示与条目看点。",
+  "inLanguage":"zh-CN",
+  "about":{
+    "@type":"Thing",
+    "name":"成年向影像资料与类型档案"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"4K 修复版一定比原版好看吗？","acceptedAnswer":{"@type":"Answer","text":"不一定。修复解决的是介质老化问题，不改变原始拍摄条件。1998 年用 16mm 拍的夜戏扫描到 4K 后颗粒更明显，若修复方降噪，画面反而变滑。《雾港夜班》修复版保留颗粒但重混了雨声轨，原版单声道粗糙感消失。"}},
+    {"@type":"Question","name":"分级提示里的三项分别指什么？","acceptedAnswer":{"@type":"Answer","text":"裸露程度、暴力暗示、语言强度，各分 1—3 级。三项独立标注，可以只避开其中一项，不必整片放弃。"}},
+    {"@type":"Question","name":"纪实访谈和幕后花絮有什么区别？","acceptedAnswer":{"@type":"Answer","text":"幕后花絮以宣传为目的，时长多在 5—10 分钟。纪实访谈以工作方法为核心，通常 40 分钟以上，涉及设备型号、拍摄日程、剪辑取舍等可核对细节。"}},
+    {"@type":"Question","name":"只有 VHS 转录的条目还能看吗？","acceptedAnswer":{"@type":"Answer","text":"能看，但要降低画质预期。VHS 转录分辨率约 240—300 线，色彩易偏，音频有底噪。条目页会标注仅存转录并说明转录设备与年份。"}},
+    {"@type":"Question","name":"艺术短片为什么经常没有完整对白？","acceptedAnswer":{"@type":"Answer","text":"短片时长有限，对白占用大量时间。《两个人的房间》原版有 6 分钟对话，终剪全部删掉，改成靠钟表声与呼吸声推进。"}},
+    {"@type":"Question","name":"条目页的更新记录有什么用？","acceptedAnswer":{"@type":"Answer","text":"更新记录反映条目信息的修正过程。片长改过、分级标注调过、访谈补入过，都会留下带日期的记录。修正次数多且有依据的条目，信息通常更可靠。"}}
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var nav = document.getElementById('mainnav');
+  var burger = document.getElementById('burger');
+  var scrim = document.getElementById('scrim');
+  var search = document.getElementById('q');
+  var feedback = document.getElementById('searchFeedback');
+  var cardgrid = document.getElementById('cardgrid');
+  var cards = Array.prototype.slice.call(cardgrid.querySelectorAll('.card'));
+  var catBtns = Array.prototype.slice.call(document.querySelectorAll('#catgrid .cat'));
+
+  /* ---- 移动端菜单 ---- */
+  function openMenu(){
+    nav.classList.add('open');
+    burger.setAttribute('aria-expanded','true');
+    scrim.hidden = false;
+    scrim.classList.add('show');
+  }
+  function closeMenu(){
+    nav.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    scrim.classList.remove('show');
+    scrim.hidden = true;
+  }
+  burger.addEventListener('click', function(){
+    if(nav.classList.contains('open')) closeMenu(); else openMenu();
+  });
+  scrim.addEventListener('click', closeMenu);
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 1024) closeMenu();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ closeMenu(); }
+  });
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 1024) closeMenu();
+  });
+
+  /* ---- 分类筛选 ---- */
+  var activeCat = '';
+  function applyFilter(){
+    var kw = (search.value || '').trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(c){
+      var cat = c.getAttribute('data-cat') || '';
+      var text = c.textContent.toLowerCase();
+      var okCat = !activeCat || cat === activeCat;
+      var okKw = !kw || text.indexOf(kw) !== -1;
+      var show = okCat && okKw;
+      c.style.display = show ? '' : 'none';
+      if(show) shown++;
+    });
+    catBtns.forEach(function(b){
+      var c = b.getAttribute('data-cat') || '';
+      b.setAttribute('aria-pressed', c === activeCat ? 'true' : 'false');
+    });
+    if((kw || activeCat) && shown === 0){
+      feedback.textContent = '没有匹配的条目，换个关键词或点「全部条目」恢复。';
+      feedback.classList.add('show');
+    }else if(kw || activeCat){
+      feedback.textContent = '当前显示 ' + shown + ' 条' + (activeCat ? '（类型：' + activeCat + '）' : '');
+      feedback.classList.add('show');
+    }else{
+      feedback.classList.remove('show');
+      feedback.textContent = '';
+    }
+  }
+  catBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var c = b.getAttribute('data-cat') || '';
+      activeCat = (c === activeCat) ? '' : c;
+      applyFilter();
+      if(window.innerWidth > 1024){
+        document.getElementById('picks').scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
+  search.addEventListener('input', applyFilter);
+  search.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){
+      e.preventDefault();
+      applyFilter();
+      document.getElementById('picks').scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+
+  /* ---- 侧栏/频道高亮 ---- */
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main .sec'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('#navlist a'));
+  function highlight(){
+    var pos = window.scrollY + 140;
+    var current = '';
+    sections.forEach(function(s){
+      if(s.offsetTop <= pos) current = s.id;
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('data-target') === current);
+    });
+    var topBtn = document.getElementById('totop');
+    if(window.scrollY > window.innerHeight * 0.9) topBtn.classList.add('show');
+    else topBtn.classList.remove('show');
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  window.addEventListener('resize', highlight);
+  highlight();
+
+  /* ---- 回顶 ---- */
+  document.getElementById('totop').addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+                                     </html>
